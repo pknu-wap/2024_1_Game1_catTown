@@ -19,6 +19,8 @@
   <br>
 </div>
 
+<br>
+
 <div align=center><h2>🐥 Contributors</h2></div>
 
 <div align=center>
@@ -39,3 +41,7 @@
   </tr>
 </table>
 </div>
+
+<br>
+
+<div align=center><h2>📑 Wiki</h2></div>
