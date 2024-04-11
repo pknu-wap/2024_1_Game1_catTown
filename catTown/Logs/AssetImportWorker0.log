@@ -1,0 +1,371 @@
+Unity Editor version:    2022.3.20f1 (61c2feb0970d)
+Branch:                  2022.3/release
+Build type:              Release
+Batch mode:              YES
+macOS version:           Version 14.3.1 (Build 23D60)
+Darwin version:          23.3.0
+Architecture:            arm64
+Running under Rosetta:   NO
+Available memory:        8192 MB
+Using pre-set license
+Pro License: YES
+
+COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2022.3.20f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker0
+-projectPath
+/Users/hajin/Documents/GitHub/2024_1_Game1_catTown/catTown
+-logFile
+Logs/AssetImportWorker0.log
+-srvPort
+51971
+Successfully changed project path to: /Users/hajin/Documents/GitHub/2024_1_Game1_catTown/catTown
+/Users/hajin/Documents/GitHub/2024_1_Game1_catTown/catTown
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [8080923712] Host "[IP] 172.30.63.61 [Port] 0 [Flags] 2 [Guid] 1316651365 [EditorId] 1316651365 [Version] 1048832 [Id] OSXEditor(0,seoui-MacBookPro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+
+Player connection [8080923712] Host "[IP] 172.30.63.61 [Port] 0 [Flags] 2 [Guid] 1316651365 [EditorId] 1316651365 [Version] 1048832 [Id] OSXEditor(0,seoui-MacBookPro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+
+[Physics::Module] Initialized MultithreadedJobDispatcher with 7 workers.
+Refreshing native plugins compatible for Editor in 32.96 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2022.3.20f1 (61c2feb0970d)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.20f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/hajin/Documents/GitHub/2024_1_Game1_catTown/catTown/Assets
+GfxDevice: creating device client; threaded=0; jobified=0
+ preferred device: Apple M1 (high power)
+Metal devices available: 1
+0: Apple M1 (high power)
+Using device Apple M1 (high power)
+Initializing Metal device caps: Apple M1
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.20f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.20f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
+Mono config path = '/Applications/Unity/Hub/Editor/2022.3.20f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56985
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.20f1/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: /Applications/Unity/Hub/Editor/2022.3.20f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.004569 seconds.
+- Loaded All Assemblies, in  0.508 seconds
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.463 seconds
+Domain Reload Profiling: 971ms
+	BeginReloadAssembly (124ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (49ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (67ms)
+	LoadAllAssembliesAndSetupDomain (252ms)
+		LoadAssemblies (124ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (248ms)
+			TypeCache.Refresh (245ms)
+				TypeCache.ScanAssembly (217ms)
+			ScanForSourceGeneratedMonoScriptInfo (1ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (463ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (353ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (11ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (3ms)
+			ProcessInitializeOnLoadAttributes (248ms)
+			ProcessInitializeOnLoadMethodAttributes (76ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.247 seconds
+Refreshing native plugins compatible for Editor in 9.29 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+Package Manager log level set to [2]
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.674 seconds
+Domain Reload Profiling: 2924ms
+	BeginReloadAssembly (121ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (36ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (38ms)
+	LoadAllAssembliesAndSetupDomain (1041ms)
+		LoadAssemblies (620ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (471ms)
+			TypeCache.Refresh (410ms)
+				TypeCache.ScanAssembly (351ms)
+			ScanForSourceGeneratedMonoScriptInfo (48ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1675ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (1318ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (9ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (159ms)
+			ProcessInitializeOnLoadAttributes (759ms)
+			ProcessInitializeOnLoadMethodAttributes (376ms)
+			AfterProcessingInitializeOnLoad (2ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.20f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.48 seconds
+Refreshing native plugins compatible for Editor in 8.52 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4286 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 72 unused Assets / (67.5 KB). Loaded Objects now: 4728.
+Memory consumption went from 157.5 MB to 157.5 MB.
+Total: 31.364667 ms (FindLiveObjects: 0.312875 ms CreateObjectMapping: 0.159833 ms MarkObjects: 30.368833 ms  DeleteObjects: 0.522125 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 40961.766557 seconds.
+  path: Assets/Hajin/Assets/Materials/Color1.mat
+  artifactKey: Guid(92bdde61e46f7473791be47859e8cf2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Assets/Materials/Color1.mat using Guid(92bdde61e46f7473791be47859e8cf2e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '480b9a9789b4815bd8ac61dcf9988325') in 0.807478 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000228 seconds.
+  path: Assets/Hajin
+  artifactKey: Guid(2bb20041f9c254dfc87b2752a427d2d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin using Guid(2bb20041f9c254dfc87b2752a427d2d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b696610802bf592bee2263da381a6c2d') in 0.000680 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.266015 seconds.
+  path: Assets/Hajin/Scenes/ApartmentScene.unity
+  artifactKey: Guid(16d21623ce7694564b7f9b0f4ae219b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Scenes/ApartmentScene.unity using Guid(16d21623ce7694564b7f9b0f4ae219b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a7252e06f7580cb0523ec8cefc779d3b') in 0.001300 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x2a11cb000 may have been prematurely finalized
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.688 seconds
+Refreshing native plugins compatible for Editor in 4.14 ms, found 2 plugins.
+Native extension for OSXStandalone target not found
+Native extension for WebGL target not found
+[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.114 seconds
+Domain Reload Profiling: 1802ms
+	BeginReloadAssembly (252ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (131ms)
+	RebuildCommonClasses (43ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (25ms)
+	LoadAllAssembliesAndSetupDomain (352ms)
+		LoadAssemblies (389ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (43ms)
+			TypeCache.Refresh (23ms)
+				TypeCache.ScanAssembly (1ms)
+			ScanForSourceGeneratedMonoScriptInfo (9ms)
+			ResolveRequiredComponents (11ms)
+	FinalizeReload (1115ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (474ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (5ms)
+			SetLoadedEditorAssemblies (4ms)
+			RefreshPlugins (0ms)
+			BeforeProcessingInitializeOnLoad (61ms)
+			ProcessInitializeOnLoadAttributes (259ms)
+			ProcessInitializeOnLoadMethodAttributes (143ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (4ms)
+Refreshing native plugins compatible for Editor in 3.92 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 4279 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 58 unused Assets / (47.7 KB). Loaded Objects now: 4773.
+Memory consumption went from 167.0 MB to 167.0 MB.
+Total: 8.707583 ms (FindLiveObjects: 0.191458 ms CreateObjectMapping: 0.090292 ms MarkObjects: 8.335041 ms  DeleteObjects: 0.086791 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 223.942767 seconds.
+  path: Assets/Hajin/Scenes/ApartmentScene.unity
+  artifactKey: Guid(16d21623ce7694564b7f9b0f4ae219b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Scenes/ApartmentScene.unity using Guid(16d21623ce7694564b7f9b0f4ae219b8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ab9aa1ada6f3e82d43fe9166a901b66a') in 0.001669 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 21.795713 seconds.
+  path: Assets/Hajin/Assets/Animations/Closingwindow.anim
+  artifactKey: Guid(d29739a19e59f48e098a2b353dc9cf2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Assets/Animations/Closingwindow.anim using Guid(d29739a19e59f48e098a2b353dc9cf2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '87fcc77c66b80c8ec8f30df195f33dd0') in 0.013876 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.894883 seconds.
+  path: Assets/Hajin/Assets/Animations/DoorAnimationController.controller
+  artifactKey: Guid(b9734fdc87c6146e1902d9d7f2155372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Assets/Animations/DoorAnimationController.controller using Guid(b9734fdc87c6146e1902d9d7f2155372) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'feeddddce01359fcc8ccff0a8fc96989') in 0.002075 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.617167 seconds.
+  path: Assets/Hajin/Assets/Animations/Openingwindow.anim
+  artifactKey: Guid(3b257505cb18c4acf82a9b081d40b847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Assets/Animations/Openingwindow.anim using Guid(3b257505cb18c4acf82a9b081d40b847) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '932b5cfbfaac02aef38d571bd677334b') in 0.000824 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 71.816117 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets
+  artifactKey: Guid(91b83f31308c06d439689f8138186839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets using Guid(91b83f31308c06d439689f8138186839) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0a6ff7698e72880120b9ff11fb29cf09') in 0.000582 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.827669 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common
+  artifactKey: Guid(fb45e9e13a1072940b2100c8ce370c4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common using Guid(fb45e9e13a1072940b2100c8ce370c4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2944a02171cfd08ac74e3a422deb13db') in 0.000629 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.754502 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations
+  artifactKey: Guid(1b36872c1c34c9d44bd4ca3f7e5ac086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations using Guid(1b36872c1c34c9d44bd4ca3f7e5ac086) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8bccf0e3ad49ae4749346dd54ac9bc4e') in 0.000585 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.261309 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors
+  artifactKey: Guid(a62e9a2c4503174458b0184707ddb33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors using Guid(a62e9a2c4503174458b0184707ddb33a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac1aaedf2d90dbd6ff6da1c7ad840b05') in 0.001221 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.314384 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors/Closing.anim
+  artifactKey: Guid(107c03b19248aa740b48b8e3714d20ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors/Closing.anim using Guid(107c03b19248aa740b48b8e3714d20ec) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de048c756bdef1f44a9c5f934aa1a05d') in 0.001752 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 8.498045 seconds.
+  path: Assets/Hajin/Assets/Animations/Open.anim
+  artifactKey: Guid(b8221090405af42f084cdbe44122ed98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Assets/Animations/Open.anim using Guid(b8221090405af42f084cdbe44122ed98) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '70342da7b885311fa850cef652673273') in 0.000987 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 4.238520 seconds.
+  path: Assets/Hajin/Assets/Animations/Closing.anim
+  artifactKey: Guid(28e5980d773234fc3b25705530355437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Hajin/Assets/Animations/Closing.anim using Guid(28e5980d773234fc3b25705530355437) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '225be935e45c415a210be0b7c7c02442') in 0.001211 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
