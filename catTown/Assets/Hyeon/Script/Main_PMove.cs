@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerMove : MonoBehaviour
+
+public class Main_PMove : MonoBehaviour
 {
     // 플레이어 이동 속도
     private float walkSpeed= 3f;
@@ -27,13 +28,13 @@ public class PlayerMove : MonoBehaviour
 
     //플레이어 스태미나 변수
 
-    int st = 500; //st = stemina
+    int st = 1000; //st = stemina
 
-    public int maxSt = 500;
-    private int minSt = 0;
+    public int maxSt = 1000;
+    private int minSt = -5;
 
     private int std = 10; // stemina damega
-    private int sth = 5; // stemina heal
+    private int sth = 500; // stemina heal
 
     public Slider stSlider;
 
@@ -41,13 +42,16 @@ public class PlayerMove : MonoBehaviour
         IEnumerator DelayDamst()
         {
             
-        float seconds = 3.0f;
-
+        float seconds = 10.0f;
         yield return new WaitForSecondsRealtime(seconds);
-        
-        st += sth;
 
-        // 스태미너가 0이 된 순간 10초간 딜레이를 준 후 이후에 스태미너 회복을 하는 방향으로 코드 수정
+        }
+        IEnumerator DelayHilst()
+        {
+
+            float secondsH = 3.0f;
+            yield return new WaitForSecondsRealtime(secondsH);
+            st += sth;
 
         }
 
@@ -129,7 +133,7 @@ public class PlayerMove : MonoBehaviour
         applySpeed = walkSpeed;
 
         StartCoroutine("DelayDamst");
-
+        StartCoroutine("DelayHilst");
 
     }
 
@@ -143,3 +147,4 @@ public class PlayerMove : MonoBehaviour
 
     }
 }
+
