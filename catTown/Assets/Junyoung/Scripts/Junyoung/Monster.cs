@@ -5,7 +5,7 @@ using UnityEngine.AI;
 public class Monster : MonoBehaviour
 {
     public LayerMask whatIsTarget; // 추적 대상 레이어
-    private Player targetEntity; // 추적 대상
+    private Main_PMove targetEntity; // 추적 대상
     private NavMeshAgent navMeshAgent; // 경로 계산 AI 에이전트
     private Animator monsterAnimator; // 애니메이터 컴포넌트
     private bool isAttacking = false; // 공격 중인지 여부
@@ -16,7 +16,7 @@ public class Monster : MonoBehaviour
         get
         {
             // 추적할 대상이 존재하고, 대상이 사망하지 않았다면 true
-            if (targetEntity != null && !targetEntity.dead)
+            if (targetEntity != null)// && !targetEntity.dead)
             {
                 return true;
             }
@@ -59,8 +59,8 @@ public class Monster : MonoBehaviour
                 // 주변에 플레이어가 있는지 확인
                 for (int i = 0; i < colliders.Length; i++)
                 {
-                    Player player = colliders[i].GetComponent<Player>();
-                    if (player != null && !player.dead)
+                    Main_PMove player = colliders[i].GetComponent<Main_PMove>();
+                    if (player != null) //&& !player.dead)
                     {
                         targetEntity = player;
                         break;
@@ -70,14 +70,15 @@ public class Monster : MonoBehaviour
             else
             {
                 // 추적 중인 경우
-                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 5f && !isAttacking)
+                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2f && !isAttacking)
                 {
                     // 플레이어가 일정 범위 내에 있으면 공격
-                    monsterAnimator.SetTrigger("Hit");
+                    monsterAnimator.SetBool("isHit", true);
                 }
                 else
                 {
-                    // 일정 범위 내에 플레이어가 없으면 추적 계속
+                    // 일정 범위 내에 플레이어가 없으면 공격을 멈추고 다시 추격
+                    monsterAnimator.SetBool("isHit", false);
                     navMeshAgent.isStopped = false;
                     navMeshAgent.SetDestination(targetEntity.transform.position);
                 }

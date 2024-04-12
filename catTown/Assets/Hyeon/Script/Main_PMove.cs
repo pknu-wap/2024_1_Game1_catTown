@@ -39,7 +39,7 @@ public class Main_PMove : MonoBehaviour
     public Slider stSlider;
 
     //딜레이 코루틴
-        IEnumerator DelayDamst()
+    IEnumerator DelayDamst()
         {
             
         float seconds = 10.0f;
