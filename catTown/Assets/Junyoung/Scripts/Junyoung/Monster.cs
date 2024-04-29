@@ -1,27 +1,14 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Monster : MonoBehaviour
 {
     public LayerMask whatIsTarget; // 추적 대상 레이어
-
     private Player targetEntity; // 추적 대상
     private NavMeshAgent navMeshAgent; // 경로 계산 AI 에이전트
-
-    //public ParticleSystem hitEffect; // 피격 시 재생할 파티클 효과
-    //public AudioClip deathSound; // 사망 시 재생할 소리
-    //public AudioClip hitSound; // 피격 시 재생할 소리
-
     private Animator monsterAnimator; // 애니메이터 컴포넌트
-    private AudioSource monsterAudioPlayer; // 오디오 소스 컴포넌트
-    private Renderer monsterRenderer; // 렌더러 컴포넌트
-
-    public float damage = 20f; // 공격력
-    public float timeBetAttack = 0.5f; // 공격 간격
-    private float lastAttackTime; // 마지막 공격 시점
-    
+    private bool isAttacking = false; // 공격 중인지 여부
 
     // 추적할 대상이 존재하는지 알려주는 프로퍼티
     private bool hasTarget
@@ -44,18 +31,14 @@ public class Monster : MonoBehaviour
         // 초기화
         navMeshAgent = GetComponent<NavMeshAgent>();
         monsterAnimator = GetComponent<Animator>();
-        monsterAudioPlayer = GetComponent<AudioSource>();
-        monsterRenderer = GetComponentInChildren<Renderer>();
     }
 
-    // Start is called before the first frame update
     void Start()
     {
         // 게임 오브젝트 활성화와 동시에 AI의 추적 루틴 시작
         StartCoroutine(UpdatePath());
     }
 
-    // Update is called once per frame
     void Update()
     {
         // 추적 대상의 존재 여부에 따라 다른 애니메이션 재생
@@ -68,34 +51,35 @@ public class Monster : MonoBehaviour
         // 살아 있는 동안 무한 루프
         while (true)
         {
-            if (hasTarget)
+            if (!hasTarget)
             {
-                navMeshAgent.isStopped = false;
-                navMeshAgent.SetDestination(
-                    targetEntity.transform.position);
+                // 추적 대상이 없을 때 코드
+                Collider[] colliders = Physics.OverlapSphere(transform.position, 20f, whatIsTarget);
+
+                // 주변에 플레이어가 있는지 확인
+                for (int i = 0; i < colliders.Length; i++)
+                {
+                    Player player = colliders[i].GetComponent<Player>();
+                    if (player != null && !player.dead)
+                    {
+                        targetEntity = player;
+                        break;
+                    }
+                }
             }
             else
             {
-                // 추적 대상없음
-                navMeshAgent.isStopped = true;
-
-                // 20유닛의 반지름을 가진 가상의 구를 그렸을 때 구와 겹치는 모든 콜라이더를 가져옴
-                // 단, whatIsTarget 레이러르 가진 콜라이더만 가져오도록 필터링
-                Collider[] colliders = Physics.OverlapSphere(transform.position, 20f, whatIsTarget);
-
-                // 모든 콜라이더를 순회하면서 살아 있는 LivingEntity찾기
-                for (int i = 0; i < colliders.Length; i++)
+                // 추적 중인 경우
+                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 5f && !isAttacking)
                 {
-                    // 콜라이더로부터 LivingEntity 컴포넌트 가져오기
-                    Player livingEntity = colliders[i].GetComponent<Player>();
-
-                    // 컴포넌트가 존재하고 살아있다면
-                    if (livingEntity != null && !livingEntity.dead)
-                    {
-                        targetEntity = livingEntity;
-
-                        break;
-                    }
+                    // 플레이어가 일정 범위 내에 있으면 공격
+                    monsterAnimator.SetTrigger("Hit");
+                }
+                else
+                {
+                    // 일정 범위 내에 플레이어가 없으면 추적 계속
+                    navMeshAgent.isStopped = false;
+                    navMeshAgent.SetDestination(targetEntity.transform.position);
                 }
             }
 
@@ -104,5 +88,3 @@ public class Monster : MonoBehaviour
         }
     }
 }
-
-
