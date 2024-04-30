@@ -405,18 +405,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 465036809}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 134540366}
   - {fileID: 593525683}
-  m_Father: {fileID: 1237013363}
+  m_Father: {fileID: 995857201}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -170, y: -120}
+  m_AnchoredPosition: {x: 77.66667, y: 12.666672}
   m_SizeDelta: {x: 160, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &465036811
@@ -458,7 +458,7 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 507838173}
   m_HandleRect: {fileID: 0}
@@ -786,6 +786,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 925195556}
+  - {fileID: 465036810}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &995857202
@@ -840,10 +841,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isRunnig: 0
+  isStaminaHeal: 1
   applySpeed: 0
-  maxHp: 200
   hpSlider: {fileID: 465036811}
-  maxSt: 500
   stSlider: {fileID: 357174229}
   jumpPower: 5
   isJumping: 0
@@ -941,7 +941,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 465036810}
   - {fileID: 357174228}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
