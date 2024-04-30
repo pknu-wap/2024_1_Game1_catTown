@@ -2,16 +2,24 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class Main_PMove : MonoBehaviour
 {
+    void CallNextScene ()
+    {
+    SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);
+    }
+
+
     // 플레이어 이동 속도
     private float walkSpeed= 3f;
     
     private float runSpeed = 6f;
     public bool isRunnig = false;
     public bool isStaminaHeal = true; //코루틴 딜레이에서 불 함수를 통한 스태미너 힐 처리 
+    public bool isCaution = true;
 
     public float applySpeed;
 
@@ -20,10 +28,13 @@ public class Main_PMove : MonoBehaviour
 
     //플레이어 체력 변수
 
-    private int hp = 200; //hp = health point
+    private int hp = 10; //hp = health point
 
-    private int maxHp = 200;
+    private int maxHp = 10;
     private int minHp = 0;
+
+    private int hpd = 2;
+    private int hph = 5;
 
     public Slider hpSlider; //ui 머리 위로 감춰둠.
 
@@ -35,15 +46,29 @@ public class Main_PMove : MonoBehaviour
     private int maxSt = 1000;
     private int minSt = -5;
 
-    private int std = 10; // stemina damega
+    private int std = 10; // stemina damege
     private int sth = 5; // stemina heal
 
     public Slider stSlider;
 
     //위험도 변수 제어
 
-    //private int ct = 0; //ct = caution
-    
+    private int ct = 0; //ct = caution
+    float cautionHealthTime = 0.0f;
+
+    private int maxCt = 50;
+    private int minCt = 0;
+
+    private int ctd = 10;
+    private int cth = 5;
+
+    //위험도 및 피격시 ui 이펙트 
+    //public attackP hitEffect;
+
+    public void DamegeAction(int damege)
+    {
+        hp -= hpd;
+    }
 
     //중력, 수직 속도 변수
     float gravity = -20f;
@@ -57,11 +82,22 @@ public class Main_PMove : MonoBehaviour
     // 스크립트 기준 호출
     private void Start()
     {
+
+        CallNextScene();
+        
         //캐릭터 컨트롤러 컴포넌트 받아오기
         cc = GetComponent<CharacterController>();
 
         //속도 초기화
         applySpeed = walkSpeed;
+
+        LoadData();
+
+    }
+
+    void LoadData()
+    {
+
 
     }
 
@@ -80,7 +116,7 @@ public class Main_PMove : MonoBehaviour
     if (Input.GetKey(KeyCode.RightShift) && st > 0 && dir != Vector3.zero) 
         //점프랑 동일한 구조 함수, 달리기 확인에 필요한 dir값의 좌표 이동에 따른 값 변동의 
         {
-            Debug.Log("나는 달릴거야"); //콘솔 내 실행 디버그
+            //Debug.Log("나는 달릴거야"); //콘솔 내 실행 디버그
             isStaminaHeal = false; 
             staminaHealthTime = 0.0f; //스태미나 힐 리셋
 
@@ -126,6 +162,11 @@ public class Main_PMove : MonoBehaviour
 
     }
 
+    if(hp > 0)
+    {
+
+    }
+
     
     if(isStaminaHeal == false) //스태미나 힐 작동 조건문 
     {
@@ -143,6 +184,21 @@ public class Main_PMove : MonoBehaviour
         if(st > 1000) st = 1000;
     }
 
+    if(isCaution == false)
+    {
+        cautionHealthTime += Time.deltaTime;
+        if(cautionHealthTime > 5.0f)
+        {
+            cautionHealthTime = 5.0f;
+            isCaution = true;
+        }
+    }
+
+    if(isCaution)
+    {
+        ct += cth;
+        if(ct > 50) ct = 50;
+    }
     //현재 플레이어 체력 퍼센테이지를 체력바의 Value에 반영
 
     hpSlider.value = (float)hp / (float)maxHp;
@@ -153,4 +209,3 @@ public class Main_PMove : MonoBehaviour
 
     }
 }
-
