@@ -31,13 +31,10 @@ public class Monster : MonoBehaviour
 
     private void Awake()
     {
-        // 초기화
+        // 컴포넌트 가져오기
         navMeshAgent = GetComponent<NavMeshAgent>();
         monsterAnimator = GetComponent<Animator>();
-        // 오디오 소스 컴포넌트 가져오기
         audioSource = GetComponent<AudioSource>();
-        // 발 소리 오디오 클립 설정
-        //audioSource.clip = footstepSound;
         
     }
 
@@ -56,12 +53,12 @@ public class Monster : MonoBehaviour
     // 주기적으로 추적할 대상의 위치를 찾아 경로 갱신
     private IEnumerator UpdatePath()
     {
-        // 살아 있는 동안 무한 루프
         while (true)
-        {
+        {   // 추적 대상이 없을 때
             if (!hasTarget)
             {
-                // 추적 대상이 없을 때 코드
+                // Physics.OverlapSphere(): 주변에 20유닛 크기의 구 내에 있는
+                // whatIsTarget 레이어를 가진 물체를 배열로 반환
                 Collider[] colliders = Physics.OverlapSphere(transform.position, 20f, whatIsTarget);
 
                 // 주변에 플레이어가 있는지 확인
@@ -70,29 +67,28 @@ public class Monster : MonoBehaviour
                     Main_PMove player = colliders[i].GetComponent<Main_PMove>();
                     if (player != null) //&& !player.dead)
                     {
+                        // 추적 대상을 설정
                         targetEntity = player;
                         break;
                     }
                 }
             }
+            // 추적 중인 경우
             else
             {
-                // 추적 중인 경우
+                // 플레이어가 일정 범위 내에 있으면 공격
                 if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2f && !isAttacking)
                 {
-                    // 플레이어가 일정 범위 내에 있으면 공격
                     monsterAnimator.SetBool("isHit", true);
                 }
+                // 일정 범위 내에 플레이어가 없으면 공격을 멈추고 다시 추격
                 else
                 {
-                    // 일정 범위 내에 플레이어가 없으면 공격을 멈추고 다시 추격
                     monsterAnimator.SetBool("isHit", false);
                     navMeshAgent.isStopped = false;
                     navMeshAgent.SetDestination(targetEntity.transform.position);
-              
                 }
             }
-
             // 0.25초 주기로 처리 반복
             yield return new WaitForSeconds(0.25f);
         }
