@@ -10,9 +10,6 @@ public class Monster : MonoBehaviour
     private Animator monsterAnimator; // 애니메이터 컴포넌트
     private bool isAttacking = false; // 공격 중인지 여부
 
-    public AudioClip footstepSound; // 발 소리 오디오 클립
-    private AudioSource audioSource; // 오디오 소스 컴포넌트
-
     // 추적할 대상이 존재하는지 알려주는 프로퍼티
     private bool hasTarget
     {
@@ -34,11 +31,6 @@ public class Monster : MonoBehaviour
         // 초기화
         navMeshAgent = GetComponent<NavMeshAgent>();
         monsterAnimator = GetComponent<Animator>();
-        // 오디오 소스 컴포넌트 가져오기
-        audioSource = GetComponent<AudioSource>();
-        // 발 소리 오디오 클립 설정
-        //audioSource.clip = footstepSound;
-        
     }
 
     void Start()
@@ -89,19 +81,11 @@ public class Monster : MonoBehaviour
                     monsterAnimator.SetBool("isHit", false);
                     navMeshAgent.isStopped = false;
                     navMeshAgent.SetDestination(targetEntity.transform.position);
-              
                 }
             }
 
             // 0.25초 주기로 처리 반복
             yield return new WaitForSeconds(0.25f);
         }
-    }
-
-    // 오디오를 재생하는 함수
-    void PlayAudio()
-    {
-        // 오디오 재생
-        audioSource.Play();
     }
 }
