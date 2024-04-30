@@ -743,6 +743,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4705614124702618, guid: 473537c058b2b4c478082268e7026d93, type: 3}
   m_PrefabInstance: {fileID: 162556371}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &213029329
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 213029331}
+  - component: {fileID: 213029330}
+  m_Layer: 0
+  m_Name: Audio Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &213029330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213029329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b09088a34590caf41af7c669ca202ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backgroundMusic: {fileID: 8300000, guid: ee403a3067a0c476dbd3e34a5f69c4a3, type: 3}
+--- !u!4 &213029331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 213029329}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &244727161
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9686,6 +9731,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2534946749617271136, guid: 1ae9f5be6a6230940a9d563926f3972c, type: 3}
+      propertyPath: footstepSound
+      value: 
+      objectReference: {fileID: 8300000, guid: fb3ab1ffd6b8cb243bdf9c678dfc3c44, type: 3}
+    - target: {fileID: 2534946749617271136, guid: 1ae9f5be6a6230940a9d563926f3972c, type: 3}
       propertyPath: whatIsTarget.m_Bits
       value: 8
       objectReference: {fileID: 0}
@@ -9956,3 +10005,4 @@ SceneRoots:
   - {fileID: 1806021512}
   - {fileID: 669858156351142807}
   - {fileID: 2430105493185111064}
+  - {fileID: 213029331}
