@@ -11,6 +11,7 @@ public class Main_PMove : MonoBehaviour
     
     private float runSpeed = 6f;
     public bool isRunnig = false;
+    public bool isStaminaHeal = true; //코루틴 딜레이에서 불 함수를 통한 스태미너 힐 처리 
 
     public float applySpeed;
 
@@ -19,43 +20,32 @@ public class Main_PMove : MonoBehaviour
 
     //플레이어 체력 변수
 
-    int hp = 200; //hp = health point
+    private int hp = 200; //hp = health point
 
-    public int maxHp = 200;
+    private int maxHp = 200;
     private int minHp = 0;
 
-    public Slider hpSlider;
+    public Slider hpSlider; //ui 머리 위로 감춰둠.
 
     //플레이어 스태미나 변수
 
-    int st = 1000; //st = stemina
+    private int st = 1000; //st = stemina
+    float staminaHealthTime = 0.0f; //스태미너 힐 딜레이를 위한 타임 기본 값
 
-    public int maxSt = 1000;
+    private int maxSt = 1000;
     private int minSt = -5;
 
     private int std = 10; // stemina damega
-    private int sth = 500; // stemina heal
+    private int sth = 5; // stemina heal
 
     public Slider stSlider;
 
-    //딜레이 코루틴
-    IEnumerator DelayDamst()
-        {
-            
-        float seconds = 10.0f;
-        yield return new WaitForSecondsRealtime(seconds);
 
-        }
-        IEnumerator DelayHilst()
-        {
+    //위험도 변수 제어
 
-            float secondsH = 3.0f;
-            yield return new WaitForSecondsRealtime(secondsH);
-            st += sth;
 
-        }
-
-    //public Animator anim; // 넣을수도 있고 아닐 수도 있는 애니메이션 모션
+    //private int ct = 0; //ct = caution
+    
 
     //중력, 수직 속도 변수
     float gravity = -20f;
@@ -87,6 +77,27 @@ public class Main_PMove : MonoBehaviour
         Vector3 dir = new Vector3(h, 0, v);
         dir = dir.normalized;
 
+        //Shift 키 입력에 따른 달리기 제어 조건문 및 스태미너 감소 제어
+
+    if (Input.GetKey(KeyCode.RightShift) && st > 0 && dir != Vector3.zero) 
+        //점프랑 동일한 구조 함수, 달리기 확인에 필요한 dir값의 좌표 이동에 따른 값 변동의 
+        {
+            Debug.Log("나는 달릴거야"); //콘솔 내 실행 디버그
+            isStaminaHeal = false; 
+            staminaHealthTime = 0.0f; //스태미나 힐 리셋
+
+            isRunnig = true;
+            applySpeed = runSpeed;
+            st -= std;
+
+        }
+    else{
+
+        isRunnig = false;
+        applySpeed = walkSpeed;
+
+    }
+
         transform.position += dir * applySpeed * Time.deltaTime;
 
         //메인 카메라 시점 기준 이동
@@ -116,25 +127,22 @@ public class Main_PMove : MonoBehaviour
         isJumping = true;
 
     }
+
     
-    //Shift 키 입력에 따른 달리기 제어 조건문 및 스태미너 감소 제어
-
-    if (Input.GetKey(KeyCode.RightShift) && st > 0 )
+    if(isStaminaHeal == false) //스태미나 힐 작동 조건문 
+    {
+        staminaHealthTime += Time.deltaTime; // 리얼타임 = 프레임타임 변환 코드
+        if(staminaHealthTime > 2.0f)
         {
-            
-            isRunnig = true;
-            applySpeed = runSpeed;
-            st -= std;
-
+            staminaHealthTime = 2.0f;
+            isStaminaHeal = true;
         }
-    else{
+    }
 
-        isRunnig = false;
-        applySpeed = walkSpeed;
-
-        StartCoroutine("DelayDamst");
-        StartCoroutine("DelayHilst");
-
+    if(isStaminaHeal)
+    {
+        st += sth;
+        if(st > 1000) st = 1000;
     }
 
     //현재 플레이어 체력 퍼센테이지를 체력바의 Value에 반영
