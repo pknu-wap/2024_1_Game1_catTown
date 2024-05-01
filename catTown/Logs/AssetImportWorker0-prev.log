@@ -15,7 +15,7 @@ C:/Users/gjsk1/OneDrive/문서/GitHub/2024_1_Game1_catTown/catTown
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-59645
+54103
 Successfully changed project path to: C:/Users/gjsk1/OneDrive/문서/GitHub/2024_1_Game1_catTown/catTown
 C:/Users/gjsk1/OneDrive/문서/GitHub/2024_1_Game1_catTown/catTown
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -49,12 +49,12 @@ C:/Users/gjsk1/OneDrive/문서/GitHub/2024_1_Game1_catTown/catTown
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [19348] Host "[IP] 172.18.206.204 [Port] 0 [Flags] 2 [Guid] 627068144 [EditorId] 627068144 [Version] 1048832 [Id] WindowsEditor(7,Lenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [13200] Host "[IP] 172.18.231.41 [Port] 0 [Flags] 2 [Guid] 2459819787 [EditorId] 2459819787 [Version] 1048832 [Id] WindowsEditor(7,Lenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [19348] Host "[IP] 172.18.206.204 [Port] 0 [Flags] 2 [Guid] 627068144 [EditorId] 627068144 [Version] 1048832 [Id] WindowsEditor(7,Lenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [13200] Host "[IP] 172.18.231.41 [Port] 0 [Flags] 2 [Guid] 2459819787 [EditorId] 2459819787 [Version] 1048832 [Id] WindowsEditor(7,Lenovo) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 15 workers.
-Refreshing native plugins compatible for Editor in 33.85 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.20f1 (61c2feb0970d)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity 2022.3.20f1/Editor/Data/Resources/UnitySubsystems
@@ -70,44 +70,44 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity 2022.3.20f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity 2022.3.20f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Program Files/Unity 2022.3.20f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56824
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56628
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity 2022.3.20f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.008276 seconds.
-- Loaded All Assemblies, in  0.441 seconds
+Registered in 0.007528 seconds.
+- Loaded All Assemblies, in  0.316 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.263 seconds
-Domain Reload Profiling: 702ms
-	BeginReloadAssembly (151ms)
+- Finished resetting the current domain, in  0.231 seconds
+Domain Reload Profiling: 546ms
+	BeginReloadAssembly (106ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (68ms)
-	LoadAllAssembliesAndSetupDomain (167ms)
-		LoadAssemblies (148ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (56ms)
+	LoadAllAssembliesAndSetupDomain (106ms)
+		LoadAssemblies (103ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (165ms)
-			TypeCache.Refresh (164ms)
-				TypeCache.ScanAssembly (152ms)
+		AnalyzeDomain (105ms)
+			TypeCache.Refresh (103ms)
+				TypeCache.ScanAssembly (92ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (263ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (231ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (206ms)
+		SetupLoadedEditorAssemblies (180ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (8ms)
-			SetLoadedEditorAssemblies (8ms)
+			InitializePlatformSupportModulesInManaged (7ms)
+			SetLoadedEditorAssemblies (6ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (2ms)
-			ProcessInitializeOnLoadAttributes (140ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			ProcessInitializeOnLoadAttributes (127ms)
+			ProcessInitializeOnLoadMethodAttributes (39ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -115,83 +115,1981 @@ Domain Reload Profiling: 702ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.926 seconds
-Refreshing native plugins compatible for Editor in 22.73 ms, found 3 plugins.
+- Loaded All Assemblies, in  0.183 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
 Native extension for WindowsStandalone target not found
-Package Manager log level set to [2]
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.799 seconds
-Domain Reload Profiling: 1720ms
-	BeginReloadAssembly (148ms)
+- Finished resetting the current domain, in  0.285 seconds
+Domain Reload Profiling: 467ms
+	BeginReloadAssembly (122ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (5ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (22ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (51ms)
-	LoadAllAssembliesAndSetupDomain (676ms)
-		LoadAssemblies (536ms)
+		CreateAndSetChildDomain (20ms)
+	RebuildCommonClasses (26ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (20ms)
+	LoadAllAssembliesAndSetupDomain (5ms)
+		LoadAssemblies (72ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (227ms)
-			TypeCache.Refresh (198ms)
-				TypeCache.ScanAssembly (180ms)
-			ScanForSourceGeneratedMonoScriptInfo (23ms)
-			ResolveRequiredComponents (5ms)
-	FinalizeReload (800ms)
+		AnalyzeDomain (3ms)
+			TypeCache.Refresh (2ms)
+				TypeCache.ScanAssembly (0ms)
+			ScanForSourceGeneratedMonoScriptInfo (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (286ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (635ms)
+		SetupLoadedEditorAssemblies (178ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (6ms)
+			InitializePlatformSupportModulesInManaged (5ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (88ms)
-			ProcessInitializeOnLoadAttributes (338ms)
-			ProcessInitializeOnLoadMethodAttributes (188ms)
-			AfterProcessingInitializeOnLoad (10ms)
+			BeforeProcessingInitializeOnLoad (22ms)
+			ProcessInitializeOnLoadAttributes (124ms)
+			ProcessInitializeOnLoadMethodAttributes (17ms)
+			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (10ms)
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 seconds
-Refreshing native plugins compatible for Editor in 14.78 ms, found 3 plugins.
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.00 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 4287 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 72 unused Assets / (73.5 KB). Loaded Objects now: 4729.
-Memory consumption went from 150.8 MB to 150.7 MB.
-Total: 7.886100 ms (FindLiveObjects: 0.370400 ms CreateObjectMapping: 0.186900 ms MarkObjects: 7.114200 ms  DeleteObjects: 0.211700 ms)
+Unloading 42 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3 unused Assets / (49.1 KB). Loaded Objects now: 513.
+Memory consumption went from 54.6 MB to 54.5 MB.
+Total: 3.210200 ms (FindLiveObjects: 0.071600 ms CreateObjectMapping: 0.008600 ms MarkObjects: 3.048700 ms  DeleteObjects: 0.080000 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
-  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
-  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:video-codec-MediaFoundation-h265: 746d11721c4dcdbdad8f713fa42b33f4 -> 
+  custom:CustomObjectIndexerAttribute: 6d391050e5a25f67b0a2c618074f2cd9 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:SearchIndexIgnoredProperties: e643bd26f0fe6173181afceb89e7c659 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:AudioImporter_EditorPlatform: d09bf68614088b80899f8185d706f6e7 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 214845.557245 seconds.
-  path: Assets/Nayeong/Script
-  artifactKey: Guid(58cc142ebf117ef468b8c7511f50f149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Nayeong/Script using Guid(58cc142ebf117ef468b8c7511f50f149) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '93770c07fc8aa16569121eb4a047dd35') in 0.003372 seconds
+  Time since last request: 19360.594218 seconds.
+  path: Assets/Junyoung/Animations/Amy@Surprised.fbx
+  artifactKey: Guid(8ac89198993774841a9061905e3a8eee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Junyoung/Animations/Amy@Surprised.fbx using Guid(8ac89198993774841a9061905e3a8eee) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '205e0009ae3663a539239c26db0a243d') in 0.154465 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 135
 ========================================================================
 Received Import Request.
-  Time since last request: 7.689447 seconds.
-  path: Assets/Resources
-  artifactKey: Guid(421391a30b2ecdc47a248c61a7084112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Resources using Guid(421391a30b2ecdc47a248c61a7084112) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '442bfd33f5147900da20757bc95b13c2') in 0.000884 seconds
+  Time since last request: 0.000018 seconds.
+  path: Assets/Junyoung/Models/Tiger/TigerSettings.lighting
+  artifactKey: Guid(a7521a174ee00914cb4c506fda0dd5d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Junyoung/Models/Tiger/TigerSettings.lighting using Guid(a7521a174ee00914cb4c506fda0dd5d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) LightingSettings: switching bake backend from 1 to 0.
+Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '62c9520c0de4c257a79baf9b37be4c73') in 0.046614 seconds
 Number of updated asset objects reloaded before import = 0
-Number of asset objects unloaded after import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Junyoung/Models/Tiger/Walk.fbx
+  artifactKey: Guid(427f72e3e110e5145bf4956336b40f6f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Junyoung/Models/Tiger/Walk.fbx using Guid(427f72e3e110e5145bf4956336b40f6f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4c2fbfdd1746ecba5dcabb218ce34ca2') in 0.227271 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 709
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Hajin/Assets/Materials/Color1.mat
+  artifactKey: Guid(92bdde61e46f7473791be47859e8cf2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Assets/Materials/Color1.mat using Guid(92bdde61e46f7473791be47859e8cf2e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7698438be8290c49c76ac067eb9fde37') in 0.054729 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Hajin/Scenes/shjScene.unity
+  artifactKey: Guid(e689a589ae810594d807dc42b1ce266e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Scenes/shjScene.unity using Guid(e689a589ae810594d807dc42b1ce266e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f9b99ea266a62e5982473444e8e72552') in 0.015452 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Chan/Mine/Example/Example/Lightmap-2_comp_dir.png
+  artifactKey: Guid(71032f55fc10b5842872c2d73303de4d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Example/Example/Lightmap-2_comp_dir.png using Guid(71032f55fc10b5842872c2d73303de4d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9c30a2999db900a65af4beaef35d5ad4') in 0.094663 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Hajin/Assets/Animations/Closing.anim
+  artifactKey: Guid(9e053e2ffce6b43b484e256140a783f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Assets/Animations/Closing.anim using Guid(9e053e2ffce6b43b484e256140a783f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1a75be67e8534f3137442458dc4f5c7b') in 0.039561 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Junyoung/Models/Tiger/sound.fbx
+  artifactKey: Guid(e5b1add7bc31a7f4db37d3603b8f12b0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Junyoung/Models/Tiger/sound.fbx using Guid(e5b1add7bc31a7f4db37d3603b8f12b0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2fe189675d5acf076b56399b22c834f9') in 0.223129 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 713
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Hajin/Assets/Animations/Opening.anim
+  artifactKey: Guid(57076926355a34f0e8e5daf35170e84c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Assets/Animations/Opening.anim using Guid(57076926355a34f0e8e5daf35170e84c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e10a760d3f10f611cab4fadaa9c00bd7') in 0.030743 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000038 seconds.
+  path: Assets/Chan/Mine/Example/Example/LightingData.asset
+  artifactKey: Guid(e350c7cd62b9c9c4aaf91f646c9f811b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Example/Example/LightingData.asset using Guid(e350c7cd62b9c9c4aaf91f646c9f811b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Lighting data asset ‘LightingData’ is incompatible with the current Unity version. Please use Generate Lighting to rebuild the lighting data. Realtime Global Illumination cannot be used until the lighting data is rebuilt.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.Search.AssetIndexer:IndexProperties (int&,string&,bool&)
+UnityEditor.Search.AssetIndexer:IndexDocument (string,bool)
+UnityEditor.Search.SearchIndexEntryImporter:OnImportAsset (UnityEditor.AssetImporters.AssetImportContext)
+UnityEditor.AssetImporters.ScriptedImporter:GenerateAssetData (UnityEditor.AssetImporters.AssetImportContext)
+
+[C:\build\output\unity\unity\Editor\Src\GI\Enlighten\LightingDataAsset.cpp line 417]
+
+Lighting data asset ‘LightingData’ is incompatible with the current Unity version because the scene it was baked for was not serialized. Please use Generate Lighting to rebuild the lighting data, or assign the target scene to the Lighting Data Asset in the inspector.
+UnityEngine.StackTraceUtility:ExtractStackTrace ()
+UnityEditor.Search.AssetIndexer:IndexProperties (int&,string&,bool&)
+UnityEditor.Search.AssetIndexer:IndexDocument (string,bool)
+UnityEditor.Search.SearchIndexEntryImporter:OnImportAsset (UnityEditor.AssetImporters.AssetImportContext)
+UnityEditor.AssetImporters.ScriptedImporter:GenerateAssetData (UnityEditor.AssetImporters.AssetImportContext)
+
+[C:\build\output\unity\unity\Editor\Src\GI\Enlighten\LightingDataAsset.cpp line 424]
+
+Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd8e1a4c8a8d5a175e0963820c7d9da10') in 0.024702 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000073 seconds.
+  path: Assets/Hyeon/Script/Main_PMove.cs
+  artifactKey: Guid(15607dbd3bd4c8b42856ebda9b636956) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hyeon/Script/Main_PMove.cs using Guid(15607dbd3bd4c8b42856ebda9b636956) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1ebc26104acf8c05b915605fe3010bdf') in 0.015725 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Junyoung/Models/Tiger/hit.fbx
+  artifactKey: Guid(3ba44afe9035c5e409c30bae1ec51c36) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Junyoung/Models/Tiger/hit.fbx using Guid(3ba44afe9035c5e409c30bae1ec51c36) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '53499189cec7957770134b82e9321c6f') in 0.224205 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 713
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Chan/Mine/Models/Props/Materials/Pickaxe_MetallicSmoothness.png
+  artifactKey: Guid(a74b75507896cf140b9295ae5b7d0e93) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Props/Materials/Pickaxe_MetallicSmoothness.png using Guid(a74b75507896cf140b9295ae5b7d0e93) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cd97c64a7237284165e83264366083a7') in 0.038041 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Chan/Mine/Prefabs/Props/Ladder.prefab
+  artifactKey: Guid(10f81f7f1e6523b4fa0b5b6f0ea61f4c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Prefabs/Props/Ladder.prefab using Guid(10f81f7f1e6523b4fa0b5b6f0ea61f4c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2d87303d92d8c9d217d7b181559555d5') in 0.033594 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Chan/Mine/Models/Props/Materials/Pickaxe.mat
+  artifactKey: Guid(a8b3705a58187ac4c94fd96c42d8bdf5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Props/Materials/Pickaxe.mat using Guid(a8b3705a58187ac4c94fd96c42d8bdf5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '81a9e093005df73d6380aacb15bbce1f') in 0.072969 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Chan/Mine/Models/Rocks/Materials/OreBlue.mat
+  artifactKey: Guid(f78440d871ecd4643bb82c3cbc334e4f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Rocks/Materials/OreBlue.mat using Guid(f78440d871ecd4643bb82c3cbc334e4f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '248b1aa8d8ee7b7e3365ca81957ce396') in 0.027084 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Scenes/DemoSettings.lighting
+  artifactKey: Guid(a2f6163588e6e074996614a2b15b04b7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Scenes/DemoSettings.lighting using Guid(a2f6163588e6e074996614a2b15b04b7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '06128d241ed1a4c4124e63e24e55c069') in 0.031297 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Chan/Mine/Prefabs/Rocks/OreRed.prefab
+  artifactKey: Guid(a957dc986069ca3409a5fb1599a3cad8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Prefabs/Rocks/OreRed.prefab using Guid(a957dc986069ca3409a5fb1599a3cad8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7b5875e98ae9aea07b58cb3aec843e70') in 0.028255 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 15
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Scenes/FPS Day.asset
+  artifactKey: Guid(e3182bcc24e537a4cabcb81980a6a669) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Scenes/FPS Day.asset using Guid(e3182bcc24e537a4cabcb81980a6a669) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6a4c28f7f85f48a1fe50abbb57ed80e8') in 0.025422 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000064 seconds.
+  path: Assets/Chan/Mine/Prefabs/Props/Pickaxe.prefab
+  artifactKey: Guid(7a4e041ab060e0043a131d10421bdfda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Prefabs/Props/Pickaxe.prefab using Guid(7a4e041ab060e0043a131d10421bdfda) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c1ea3495493dae8d04be70ff7c45cbf9') in 0.035005 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Chan/Mine/Prefabs/Base/Tunnel3.prefab
+  artifactKey: Guid(074e9fd3c543c144e972e97dff953b88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Prefabs/Base/Tunnel3.prefab using Guid(074e9fd3c543c144e972e97dff953b88) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3c3619a0a6edced27f08fb2ea852d36d') in 0.033558 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Chan/Mine/Models/Props/Materials/Pickaxe_AlbedoTransparency.png
+  artifactKey: Guid(7a538c8d5a7f4a541b174a0f47232036) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Props/Materials/Pickaxe_AlbedoTransparency.png using Guid(7a538c8d5a7f4a541b174a0f47232036) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd56446930057ff237c59303da28e6c2f') in 0.025187 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Chan/Mine/Models/Base/Materials/Stone_AlbedoSmoothness.png
+  artifactKey: Guid(1560545bdc4db1847a4e695ff7e956cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Base/Materials/Stone_AlbedoSmoothness.png using Guid(1560545bdc4db1847a4e695ff7e956cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '83e4662a6406966e6b5988e9b81df70d') in 0.045720 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000061 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Scenes/Prefab Doors.pdf
+  artifactKey: Guid(a9b8acaf2552b6c45a090980e69ceae1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Scenes/Prefab Doors.pdf using Guid(a9b8acaf2552b6c45a090980e69ceae1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd878083dd5026df5de38092c7db2408c') in 0.010122 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Chan/Mine/Prefabs/Props/Support2.prefab
+  artifactKey: Guid(b53586081307f1543bb0315828b57953) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Prefabs/Props/Support2.prefab using Guid(b53586081307f1543bb0315828b57953) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '00ee0180f5e008232e88e143a46d3830') in 0.028191 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Chan/Mine/Models/Base/Materials/Stone_Normal.png
+  artifactKey: Guid(49010a7620ab5404aadab468478fb672) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Base/Materials/Stone_Normal.png using Guid(49010a7620ab5404aadab468478fb672) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'efcda6c5d8352743ad972be6ae5bf712') in 0.040758 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Scenes/BPS Apartment Kit.txt
+  artifactKey: Guid(de9733bf19fc523468c159b6fa49c2b3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Scenes/BPS Apartment Kit.txt using Guid(de9733bf19fc523468c159b6fa49c2b3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c0f5e015edee1be38c0bb934cf8f3fd3') in 0.019925 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Chan/Mine/Models/Props/Materials/Lantern_AlbedoTransparency.png
+  artifactKey: Guid(f2b8b87b82de71446aee8bfe22b05b7f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Props/Materials/Lantern_AlbedoTransparency.png using Guid(f2b8b87b82de71446aee8bfe22b05b7f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '94f478eb7eadfc66778d1072cbf59587') in 0.025794 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000035 seconds.
+  path: Assets/Nayeong/Script/Player_Ctrl.cs
+  artifactKey: Guid(572b7aa86993817469f9b9e6481cbb3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Nayeong/Script/Player_Ctrl.cs using Guid(572b7aa86993817469f9b9e6481cbb3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '950e298030b2476416e2297c22f2811d') in 0.014757 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Hajin/Scenes/ApartmentScene.unity
+  artifactKey: Guid(16d21623ce7694564b7f9b0f4ae219b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Scenes/ApartmentScene.unity using Guid(16d21623ce7694564b7f9b0f4ae219b8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0036eb46891890f437a2f56ffa637bd5') in 0.013576 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000083 seconds.
+  path: Assets/Chan/Mine/Effects/red ore reflection.png
+  artifactKey: Guid(8058622f3252ae24f8635bb138d7569e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Effects/red ore reflection.png using Guid(8058622f3252ae24f8635bb138d7569e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'da5aea4ce706b569c5bfb6a18a781117') in 0.033994 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Chan/Mine/Example/Example/Lightmap-4_comp_light.exr
+  artifactKey: Guid(ca6d007122e617c40842623ec97963f7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Example/Example/Lightmap-4_comp_light.exr using Guid(ca6d007122e617c40842623ec97963f7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'bb096a7479733067e01f0a7186cb9ee7') in 0.123739 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000132 seconds.
+  path: Assets/Chan/Mine/Example/Example/Lightmap-5_comp_light.exr
+  artifactKey: Guid(c9cd6cd8b7bd6014f9ef1115ed83d250) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Example/Example/Lightmap-5_comp_light.exr using Guid(c9cd6cd8b7bd6014f9ef1115ed83d250) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '15537fd6bed3c609a2bf2ef5ed2aaa7d') in 0.083447 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000062 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Lamp 02 Table.mat
+  artifactKey: Guid(ef49c0bd94883b4498c46a5c772544b3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Lamp 02 Table.mat using Guid(ef49c0bd94883b4498c46a5c772544b3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'aaf1898c75062083435e9de0c6cfd79c') in 0.033861 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Blender_01_A.mat
+  artifactKey: Guid(ea4d64c9747ed7b479f9198da3e78cd7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Blender_01_A.mat using Guid(ea4d64c9747ed7b479f9198da3e78cd7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b9a33d16741120c0ca64a2d546e0b9e3') in 0.032639 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Legacy/Large Floor.prefab
+  artifactKey: Guid(ee987da6efab07d49bc9fc59e287f08b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Legacy/Large Floor.prefab using Guid(ee987da6efab07d49bc9fc59e287f08b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dd6f1255b7b196a6f2acb0a5d14bc226') in 0.022458 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 249
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Fire/Torch Flame.prefab
+  artifactKey: Guid(65b0d7b3c17d2854f87e4c8416f798fb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Fire/Torch Flame.prefab using Guid(65b0d7b3c17d2854f87e4c8416f798fb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5f3c3c052458d70b12dd788958f6b496') in 0.076430 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Chessboard.mat
+  artifactKey: Guid(acb2ae4532d2c0c4a827a97b50b5c353) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Chessboard.mat using Guid(acb2ae4532d2c0c4a827a97b50b5c353) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c66724f66f682db6e9ce38eb1b3bdb12') in 0.032067 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Chan/Mine/Models/Rocks/Materials/Rock2_AlbedoSmoothness.png
+  artifactKey: Guid(2a26642adbd43da49892ee8b009cb655) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Rocks/Materials/Rock2_AlbedoSmoothness.png using Guid(2a26642adbd43da49892ee8b009cb655) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '146c551d1a89abe6eeac5837d53be2bf') in 0.038135 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000072 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Canvas_Nat_03-04.mat
+  artifactKey: Guid(76a081e3e3664a443af0a878387b200e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Canvas_Nat_03-04.mat using Guid(76a081e3e3664a443af0a878387b200e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '25869833b1a747d5a71c8cd6e81a8ca2') in 0.039094 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Junyoung/Models/Shadowlop/_Animations/Shadowlop/Shadowlop_GETDAMAGE.fbx
+  artifactKey: Guid(aa2d4561696a2b64e83e5e32e08de3c1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Junyoung/Models/Shadowlop/_Animations/Shadowlop/Shadowlop_GETDAMAGE.fbx using Guid(aa2d4561696a2b64e83e5e32e08de3c1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a66700d47a6296b3198cb352cfd7b028') in 0.033447 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 153
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Canvas_Nat_06-07.mat
+  artifactKey: Guid(fad41da6b0b4a274ea1daeb98b3d6b9b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Canvas_Nat_06-07.mat using Guid(fad41da6b0b4a274ea1daeb98b3d6b9b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ce4b25b75d9df9c7049c148b4a6c3a41') in 0.035672 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Base Scene/BA_Simple Cursor.prefab
+  artifactKey: Guid(f29f229ca7700404abfeb5f8c1859d62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Base Scene/BA_Simple Cursor.prefab using Guid(f29f229ca7700404abfeb5f8c1859d62) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cb2fa9be62b16355c3cc4e0724bed057') in 0.026973 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 11
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Models/Painting.fbx
+  artifactKey: Guid(27b4045e9d44110428f91ffc9297b5f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Models/Painting.fbx using Guid(27b4045e9d44110428f91ffc9297b5f1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '23794f8c23c1f55ac4b82f8367f0ab61') in 0.022353 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Models/wine thin glass.fbx
+  artifactKey: Guid(09cb81f6ddeeb3046979371d041373b5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Models/wine thin glass.fbx using Guid(09cb81f6ddeeb3046979371d041373b5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8695fedb4e4c358a24673dff9b65a7ca') in 0.025750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Models/Apt_Furniture_01.fbx
+  artifactKey: Guid(7a1dd57bd8b6ca44cbf5f922801b2975) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Models/Apt_Furniture_01.fbx using Guid(7a1dd57bd8b6ca44cbf5f922801b2975) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7eebb0b873b8483fd951b724a2fbcb70') in 0.066617 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 379
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/DoorMat_01.mat
+  artifactKey: Guid(cca629179fca3a14ab08d0f1cc0ecce3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/DoorMat_01.mat using Guid(cca629179fca3a14ab08d0f1cc0ecce3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8d25f218f3ebf7d8a67adc8e93362b78') in 0.040255 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Fire/Candle Flame.prefab
+  artifactKey: Guid(76ba1ca0f3bd5de408854a87c409fe9c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Fire/Candle Flame.prefab using Guid(76ba1ca0f3bd5de408854a87c409fe9c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0a2f6f0652f4ce8c18be62747bfc695f') in 0.062488 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Legacy/office chair.prefab
+  artifactKey: Guid(99a0f1488ea2c1d47b7e9f7190961e40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Legacy/office chair.prefab using Guid(99a0f1488ea2c1d47b7e9f7190961e40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fc23deb14cb6e7c2892615dbd3b4734a') in 0.017177 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 48
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Interior Exterior/Ext_Apt_01.mat
+  artifactKey: Guid(05ab6237a2436a34bb31bebcb35225c8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Interior Exterior/Ext_Apt_01.mat using Guid(05ab6237a2436a34bb31bebcb35225c8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4977bc13b4e621e88e6d923735d67590') in 0.081027 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/TableFlip/FlipR.controller
+  artifactKey: Guid(eb2c5b09abb74004bb912dbee575aca1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/TableFlip/FlipR.controller using Guid(eb2c5b09abb74004bb912dbee575aca1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a6572565b2d1beb18d8ee07838b78a64') in 0.047050 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/BRGlassDoorClose.anim
+  artifactKey: Guid(59bf63e47d9f08e47a9fd86d44895e45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/BRGlassDoorClose.anim using Guid(59bf63e47d9f08e47a9fd86d44895e45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cb208bb49f9281e8c27fd0e33609e594') in 0.023206 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/ScreenMonitor_01.mat
+  artifactKey: Guid(be58df235057e3040b40406a31bcbf58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/ScreenMonitor_01.mat using Guid(be58df235057e3040b40406a31bcbf58) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f017e6cea75ef80e3876192845d0b0a1') in 0.038065 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/WallArt_Apt_01.mat
+  artifactKey: Guid(2078401f2a19e7e4aa88ce0df5064d71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/WallArt_Apt_01.mat using Guid(2078401f2a19e7e4aa88ce0df5064d71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '63e45aaa10b612487f619ac9af5795ff') in 0.031167 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/OpeningSlide.anim
+  artifactKey: Guid(e200fc53947c71a429e5e90215956f0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/OpeningSlide.anim using Guid(e200fc53947c71a429e5e90215956f0d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6582ac06ce38a0eec9e5752ef2f71348') in 0.030268 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Brushed Metal_Chrome.mat
+  artifactKey: Guid(4580dd49916b3c542b97109c8ca425f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Brushed Metal_Chrome.mat using Guid(4580dd49916b3c542b97109c8ca425f3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2e21b11a6b436bd96a98b4f55ec8eb88') in 0.028503 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/RedLight_01.mat
+  artifactKey: Guid(4bb7c435fb1657c42a9ec5ad46b7100a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/RedLight_01.mat using Guid(4bb7c435fb1657c42a9ec5ad46b7100a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0e757993b8e9d6aa348caa5b29cc25ee') in 0.023971 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000070 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Rustic Wood.mat
+  artifactKey: Guid(a5fe6931b64e0de469d6a1b5b2a23513) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Rustic Wood.mat using Guid(a5fe6931b64e0de469d6a1b5b2a23513) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5441418f9530c97592836478b439e87f') in 0.042329 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Vase_Apt_01.mat
+  artifactKey: Guid(7504f6d8f16670241856bdd867609ccc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Vase_Apt_01.mat using Guid(7504f6d8f16670241856bdd867609ccc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0bb8429304cd765a69ba71fb4159db4a') in 0.048840 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Shiny Metal_04.mat
+  artifactKey: Guid(48852ed51db63954399f7facee033ea4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Shiny Metal_04.mat using Guid(48852ed51db63954399f7facee033ea4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '282c152d1ff861f291755e37964c6937') in 0.028608 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Burlap_01.mat
+  artifactKey: Guid(4c3e122e15d5d984083bffaa2d094ff5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Burlap_01.mat using Guid(4c3e122e15d5d984083bffaa2d094ff5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'db3d080b73eedda34017d8e4f520eb63') in 0.041782 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Red Wine.mat
+  artifactKey: Guid(4395ee91f3c8a8245ac3acea11839b80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Red Wine.mat using Guid(4395ee91f3c8a8245ac3acea11839b80) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cfd7cfeb005d426e915ffc067ab8aa3d') in 0.026963 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/TableFlip/FlipL.controller
+  artifactKey: Guid(44a6083341b144c4f9f33731e8b8d0aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/TableFlip/FlipL.controller using Guid(44a6083341b144c4f9f33731e8b8d0aa) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '04f2f374fb260490ccf51ad0c0ea1b47') in 0.042277 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/White Wood.mat
+  artifactKey: Guid(fb7d7a07b2942ca4cb6a6c38d807c8ea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/White Wood.mat using Guid(fb7d7a07b2942ca4cb6a6c38d807c8ea) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2b84477fe9c105abe81d3e777ab6c8d1') in 0.042326 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/porc_01.mat
+  artifactKey: Guid(691850c8ec9fa6d44ae662bfdbe6c53a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/porc_01.mat using Guid(691850c8ec9fa6d44ae662bfdbe6c53a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '77e693384a7da737af5d72a727826f8f') in 0.025830 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/BRGlassDoor.controller
+  artifactKey: Guid(5c81701154f36c94698562dbaf42d6fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/BRGlassDoor.controller using Guid(5c81701154f36c94698562dbaf42d6fc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cb277530dfdfd4c03f223f161b1197e2') in 0.023799 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/BR_Tile_02.mat
+  artifactKey: Guid(10c8542d4324afc4bb4d61e51e00800e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/BR_Tile_02.mat using Guid(10c8542d4324afc4bb4d61e51e00800e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fb3691356e07b064e23d787377253079') in 0.033519 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Plastic_01.mat
+  artifactKey: Guid(9a0f81c2a61d0294db7e1b3a3eabad0c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Plastic_01.mat using Guid(9a0f81c2a61d0294db7e1b3a3eabad0c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '45cca143098bb496a6f40b9e2172aee5') in 0.040258 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Models/Apt_Kit_01.fbx
+  artifactKey: Guid(cd0bf29c9c9af6f4098b74076d25f0cd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Models/Apt_Kit_01.fbx using Guid(cd0bf29c9c9af6f4098b74076d25f0cd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f59a685bad21763d9d01f68ad7101f65') in 0.031446 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 99
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Lamp 02 Ceiling Shade.png
+  artifactKey: Guid(36f3754f68178f149b9d58c226e14abb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Lamp 02 Ceiling Shade.png using Guid(36f3754f68178f149b9d58c226e14abb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fbbd9074d97e215a7ee2dac4c60351c5') in 0.025927 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Chan/Mine/Example/Example/Lightmap-4_comp_dir.png
+  artifactKey: Guid(ad645280a55e5904db29b23e8790182d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Example/Example/Lightmap-4_comp_dir.png using Guid(ad645280a55e5904db29b23e8790182d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dc276c551d88aea135363265709a40a8') in 0.048472 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Interior Exterior/Ext_Apt_WallFloor_01_N.png
+  artifactKey: Guid(0291337013d67bd4ca83920be0c11749) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Interior Exterior/Ext_Apt_WallFloor_01_N.png using Guid(0291337013d67bd4ca83920be0c11749) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7db30827c2ef94dfff0386aa5cf3a09e') in 0.039571 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Colors_apt.png
+  artifactKey: Guid(a7a36494f99a45a4ba843833f39659a0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Colors_apt.png using Guid(a7a36494f99a45a4ba843833f39659a0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a39dc888fafa64b9353ebf6ab3906ed1') in 0.023600 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/keyboard_01_N.png
+  artifactKey: Guid(37f203c6a42b6b54ea38024733ee10e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/keyboard_01_N.png using Guid(37f203c6a42b6b54ea38024733ee10e5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e1303fe7e32a1e46e92bc78714614f78') in 0.025884 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Windows/opencloseWindowApt.cs
+  artifactKey: Guid(ea52830e8c3e35741a451b12277dfde1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Windows/opencloseWindowApt.cs using Guid(ea52830e8c3e35741a451b12277dfde1) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'fb00286d9295aade2248f5b9cbd988ce') in 0.014495 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Interior Exterior/Int_Apt_03_N.png
+  artifactKey: Guid(3fe628b28bc9f1840a32714ccf063eb3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Interior Exterior/Int_Apt_03_N.png using Guid(3fe628b28bc9f1840a32714ccf063eb3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f65512d70c7fcff9d3d80a5422a6bc65') in 0.026388 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000080 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Lamp 02 Table shade - Normal.png
+  artifactKey: Guid(fe2b946fe11b665428ee3a7b3f07f29e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Lamp 02 Table shade - Normal.png using Guid(fe2b946fe11b665428ee3a7b3f07f29e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '389f7ffce711f4d6a88c0fd99ead66b7') in 0.033424 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000050 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Lamp 02 Ceiling.png
+  artifactKey: Guid(505ba2c4c448cba4a818067958271639) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Lamp 02 Ceiling.png using Guid(505ba2c4c448cba4a818067958271639) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2e4f6662a830c9c7de08a4bf10815649') in 0.026141 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Toothbrush_01_A.png
+  artifactKey: Guid(4ab40b3a4ff0b7a48a1090e232aa80b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Toothbrush_01_A.png using Guid(4ab40b3a4ff0b7a48a1090e232aa80b6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '560822f6ff3dee10d9c7722e7af677f0') in 0.030076 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000040 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Controller_01_A.png
+  artifactKey: Guid(86060e917dc55a7448b8935812c62bb4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Controller_01_A.png using Guid(86060e917dc55a7448b8935812c62bb4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4c0d2a39d43c5d4e810bed679bbc24c1') in 0.026257 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Controller Screen_02_A.png
+  artifactKey: Guid(cde7f6eb91781a7469564a0d4f32910d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Controller Screen_02_A.png using Guid(cde7f6eb91781a7469564a0d4f32910d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a1200d910e4755b734b9e7c5c0bb1a5d') in 0.023860 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Int_Apt_03_A.png
+  artifactKey: Guid(151c8bea4e39c94459a318ab8efb5fdd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Int_Apt_03_A.png using Guid(151c8bea4e39c94459a318ab8efb5fdd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e2a724cb30f2823340c583d774d29a16') in 0.038118 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Interior Exterior/Int_Apt_01_H.png
+  artifactKey: Guid(d891eeff6af0d2f41acb05df08dcaaa9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Interior Exterior/Int_Apt_01_H.png using Guid(d891eeff6af0d2f41acb05df08dcaaa9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd6eea9a3fd6f2c5c482b8a4480f8f8c9') in 0.030122 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/TableFlip/Lup.anim
+  artifactKey: Guid(b6e07fe1ec87b3e45a099812a5828e1f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/TableFlip/Lup.anim using Guid(b6e07fe1ec87b3e45a099812a5828e1f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c442280f343f203abe2df20a1e43e05e') in 0.014968 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Canvas_Nat_01_02.png
+  artifactKey: Guid(6a8bc2eb1d26b8148adab82af7aac7f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Canvas_Nat_01_02.png using Guid(6a8bc2eb1d26b8148adab82af7aac7f2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '205fee5bb1bf15592e9a61b055fc12a6') in 0.025833 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000082 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/opencloseSlide.cs
+  artifactKey: Guid(770aee30421368f4899e57b35481b2f8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/opencloseSlide.cs using Guid(770aee30421368f4899e57b35481b2f8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9fa7c8073a195384754f3771158e4805') in 0.012380 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000049 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/openandcloseSlide.controller
+  artifactKey: Guid(b69a299cbf4579446b0990e8d3a17ff9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Scripts & Animation/Slide/openandcloseSlide.controller using Guid(b69a299cbf4579446b0990e8d3a17ff9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2ac854427014a65ce785274568498858') in 0.022401 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Chan/Mine/Models/Rocks/Materials/Rock2_Normal.png
+  artifactKey: Guid(c44ffcb66c0add0438b4e29608c16eed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Rocks/Materials/Rock2_Normal.png using Guid(c44ffcb66c0add0438b4e29608c16eed) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f05efbf7a64c3bb02ea14caff8b726f5') in 0.027704 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Fabric_01_Blue.mat
+  artifactKey: Guid(0e43f5a20c0c0184da573df09c6c1d40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Surface/Fabric_01_Blue.mat using Guid(0e43f5a20c0c0184da573df09c6c1d40) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2b5843b910326ef298e86b1ba41e24ce') in 0.046928 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 5
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/Fabric_01_A.png
+  artifactKey: Guid(e9783abdcac23084985c08e4d4dade3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/Fabric_01_A.png using Guid(e9783abdcac23084985c08e4d4dade3b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a5d65f03daa61f89d37f8d56b47ef626') in 0.025794 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/CT_Marble_01_A.png
+  artifactKey: Guid(8bda7c52bef951a48a04b29d6d730922) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/CT_Marble_01_A.png using Guid(8bda7c52bef951a48a04b29d6d730922) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e9b23a3dacdf4487ba999860fca605ee') in 0.025313 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Misc/Bench_Apt_02.prefab
+  artifactKey: Guid(843e4058e4b291d44bc18a16bdfae4a2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Misc/Bench_Apt_02.prefab using Guid(843e4058e4b291d44bc18a16bdfae4a2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '07d30d0f13876eaa4cf96988edd3b6ae') in 0.024614 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/BR_Tile_01_N.png
+  artifactKey: Guid(888976efb2fe9a643bb905012d649c04) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/BR_Tile_01_N.png using Guid(888976efb2fe9a643bb905012d649c04) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8f2edd4a7b2a85bd6e9bc330fd82b3b7') in 0.029077 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Int into Ext/IntExt_apt_DoorFrame_L_01_01.prefab
+  artifactKey: Guid(0c61fe183d6f98d42a9b0250ecf21842) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Int into Ext/IntExt_apt_DoorFrame_L_01_01.prefab using Guid(0c61fe183d6f98d42a9b0250ecf21842) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1d794b8d652b247caecad2bfee60027e') in 0.027527 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 21
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Living Room/Table_Coffee_01.prefab
+  artifactKey: Guid(8c62e0f64b2956748ab5f5ece60bc90c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Living Room/Table_Coffee_01.prefab using Guid(8c62e0f64b2956748ab5f5ece60bc90c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7f364753a50530ee5faeb6691a8537a3') in 0.021316 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/White Wood.png
+  artifactKey: Guid(82825fa1dbf49564796bb87fafd54ed0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/White Wood.png using Guid(82825fa1dbf49564796bb87fafd54ed0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9eaf24eaccea5f888264f23346ad5202') in 0.026385 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000056 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/Plastic_01_N.png
+  artifactKey: Guid(df5c52a1546418346bff1558b601f6a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/Plastic_01_N.png using Guid(df5c52a1546418346bff1558b601f6a5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e655db4b4b54dc9af05daaa6fcbdaf92') in 0.028327 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Living Room/Sofa_Apt_01.prefab
+  artifactKey: Guid(d46fa1eeedbcb0e41b8c735b2594b434) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Living Room/Sofa_Apt_01.prefab using Guid(d46fa1eeedbcb0e41b8c735b2594b434) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6fbe177820766d2d74b2cd2e07b012bf') in 0.025443 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 14
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Living Room/Chair_Apt_01.prefab
+  artifactKey: Guid(29eb9cdec523f4944b46fcfae81dc9c8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Living Room/Chair_Apt_01.prefab using Guid(29eb9cdec523f4944b46fcfae81dc9c8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ebfe16bd241f44ef51b4f9efbbe6d033') in 0.024663 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/BrushedMetal_M.png
+  artifactKey: Guid(7d8b61015f4f2cc40a1c32a2791bfa3d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/BrushedMetal_M.png using Guid(7d8b61015f4f2cc40a1c32a2791bfa3d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '19e00998d4ee2c31336e93417b8ac4a1') in 0.036354 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Int into Ext/IntExt_apt_01_03.prefab
+  artifactKey: Guid(fd89e5fd063bbe449bfd219cac1ec948) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Int into Ext/IntExt_apt_01_03.prefab using Guid(fd89e5fd063bbe449bfd219cac1ec948) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c560e639da73dad3a27036766f52b575') in 0.024084 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Living Room/Table_Side_Apt_01.prefab
+  artifactKey: Guid(355f0f3f8c2463f4d8bed401784f063f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Living Room/Table_Side_Apt_01.prefab using Guid(355f0f3f8c2463f4d8bed401784f063f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '32ee1cc7752f62997640add43a9d5ba8') in 0.025518 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 29
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/Marble_Dark_01_M.png
+  artifactKey: Guid(0db03cdc963c4aa40ac6eb1f42684935) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/Marble_Dark_01_M.png using Guid(0db03cdc963c4aa40ac6eb1f42684935) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9ddd52a7e399c41902c5109513bd5176') in 0.033393 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000130 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/White Wood_normal.png
+  artifactKey: Guid(aa20464592754c2418b9144bff0d1ff6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/White Wood_normal.png using Guid(aa20464592754c2418b9144bff0d1ff6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ea150370c7fcd24d1cd6019aac284a09') in 0.024206 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/CastIron_H.png
+  artifactKey: Guid(f3243849f3d44224597bc618e578d293) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/CastIron_H.png using Guid(f3243849f3d44224597bc618e578d293) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '60156b25f20aed211a65fc11b6bb83d0') in 0.024560 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000039 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/BrushedMetal_N.png
+  artifactKey: Guid(9c068687252a67747a8ff9e098cbf47b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/BrushedMetal_N.png using Guid(9c068687252a67747a8ff9e098cbf47b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7f64396a94909c350e64d915d8604cd2') in 0.025845 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/CT_Marble_01_N.png
+  artifactKey: Guid(c17c63007b0781242b9a53c53f5a2102) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/CT_Marble_01_N.png using Guid(c17c63007b0781242b9a53c53f5a2102) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '22ee89fad31ae469621293ec8db03464') in 0.024774 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Bedroom/Table_End_02.prefab
+  artifactKey: Guid(28f3f85a3fb032b4cbee99b8dd59df44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Bedroom/Table_End_02.prefab using Guid(28f3f85a3fb032b4cbee99b8dd59df44) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '68e8877724e72465601c1a2e63f63026') in 0.024633 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 24
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Chan/Mine/Models/Base/RampUp.fbx
+  artifactKey: Guid(426f785430a598746a26494eeef35d53) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Base/RampUp.fbx using Guid(426f785430a598746a26494eeef35d53) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c99cdb30ec84ba1096cf6ecdeaff77c7') in 0.018695 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Electronics/GameController_Apt_01_01.prefab
+  artifactKey: Guid(94e4c3350f88fe94ba5e156103abcf1c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Electronics/GameController_Apt_01_01.prefab using Guid(94e4c3350f88fe94ba5e156103abcf1c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e3dee03b82dc09f5d64f0fac755440bb') in 0.029290 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 65
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Wine Cabinet/BarCabinet_Apt_02_Tower.prefab
+  artifactKey: Guid(50f7395fbbcbfff47b55a68bd9ca5773) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Wine Cabinet/BarCabinet_Apt_02_Tower.prefab using Guid(50f7395fbbcbfff47b55a68bd9ca5773) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6e75d01a1c5736773f42d71196e7786a') in 0.023340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 46
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Electronics/KeyBoard_Apt_01.prefab
+  artifactKey: Guid(cf41c3b90dc3ff44c8efe4be6ce3494c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Electronics/KeyBoard_Apt_01.prefab using Guid(cf41c3b90dc3ff44c8efe4be6ce3494c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7ff24d4f65dab16d5d8bc9dfde6f35f9') in 0.016994 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Wine Cabinet/BarCabinet_Apt_02_CenterTower.prefab
+  artifactKey: Guid(f0f8347ddc1d5ed4bb8d2379f9008300) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Wine Cabinet/BarCabinet_Apt_02_CenterTower.prefab using Guid(f0f8347ddc1d5ed4bb8d2379f9008300) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8ad7e51ddd3f711ff36458e16a944d27') in 0.025897 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 98
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Lamp_Ceiling_Apt_05.prefab
+  artifactKey: Guid(36dee4e097ce701479331df2321c1de3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Lamp_Ceiling_Apt_05.prefab using Guid(36dee4e097ce701479331df2321c1de3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4894687d2b3361bd66ed8223793822ba') in 0.023604 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 12
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Lamp_Floor_Apt_01.prefab
+  artifactKey: Guid(4850c514825283749bdc56155d7559a9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Lamp_Floor_Apt_01.prefab using Guid(4850c514825283749bdc56155d7559a9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7ef1784d74cdcc2d697f2881ac5fd475') in 0.024557 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Lamp_Ceiling_Apt_03.prefab
+  artifactKey: Guid(f920163421f537643a94fbbfe25244f9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Lamp_Ceiling_Apt_03.prefab using Guid(f920163421f537643a94fbbfe25244f9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3505bba788b908255ed89606e0bf2f50') in 0.023709 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Sculptures/Mech_apt_01.prefab
+  artifactKey: Guid(2d6f3b929468cea46a733cd9fe79f4c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Sculptures/Mech_apt_01.prefab using Guid(2d6f3b929468cea46a733cd9fe79f4c9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2ffd6539d7d0ca15e87e9491ad38b70b') in 0.023972 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 44
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Lamp_Ceiling_Apt_02.prefab
+  artifactKey: Guid(283fe20ffc8ff164080c612ba8cb7b86) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Lamp_Ceiling_Apt_02.prefab using Guid(283fe20ffc8ff164080c612ba8cb7b86) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9a5890ec424eb01f72503c6eb86c0dc0') in 0.024716 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Bathroom/Toothbrush_01.prefab
+  artifactKey: Guid(4df090b3acce5624794706f81bcff9b5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Bathroom/Toothbrush_01.prefab using Guid(4df090b3acce5624794706f81bcff9b5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '42ac07e0148c69fbb26ca36a787ffad6') in 0.023575 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Art/WallArt_Apt_03.prefab
+  artifactKey: Guid(28452da629c654043bf2718da2d8add6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Art/WallArt_Apt_03.prefab using Guid(28452da629c654043bf2718da2d8add6) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e80a3340de2401f336af19b89f82a4a7') in 0.027526 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 17
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Art/Canvas_Nat_02.prefab
+  artifactKey: Guid(4d476d9fee396a74db28e7095af9245d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Art/Canvas_Nat_02.prefab using Guid(4d476d9fee396a74db28e7095af9245d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'df06584b7c82373b1fcd0de5105680fb') in 0.024976 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Bathroom/Shower_Handel_01.prefab
+  artifactKey: Guid(2c53d7677acbaf34b81c7da75f0544ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Bathroom/Shower_Handel_01.prefab using Guid(2c53d7677acbaf34b81c7da75f0544ff) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '175fbe32e771bb7183b2b3827d3b9d61') in 0.017330 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Kitchen/CoffeeMaker_Apt_01.prefab
+  artifactKey: Guid(46bf299537dbcae4cbccff6784223305) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Kitchen/CoffeeMaker_Apt_01.prefab using Guid(46bf299537dbcae4cbccff6784223305) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '30870f73f59ffdade7c8269337307ccd') in 0.020913 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 38
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Electronics/SS_Stand_01.prefab
+  artifactKey: Guid(70c062c3a7500e7479c9797b6190948e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Electronics/SS_Stand_01.prefab using Guid(70c062c3a7500e7479c9797b6190948e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2348db3f22dc5ba46aab4a52fc0df101') in 0.025003 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Art/Wall Wine Rack_Apt_01.prefab
+  artifactKey: Guid(79b944a6d385a6444a7932d0dd93d9ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Art/Wall Wine Rack_Apt_01.prefab using Guid(79b944a6d385a6444a7932d0dd93d9ce) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd0266f1432e0122bbe744825743a5ccc') in 0.017539 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Kitchen/Plate_Apt_02.prefab
+  artifactKey: Guid(677e48bdd6cf48e42ac397a1a8a64075) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Kitchen/Plate_Apt_02.prefab using Guid(677e48bdd6cf48e42ac397a1a8a64075) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e3cd0272a17f6aba4129e4258cb573b9') in 0.024618 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Bathroom/Shower_Head_01.prefab
+  artifactKey: Guid(708f360dca4c28243813704f811ad080) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Bathroom/Shower_Head_01.prefab using Guid(708f360dca4c28243813704f811ad080) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1b5733ee7f72871f7ec05b68163ebbbb') in 0.016117 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Wine Cabinet/BarCabinet_Apt_03_Filled.prefab
+  artifactKey: Guid(3d51d280e33c5fe4c97ae593c2292997) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Wine Cabinet/BarCabinet_Apt_03_Filled.prefab using Guid(3d51d280e33c5fe4c97ae593c2292997) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'abee460e9f06db85c713b3e156080b62') in 0.030677 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 178
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/Wood_Ebony_01_N.png
+  artifactKey: Guid(b5b20f23beab58d45b513b9aa44e2709) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Surface/Wood_Ebony_01_N.png using Guid(b5b20f23beab58d45b513b9aa44e2709) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '513dd97504d7b712c1c0c8f53db18110') in 0.030459 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000091 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Texture_Map_SE.mat
+  artifactKey: Guid(5f01895f1ecb58445b3aa62be24d6bca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Texture_Map_SE.mat using Guid(5f01895f1ecb58445b3aa62be24d6bca) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a6a4230e0320e8aac5a2f412989e9159') in 0.062475 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors/OpeningStall.anim
+  artifactKey: Guid(f3f604da56740ba469c68a0aebb4c41b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors/OpeningStall.anim using Guid(f3f604da56740ba469c68a0aebb4c41b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c8539ada7115c0dbcf0bc5966a24b2c4') in 0.029298 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Models/Build Kits/Build Kit Exterior.fbx
+  artifactKey: Guid(1e4c9d0deb3bcc144ae6e91318e143a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Models/Build Kits/Build Kit Exterior.fbx using Guid(1e4c9d0deb3bcc144ae6e91318e143a7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7e321ad61a3c322df0bf507cae57025c') in 0.033472 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 50
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors/opencloseDoor.cs
+  artifactKey: Guid(1e8192f35a44301488ec0f072d9a16fe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors/opencloseDoor.cs using Guid(1e8192f35a44301488ec0f072d9a16fe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '63908e370d1b3a54a9c34d8036309845') in 0.015500 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Windows/Closingwindow 1.anim
+  artifactKey: Guid(58b3370ea2243b7438a41900e6cd12e8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Windows/Closingwindow 1.anim using Guid(58b3370ea2243b7438a41900e6cd12e8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8626cae461d5d5067704505ae7d1f652') in 0.024901 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Glass_01.mat
+  artifactKey: Guid(88b88f875cf0af442996954ba27bdf64) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Glass_01.mat using Guid(88b88f875cf0af442996954ba27bdf64) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5e8872879811822d98e9893b5d0355bd') in 0.022579 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000079 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Restroom/RR_BathroomPaper.mat
+  artifactKey: Guid(59f4361ca0482dc47b43305e31892b29) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Restroom/RR_BathroomPaper.mat using Guid(59f4361ca0482dc47b43305e31892b29) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f276dcbfffb9097d78b4c5c094d88a60') in 0.041816 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Marble_01.mat
+  artifactKey: Guid(cb77271ecd71cbd4599aa533ebf5cc1e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Marble_01.mat using Guid(cb77271ecd71cbd4599aa533ebf5cc1e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'df0a1e1f948b03ce312978d872215fbc') in 0.035182 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Legacy/Building Floor Tile.mat
+  artifactKey: Guid(b65d6f1427086d84f91a3153f6f82ffc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Legacy/Building Floor Tile.mat using Guid(b65d6f1427086d84f91a3153f6f82ffc) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7b27ae26f674ff7247d99ea87cadc342') in 0.052371 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Sculptures/Sculpture_apt_02_02.prefab
+  artifactKey: Guid(7148452916a07f34a8145e1d3f150b7d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Sculptures/Sculpture_apt_02_02.prefab using Guid(7148452916a07f34a8145e1d3f150b7d) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6e4a567b28bc1d99ad3abe83f8a4b422') in 0.025410 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Porc.mat
+  artifactKey: Guid(c4633b4bc8d4dbb41bc32118f1812b6e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Porc.mat using Guid(c4633b4bc8d4dbb41bc32118f1812b6e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'cfb32d753800a20c6ac6b11f77388593') in 0.022728 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Wood 03.mat
+  artifactKey: Guid(a64c40f22fb83f041b7c584055b61c8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Wood 03.mat using Guid(a64c40f22fb83f041b7c584055b61c8f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '382bd74fac36b6b43f7d4afe5c599a68') in 0.024503 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors/opencloseDoor1.cs
+  artifactKey: Guid(4b5e0617227fa4743be84f23d9e5cb42) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Doors/opencloseDoor1.cs using Guid(4b5e0617227fa4743be84f23d9e5cb42) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '345368bccffb9c541e0a05ed5845702a') in 0.013117 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000047 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Sculptures/Sculpture_apt_02_03.prefab
+  artifactKey: Guid(b6051831735950e45a12422235f03581) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Sculptures/Sculpture_apt_02_03.prefab using Guid(b6051831735950e45a12422235f03581) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b735d5b83e3038e6bfa7e90bbc954a6e') in 0.024934 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Models/Build Kits/Build Kit Interior Updated_01.fbx
+  artifactKey: Guid(013043932069e224e90b516d38cdab48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Models/Build Kits/Build Kit Interior Updated_01.fbx using Guid(013043932069e224e90b516d38cdab48) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a14363ab4254ca034dab072e5f5de8fd') in 0.029162 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 50
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Fire/Fire_Add_01.mat
+  artifactKey: Guid(4791bf36c2e577a4a9e789b580579636) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Fire/Fire_Add_01.mat using Guid(4791bf36c2e577a4a9e789b580579636) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '324195a180b8d5f936394d118151b200') in 0.031708 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Floor.png
+  artifactKey: Guid(ca6c7e19f0ffcd348961b68ecb61461c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Floor.png using Guid(ca6c7e19f0ffcd348961b68ecb61461c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '32f82609574f4797403f981e1817ae3a') in 0.038993 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/Fixtures/RR_SoapDispenser_01.prefab
+  artifactKey: Guid(912b5bb11c24b3842b28157f23895c1e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/Fixtures/RR_SoapDispenser_01.prefab using Guid(912b5bb11c24b3842b28157f23895c1e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c1d4e1852768b9ef9466abefc80f3a19') in 0.024516 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 23
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/BA_Wood_01_A.png
+  artifactKey: Guid(48aec0e661dd8b34da0b78a05a1b25c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/BA_Wood_01_A.png using Guid(48aec0e661dd8b34da0b78a05a1b25c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6368dba6106278981ca8afa210a86ccd') in 0.023928 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/Int_BA_02.png
+  artifactKey: Guid(a7d954ba596ba994bbcc72a405b61589) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/Int_BA_02.png using Guid(a7d954ba596ba994bbcc72a405b61589) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '90a6fbb73b899cc76c38eb83326d9032') in 0.032633 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Leather_01.mat
+  artifactKey: Guid(0656c89128e147645951f2c0649b10f9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Leather_01.mat using Guid(0656c89128e147645951f2c0649b10f9) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f34917314c0ff15109ed23a1a09baafd') in 0.046750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 3
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/Int_BA_01.png
+  artifactKey: Guid(81996dc1d41eda84f9d6b55c50adea82) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/Int_BA_01.png using Guid(81996dc1d41eda84f9d6b55c50adea82) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9e8b56b250c4c2054d3001fb1ab2e31c') in 0.039906 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000101 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Bathroom/BathroomMat_01.prefab
+  artifactKey: Guid(c39a7487ae8768f46b4f6344ce704453) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Bathroom/BathroomMat_01.prefab using Guid(c39a7487ae8768f46b4f6344ce704453) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1cb4d9b62b22c5a824b5fdafeb3cc3cd') in 0.024750 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Chan/Mine/Models/Props/Lantern.fbx
+  artifactKey: Guid(ab95aa29a4f019b4b8c71652bd378966) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Chan/Mine/Models/Props/Lantern.fbx using Guid(ab95aa29a4f019b4b8c71652bd378966) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '685065235202c96b5af4fed5a45f60dd') in 0.019834 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Floor_normal.png
+  artifactKey: Guid(e10c0a17308ba8a459fb883b0de900e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Floor_normal.png using Guid(e10c0a17308ba8a459fb883b0de900e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '27f0f7b55b4661ac44ea78e4258ce68c') in 0.031785 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Windows/openandclosewindow.controller
+  artifactKey: Guid(671464f139189844db1fcfdd09b284d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Windows/openandclosewindow.controller using Guid(671464f139189844db1fcfdd09b284d7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd63c7305dd8aaf47ecf944e29db2f634') in 0.034039 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Concrete-normal.png
+  artifactKey: Guid(7e190a8bc0493c547a469963af75222c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Concrete-normal.png using Guid(7e190a8bc0493c547a469963af75222c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '15f8e428ee010c73b1a1c6b2162defe8') in 0.034140 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000068 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Restroom/RR_RestroomPaper_A.png
+  artifactKey: Guid(00368d3a4678ecd4cb2b95551bfe744e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Restroom/RR_RestroomPaper_A.png using Guid(00368d3a4678ecd4cb2b95551bfe744e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '8775ed8a1fb03b1d5508abf88b6869ab') in 0.024025 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000033 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/BA_leather_N.png
+  artifactKey: Guid(bba906a60a6f55441b3ab8088f837cf7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Basic Asset/BA_leather_N.png using Guid(bba906a60a6f55441b3ab8088f837cf7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b0b6d5a6bfcde770b812ea996560b11f') in 0.026484 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Concrete-texture.png
+  artifactKey: Guid(07abea599341a1742aa622a72461e995) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Concrete-texture.png using Guid(07abea599341a1742aa622a72461e995) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '25ec0a8a7fabd3326634f740050f73c5') in 0.034921 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000045 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Fire/Fire_Alpha_01.mat
+  artifactKey: Guid(cdb5cf50c86c5e1479a217fd032beff8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Fire/Fire_Alpha_01.mat using Guid(cdb5cf50c86c5e1479a217fd032beff8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '68519a5a1886cadab546698d843c30ad') in 0.022370 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/ceiling.png
+  artifactKey: Guid(2a909c6b0c3249d4b8fc74ae5d6d52dd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/ceiling.png using Guid(2a909c6b0c3249d4b8fc74ae5d6d52dd) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '85d576a5928a91764900460d8eba578e') in 0.032336 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Flooring & Ceilings/Int_BR_02_Floor.prefab
+  artifactKey: Guid(8934f512a6a9f714085a3d0dd88c1661) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Flooring & Ceilings/Int_BR_02_Floor.prefab using Guid(8934f512a6a9f714085a3d0dd88c1661) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '22b965fbf5430c8340dbd3931ee8f15c') in 0.024040 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Kitchen/Cabinets/Cabinet_Wall_DD_03.prefab
+  artifactKey: Guid(4c6a5e5423a8c2a41ac136b50710c436) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Kitchen/Cabinets/Cabinet_Wall_DD_03.prefab using Guid(4c6a5e5423a8c2a41ac136b50710c436) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1a9fa59dc43eea8c4455da6c59766a12') in 0.022429 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 28
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Misc/Wall_Mirror_01.prefab
+  artifactKey: Guid(22a931750861f724a854421dccfa17e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Misc/Wall_Mirror_01.prefab using Guid(22a931750861f724a854421dccfa17e0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '12c5362584868470f09579f59e2bf658') in 0.017234 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Roof_Mid_01.prefab
+  artifactKey: Guid(5a8c5bdb2890760419fa0ba36befc73e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Roof_Mid_01.prefab using Guid(5a8c5bdb2890760419fa0ba36befc73e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '24ae98305630db4b9565a8dbbf784e3f') in 0.026003 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Pillar_4x4.prefab
+  artifactKey: Guid(c132e10714a0f9441993cdd403636ac2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Pillar_4x4.prefab using Guid(c132e10714a0f9441993cdd403636ac2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a43ba12175d441b9276d45fb692473fd') in 0.025134 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Frames Windows Stairs & Doors/Frame_Apt_01.prefab
+  artifactKey: Guid(509ac6312e62e5743ae96298947599f7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Frames Windows Stairs & Doors/Frame_Apt_01.prefab using Guid(509ac6312e62e5743ae96298947599f7) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '399aee0b2d069b2bfef0716138003724') in 0.020414 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Exterior/Ext_BA_01_Pillar_1x1.prefab
+  artifactKey: Guid(97bf517250a35a647b9b27c826cd3b71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Exterior/Ext_BA_01_Pillar_1x1.prefab using Guid(97bf517250a35a647b9b27c826cd3b71) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '51004248e909011a3472211785b5a02e') in 0.023740 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Roof_01.prefab
+  artifactKey: Guid(44297ac12129a474d89e1b2eb6151936) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Roof_01.prefab using Guid(44297ac12129a474d89e1b2eb6151936) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '03872d0d14a30a65bc53a4deb2363968') in 0.022623 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Misc/Wall_Mirror_02.prefab
+  artifactKey: Guid(646857c834326db489fedada3df0bbc5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Lighting/Misc/Wall_Mirror_02.prefab using Guid(646857c834326db489fedada3df0bbc5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0bbd25c7a26d98d4ee6f4e6d94d12341') in 0.024470 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Frames Windows Stairs & Doors/DoorFrame_Apt_01.prefab
+  artifactKey: Guid(e9a47cdb5968d66499f6b4ee53467cd4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Frames Windows Stairs & Doors/DoorFrame_Apt_01.prefab using Guid(e9a47cdb5968d66499f6b4ee53467cd4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '90e763c9afbc740ad7a4f809a5974f24') in 0.022536 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Frames Windows Stairs & Doors/DoorFrame_Apt_03.prefab
+  artifactKey: Guid(f3e82dc7c471ff447b3ca0e0bfded076) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Frames Windows Stairs & Doors/DoorFrame_Apt_03.prefab using Guid(f3e82dc7c471ff447b3ca0e0bfded076) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd110b1190a0eed53c4e6096a79e99dc4') in 0.022194 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 20
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Pillar_3x3.prefab
+  artifactKey: Guid(8d0226687ab1ae8408b45c04addd8546) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Pillar_3x3.prefab using Guid(8d0226687ab1ae8408b45c04addd8546) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f35425575ba0549867bd69040cb117c') in 0.024122 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Kitchen/Cabinets/Cabinet_Wall_DD_01.prefab
+  artifactKey: Guid(d2d91ff190ebafa41b8fa852ad4c0f8c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Kitchen/Cabinets/Cabinet_Wall_DD_01.prefab using Guid(d2d91ff190ebafa41b8fa852ad4c0f8c) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2d43fd8c37b4523f27de0fb05390a32f') in 0.025892 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 34
+========================================================================
+Received Import Request.
+  Time since last request: 0.000054 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Pillar_1x1.prefab
+  artifactKey: Guid(68a3631d9068c5246954790f8f2e4708) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Pillar_1x1.prefab using Guid(68a3631d9068c5246954790f8f2e4708) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '3c07fd5758ab6cc2fe5bf657367d5747') in 0.023338 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Drawer/Z Axis/Drawer_Pull_Z.cs
+  artifactKey: Guid(286620fa050ddc24d90bd777daaa73c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Scripts and Animations/Drawer/Z Axis/Drawer_Pull_Z.cs using Guid(286620fa050ddc24d90bd777daaa73c5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '03fba6651985fac114760ce468de4c63') in 0.011340 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Exterior/Ext_BA_01_Pillar_4x4.prefab
+  artifactKey: Guid(94c14dfc6c607a44486aa4e3dbc3f125) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Exterior/Ext_BA_01_Pillar_4x4.prefab using Guid(94c14dfc6c607a44486aa4e3dbc3f125) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5b39a4c175334c519807a2e655303384') in 0.024389 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Kitchen/Appliances/Stove_01.prefab
+  artifactKey: Guid(452921da7fe17904da8c1d34c235dee4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Furniture/Kitchen/Appliances/Stove_01.prefab using Guid(452921da7fe17904da8c1d34c235dee4) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '67c9300cdea941afd2ec8626c9eb82ed') in 0.024281 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 142
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Flooring & Ceilings/Int_apt_01_Floor_01.prefab
+  artifactKey: Guid(bee09117d2231334d90a559b1ff7f323) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Flooring & Ceilings/Int_apt_01_Floor_01.prefab using Guid(bee09117d2231334d90a559b1ff7f323) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '5e258e67a9163c098904b81027d4c9b2') in 0.014362 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Frames Windows Stairs & Doors/DoorFrame_Apt_02.prefab
+  artifactKey: Guid(46552e96207732c4789f21297738d416) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Frames Windows Stairs & Doors/DoorFrame_Apt_02.prefab using Guid(46552e96207732c4789f21297738d416) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'b5b3a2a141e475cbf9cb75d2253d2524') in 0.022539 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 27
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Roof_Edge_01.prefab
+  artifactKey: Guid(6afcc4494dbad0147a4aec93839a9ad0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Exteriors/Ext_Apt_01/Ext_Apt_01_Roof_Edge_01.prefab using Guid(6afcc4494dbad0147a4aec93839a9ad0) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd760a1ce964aa2869afac1818992aa50') in 0.025318 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Wine Liquor Beer and Glassware - Sample/wine bottle 04_Low Poly.prefab
+  artifactKey: Guid(e0f8fa703bcf04a419f5263f5020b059) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Props/Wine Liquor Beer and Glassware - Sample/wine bottle 04_Low Poly.prefab using Guid(e0f8fa703bcf04a419f5263f5020b059) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e4978fb855a5b3ccee9f332efe30898d') in 0.019434 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Color_Grey_01.mat
+  artifactKey: Guid(70139dc62be58be4a91d1831e1f21e95) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Materials/Basic Assets/BA_Color_Grey_01.mat using Guid(70139dc62be58be4a91d1831e1f21e95) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2ef061bc18f74a97613de212b6402925') in 0.022519 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Modern/Int_WallExtrude_02_01.prefab
+  artifactKey: Guid(ee40b11b251097744b0b6775756b2dbf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Modern/Int_WallExtrude_02_01.prefab using Guid(ee40b11b251097744b0b6775756b2dbf) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '46a0224b90db4747e029088bf4ad8a5a') in 0.025744 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Doors Frames/Int_BA_Frame_01.prefab
+  artifactKey: Guid(b973231003cf93b4f8dd9837bafc50cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Doors Frames/Int_BA_Frame_01.prefab using Guid(b973231003cf93b4f8dd9837bafc50cb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '098423044779bbbe64af42d585536161') in 0.022814 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 26
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Walls Frames & Doors/Apt_02/Int_Apt_02_Wall_03.prefab
+  artifactKey: Guid(17aade79dac654f4aa0b24a36cd4b136) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Walls Frames & Doors/Apt_02/Int_Apt_02_Wall_03.prefab using Guid(17aade79dac654f4aa0b24a36cd4b136) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'dff7143ac88b27ed1fa030cacc612bb9') in 0.023083 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Walls Frames & Doors/Apt_02/Int_Apt_02_Pillar_2x2.prefab
+  artifactKey: Guid(2cf7605246c1a3c4a8bff50e0beb194b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Walls Frames & Doors/Apt_02/Int_Apt_02_Pillar_2x2.prefab using Guid(2cf7605246c1a3c4a8bff50e0beb194b) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a2b5995a5e08736a3cef2ccc909b0ddc') in 0.023530 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Floors Ceilings/Int_RR_01_Floor_01.prefab
+  artifactKey: Guid(e30496263f7ba54488d5cb051756f667) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Floors Ceilings/Int_RR_01_Floor_01.prefab using Guid(e30496263f7ba54488d5cb051756f667) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '2bd5ae82f23e61f314abd26ede1d87bb') in 0.024708 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Tiles/BR_Tile_APT_02_03.prefab
+  artifactKey: Guid(00d829056aee4bb4e9ce54ff8b45aa45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Tiles/BR_Tile_APT_02_03.prefab using Guid(00d829056aee4bb4e9ce54ff8b45aa45) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '14230be1d5a44832b9d18bf7cfcef52b') in 0.024824 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Tiles/BR_Tile_APT_01_03.prefab
+  artifactKey: Guid(06c413b29e11397438e5dd264e7ebe34) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Tiles/BR_Tile_APT_01_03.prefab using Guid(06c413b29e11397438e5dd264e7ebe34) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '9075d9fdbdf543835d405095d67d5b4b') in 0.021734 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Walls/Int_RR_01_Wall_01.prefab
+  artifactKey: Guid(b813d19c40ec4bc43890e91f97b087d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Walls/Int_RR_01_Wall_01.prefab using Guid(b813d19c40ec4bc43890e91f97b087d3) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ebe23c514cce9973d4a0607dbbab41b1') in 0.021770 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Exterior/Ext_BA_Roof_02.prefab
+  artifactKey: Guid(dd6658866c1c65a4aa4a6c6e8e34e4f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Exterior/Ext_BA_Roof_02.prefab using Guid(dd6658866c1c65a4aa4a6c6e8e34e4f5) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '7e628746c070e2e85c3b36b12ee4a86b') in 0.023067 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Modern/Int_WallExtrude_02_02.prefab
+  artifactKey: Guid(c32373f77912b2b4b91d6e8e1ced623f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Modern/Int_WallExtrude_02_02.prefab using Guid(c32373f77912b2b4b91d6e8e1ced623f) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '52123c11d21f8421768fd75b95353f19') in 0.019741 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Doors Frames/Int_BA_Frame_02.prefab
+  artifactKey: Guid(6b0fe008d0f2fd649ba26243e4ef0ee8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Doors Frames/Int_BA_Frame_02.prefab using Guid(6b0fe008d0f2fd649ba26243e4ef0ee8) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4fb160e98048154a2d9519d676748814') in 0.024737 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Walls/Int_RR_01_Corner_01.prefab
+  artifactKey: Guid(9fab82907283f784f961207d664b2625) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Walls/Int_RR_01_Corner_01.prefab using Guid(9fab82907283f784f961207d664b2625) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0f6c4cdcb26732e8a2c7445563e45f97') in 0.024508 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Tiles/BR_Tile_APT_02_06.prefab
+  artifactKey: Guid(0267a6b41f222044f98d57dd7a4835fb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Wall Tiles/BR_Tile_APT_02_06.prefab using Guid(0267a6b41f222044f98d57dd7a4835fb) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '08290155108590a33548d2af754fa6b5') in 0.023817 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Molding/Int_Molding_Base_Apt_03.prefab
+  artifactKey: Guid(b864c417db32982428d6e52b690ffc78) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Special/Molding/Int_Molding_Base_Apt_03.prefab using Guid(b864c417db32982428d6e52b690ffc78) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '86e918411a49a6e38819919605f42ec7') in 0.022270 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 7
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Walls/Int_RR_01_pillar_3x3.prefab
+  artifactKey: Guid(02f55a24f89f19d4083c38a6fd760a46) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Walls/Int_RR_01_pillar_3x3.prefab using Guid(02f55a24f89f19d4083c38a6fd760a46) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '4aefa2c36a3299296cd77e2106b44f1c') in 0.022972 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Walls Frames & Doors/Apt_01/Int_Apt_01_Pillar_2x2.prefab
+  artifactKey: Guid(898817d0fbc7ec3448ce39efd8267ba2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Walls Frames & Doors/Apt_01/Int_Apt_01_Pillar_2x2.prefab using Guid(898817d0fbc7ec3448ce39efd8267ba2) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'e4a0cbcef3f4a4bbac0bbfa4ac3a4605') in 0.025495 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/IntExt/IntExt_BA_GlassFrame_01.prefab
+  artifactKey: Guid(8a4a119fc2ad9fa40817bd6773fe107a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/IntExt/IntExt_BA_GlassFrame_01.prefab using Guid(8a4a119fc2ad9fa40817bd6773fe107a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'a952998120c493f0fa22cfc6663f23ff') in 0.022646 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 13
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_01/Int_BA_01_Wall_02.prefab
+  artifactKey: Guid(feb38e40cfc697547a18577613164676) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_01/Int_BA_01_Wall_02.prefab using Guid(feb38e40cfc697547a18577613164676) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '1f8fb0ff11da1b75f45ba62478ecbfcf') in 0.023786 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Floors Ceilings/Int_RR_01_Ceiling_01.prefab
+  artifactKey: Guid(55489656333abb749a864446e5879d06) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Restroom/RR Build Kit/Floors Ceilings/Int_RR_01_Ceiling_01.prefab using Guid(55489656333abb749a864446e5879d06) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'f2cbac7443c1de79ee8b604690f6ae8d') in 0.023126 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Walls Frames & Doors/Apt_02/Int_Apt_02_Wall_04.prefab
+  artifactKey: Guid(0d62acd7333a2844eb00217800ed1f99) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/_Prefabs/Apt Build Kit/Interiors/Walls Frames & Doors/Apt_02/Int_Apt_02_Wall_04.prefab using Guid(0d62acd7333a2844eb00217800ed1f99) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '40b63814f25afa687e888e92ec50cdf2') in 0.025358 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_01/Int_BA_01_Pillar_3x3.prefab
+  artifactKey: Guid(7e9fb32cd7ac0de4c81c480a5478d86a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_01/Int_BA_01_Pillar_3x3.prefab using Guid(7e9fb32cd7ac0de4c81c480a5478d86a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ac9c04e8430d5b2182c95447edd31ffd') in 0.026733 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_02/Int_BA_02_Pillar_3x3.prefab
+  artifactKey: Guid(9068914faab841c49adc9e106827f827) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_02/Int_BA_02_Pillar_3x3.prefab using Guid(9068914faab841c49adc9e106827f827) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'd27ff713918aa0f2f322bac57d753710') in 0.024547 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_02/Int_BA_02_Ceiling_01.prefab
+  artifactKey: Guid(c8a35b1154033a342ac94fd67adf1991) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_02/Int_BA_02_Ceiling_01.prefab using Guid(c8a35b1154033a342ac94fd67adf1991) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ac0e9616a0962dc5d45e369be43b32a2') in 0.026957 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_02/Int_BA_02_Wall_01.prefab
+  artifactKey: Guid(74787c4efc3c48d48ba66f7b4a32b975) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_02/Int_BA_02_Wall_01.prefab using Guid(74787c4efc3c48d48ba66f7b4a32b975) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'ff0cf8f7c30aa8e14a2a4f034a6461a0') in 0.024255 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_01/Int_BA_01_Pillar_4x4.prefab
+  artifactKey: Guid(c83e0dcf64994e249a7357b1eb31da5a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/_Prefabs/Basic Asset/BA Build Kit/Interior/Int_01/Int_BA_01_Pillar_4x4.prefab using Guid(c83e0dcf64994e249a7357b1eb31da5a) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '227227727075362dd86b511cf5b6d87d') in 0.020566 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 8
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Colors_apt_02_A.png
+  artifactKey: Guid(d78d543570cf39449a8e89367decddbe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Textures/Misc/Colors_apt_02_A.png using Guid(d78d543570cf39449a8e89367decddbe) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '6be29b7a2a15ff64dac2e3d3cd3430e6') in 0.022849 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Brick 02 Texture.png
+  artifactKey: Guid(91e6f6bf45b72bd478b59dcf22714424) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/_BPS Basic Assets/Common/Textures/Legacy/Brick 02 Texture.png using Guid(91e6f6bf45b72bd478b59dcf22714424) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: '0f30d183388ab8ff386687df7ab50228') in 0.025026 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 1
+========================================================================
+Received Import Request.
+  Time since last request: 0.000078 seconds.
+  path: Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Marble_Dark.mat
+  artifactKey: Guid(6d3ba1df7fa074c45b26f73faef7608e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23)
+Start importing Assets/Hajin/Brick Project Studio/Apartment Kit/Common/Materials/Misc/Marble_Dark.mat using Guid(6d3ba1df7fa074c45b26f73faef7608e) Importer(2089858483,0ecaa5967403d082aa24f35e1b516d23) Generated GUIDs only implemented for interfaces!
+ -> (artifact id: 'c64c675053166c34688522a7b66fea28') in 0.023425 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 4
