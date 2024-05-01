@@ -12,6 +12,7 @@ public class Main_PMove : MonoBehaviour
     
         SceneManager.LoadScene("test", LoadSceneMode.Additive); //미로
         SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);//아파트
+        SceneManager.LoadScene("constructionSite",  LoadSceneMode.Additive);//공사장
     }
 
 
@@ -168,7 +169,9 @@ public class Main_PMove : MonoBehaviour
     if(Input.GetKeyDown(KeyCode.P)){
         SceneManager.LoadScene("ApartmentScene");
     }
-    //if(Input.GetKeyDown(KeyCode.o)){}
+    if(Input.GetKeyDown(KeyCode.O)){
+            SceneManager.LoadScene("constructionSite");
+        }
 
     if(Input.GetKeyDown(KeyCode.I)){
         SceneManager.LoadScene("test");
