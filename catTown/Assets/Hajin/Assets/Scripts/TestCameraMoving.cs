@@ -14,7 +14,7 @@ public class TestCameraMoving : MonoBehaviour
         MouseX += Input.GetAxisRaw("Mouse X") * MouseSensitivity * Time.deltaTime;
         MouseY -= Input.GetAxisRaw("Mouse Y") * MouseSensitivity * Time.deltaTime;
         MouseY = Mathf.Clamp(MouseY, -90f, 90f); // 최대, 최소 설정
-       // MouseX = Mathf.Clamp(MouseX, -90f, 90f);
+        MouseX = Mathf.Clamp(MouseX, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(MouseY, MouseX, 0f); // 각 축 계산
     }
