@@ -53,7 +53,13 @@ public class Main_PMove : MonoBehaviour
 
     public Slider stSlider;
 
+
     //위험도 변수 제어
+    =======
+
+
+    //private int ct = 0; //ct = caution
+
     
     private int ct = 0; //ct = caution
     float cautionHealthTime = 0.0f;
