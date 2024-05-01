@@ -9,7 +9,9 @@ public class Main_PMove : MonoBehaviour
 {
     void CallNextScene ()
     {
-    SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);
+    
+        SceneManager.LoadScene("test", LoadSceneMode.Additive); //미로
+        SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);//아파트
     }
 
 
@@ -163,11 +165,14 @@ public class Main_PMove : MonoBehaviour
 
     // 씬 전환 조건문
 
-    if(Input.GetKeyDown(KeyCode.I)){
+    if(Input.GetKeyDown(KeyCode.P)){
         SceneManager.LoadScene("ApartmentScene");
     }
     //if(Input.GetKeyDown(KeyCode.o)){}
-    //if(Input.GetKeyDown(KeyCode.p)){}
+
+    if(Input.GetKeyDown(KeyCode.I)){
+        SceneManager.LoadScene("test");
+    }
 
     if(isStaminaHeal == false) //스태미나 힐 작동 조건문 
     {
@@ -199,7 +204,7 @@ public class Main_PMove : MonoBehaviour
 
     if(isCaution)
     {
-        ct -= cth;
+        ct += cth;
         if(ct < 0) ct = 0;
     }
     //현재 플레이어 체력 퍼센테이지를 체력바의 Value에 반영
