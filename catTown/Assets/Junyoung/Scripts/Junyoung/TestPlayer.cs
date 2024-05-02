@@ -2,218 +2,151 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
-
 
 public class TestPlayer : MonoBehaviour
 {
-    void CallNextScene ()
-    {
-    
-        SceneManager.LoadScene("test", LoadSceneMode.Additive); //ë¯¸ë¡œ
-        SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);//ì•„íŒŒíŠ¸
-    }
+    // ÇÃ·¹ÀÌ¾î ÀÌµ¿ ¼Óµµ
+    private float walkSpeed = 3f;
 
-
-    // í”Œë ˆì´ì–´ ì´ë™ ì†ë„
-    private float walkSpeed= 3f;
-    
     private float runSpeed = 6f;
-
     public bool isRunnig = false;
-    public bool isStaminaHeal = true; //ì½”ë£¨í‹´ ë”œë ˆì´ì—ì„œ ë¶ˆ í•¨ìˆ˜ë¥¼ í†µí•œ ìŠ¤íƒœë¯¸ë„ˆ í ì²˜ë¦¬ 
-    public bool isCaution = true;
 
     public float applySpeed;
 
-    //ìºë¦­í„° ì»¨íŠ¸ë¡¤ëŸ¬ ë³€ìˆ˜
+    //Ä³¸¯ÅÍ ÄÁÆ®·Ñ·¯ º¯¼ö
     CharacterController cc;
 
-    //í”Œë ˆì´ì–´ ì²´ë ¥ ë³€ìˆ˜
+    //ÇÃ·¹ÀÌ¾î Ã¼·Â º¯¼ö
 
-    private int hp = 10; //hp = health point
+    int hp = 200; //hp = health point
 
-    private int maxHp = 10;
+    public int maxHp = 200;
     private int minHp = 0;
 
-    private int hpd = 2;
-    private int hph = 5;
+    public Slider hpSlider;
 
-    public Slider hpSlider; //ui ë¨¸ë¦¬ ìœ„ë¡œ ê°ì¶°ë‘ .
+    //ÇÃ·¹ÀÌ¾î ½ºÅÂ¹Ì³ª º¯¼ö
 
-    //í”Œë ˆì´ì–´ ìŠ¤íƒœë¯¸ë‚˜ ë³€ìˆ˜
-    private int st = 1000;
-    float staminaHealthTime = 0.0f; //ìŠ¤íƒœë¯¸ë„ˆ í ë”œë ˆì´ë¥¼ ìœ„í•œ íƒ€ì„ ê¸°ë³¸ ê°’
+    int st = 1000; //st = stemina
 
-    private int maxSt = 1000;
+    public int maxSt = 1000;
     private int minSt = -5;
 
     private int std = 10; // stemina damega
-    private int sth = 5; // stemina heal
+    private int sth = 500; // stemina heal
 
     public Slider stSlider;
 
-    //ìœ„í—˜ë„ ë³€ìˆ˜ ì œì–´
-    
-    private int ct = 0; //ct = caution
-    float cautionHealthTime = 0.0f;
-
-    private int maxCt = 50;
-    private int minCt = 0;
-
-    private int ctd = 10;
-    private int cth = 5;
-
-    public Slider ctSlider;
-
-    //ìœ„í—˜ë„ ë° í”¼ê²©ì‹œ ui ì´í™íŠ¸ 
-    //public attackP hitEffect;
-
-    public void DamegeAction(int damege)
+    //µô·¹ÀÌ ÄÚ·çÆ¾
+    IEnumerator DelayDamst()
     {
-        hp -= hpd;
+
+        float seconds = 10.0f;
+        yield return new WaitForSecondsRealtime(seconds);
+
+    }
+    IEnumerator DelayHilst()
+    {
+
+        float secondsH = 3.0f;
+        yield return new WaitForSecondsRealtime(secondsH);
+        st += sth;
+
     }
 
-    //ì¤‘ë ¥, ìˆ˜ì§ ì†ë„ ë³€ìˆ˜
+    //public Animator anim; // ³ÖÀ»¼öµµ ÀÖ°í ¾Æ´Ò ¼öµµ ÀÖ´Â ¾Ö´Ï¸ŞÀÌ¼Ç ¸ğ¼Ç
+
+    //Áß·Â, ¼öÁ÷ ¼Óµµ º¯¼ö
     float gravity = -20f;
+
     float yVelocity = 0;
-    
-    // ì í”„ ì œì–´
+
+    // Á¡ÇÁ Á¦¾î
     public float jumpPower = 5f;
     public bool isJumping = false;
 
-    // ìŠ¤í¬ë¦½íŠ¸ ê¸°ì¤€ í˜¸ì¶œ
+    // ½ºÅ©¸³Æ® ±âÁØ È£Ãâ
     private void Start()
     {
-        
-        //ìºë¦­í„° ì»¨íŠ¸ë¡¤ëŸ¬ ì»´í¬ë„ŒíŠ¸ ë°›ì•„ì˜¤ê¸°
+        //Ä³¸¯ÅÍ ÄÁÆ®·Ñ·¯ ÄÄÆ÷³ÍÆ® ¹Ş¾Æ¿À±â
         cc = GetComponent<CharacterController>();
 
-        //ì†ë„ ì´ˆê¸°í™”
+        //¼Óµµ ÃÊ±âÈ­
         applySpeed = walkSpeed;
 
-        LoadData();
-
     }
 
-    void LoadData()
+    void Update()
     {
 
-
-    }
-
-    void Update(){
-        
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
-        
-        //í”Œë ˆì´ì–´ ì´ë™ ë°©í–¥
+
+        //ÇÃ·¹ÀÌ¾î ÀÌµ¿ ¹æÇâ
         Vector3 dir = new Vector3(h, 0, v);
         dir = dir.normalized;
 
-        //Shift í‚¤ ì…ë ¥ì— ë”°ë¥¸ ë‹¬ë¦¬ê¸° ì œì–´ ì¡°ê±´ë¬¸ ë° ìŠ¤íƒœë¯¸ë„ˆ ê°ì†Œ ì œì–´
-
-    if (Input.GetKey(KeyCode.RightShift) && st > 0 && dir != Vector3.zero) 
-        //ì í”„ë‘ ë™ì¼í•œ êµ¬ì¡° í•¨ìˆ˜, ë‹¬ë¦¬ê¸° í™•ì¸ì— í•„ìš”í•œ dirê°’ì˜ ì¢Œí‘œ ì´ë™ì— ë”°ë¥¸ ê°’ ë³€ë™ì˜ 
-        {
-           //Debug.Log("ë‚˜ëŠ” ë‹¬ë¦´ê±°ì•¼"); //ì½˜ì†” ë‚´ ì‹¤í–‰ ë””ë²„ê·¸
-            isStaminaHeal = false; 
-            staminaHealthTime = 0.0f; //ìŠ¤íƒœë¯¸ë‚˜ í ë¦¬ì…‹
-
-
-            isRunnig = true;
-            applySpeed = runSpeed;
-            st -= std;
-        }
-    else{
-
-        isRunnig = false;
-        applySpeed = walkSpeed;
-
-         }
-
         transform.position += dir * applySpeed * Time.deltaTime;
 
-        //ë©”ì¸ ì¹´ë©”ë¼ ì‹œì  ê¸°ì¤€ ì´ë™
+        //¸ŞÀÎ Ä«¸Ş¶ó ½ÃÁ¡ ±âÁØ ÀÌµ¿
         dir = Camera.main.transform.TransformDirection(dir);
 
-        //ìˆ˜ì§ ì†ë„ * ì¤‘ë ¥ 
+        //¼öÁ÷ ¼Óµµ * Áß·Â 
         yVelocity += gravity * Time.deltaTime;
         dir.y = yVelocity;
 
         cc.Move(dir * applySpeed * Time.deltaTime);
-        
 
 
-        //ìŠ¤í˜ì´ìŠ¤ë°” ì…ë ¥ì— ë”°ë¥¸ ì í”„ ì œì–´ ì¡°ê±´ë¬¸
+        //½ºÆäÀÌ½º¹Ù ÀÔ·Â¿¡ µû¸¥ Á¡ÇÁ Á¦¾î Á¶°Ç¹®
 
-    if (isJumping && cc.collisionFlags == CollisionFlags.Below)
-    {
-
-        isJumping = false;
-        yVelocity = 0;
-
-    }
-
-    if (Input.GetButtonDown("Jump") && !isJumping)
-    {
-
-        yVelocity = jumpPower;
-        isJumping = true;
-
-    }
-
-    // ì”¬ ì „í™˜ ì¡°ê±´ë¬¸
-
-    if(Input.GetKeyDown(KeyCode.P)){
-        SceneManager.LoadScene("ApartmentScene");
-    }
-    //if(Input.GetKeyDown(KeyCode.o)){}
-
-    if(Input.GetKeyDown(KeyCode.I)){
-        SceneManager.LoadScene("test");
-    }
-
-    if(isStaminaHeal == false) //ìŠ¤íƒœë¯¸ë‚˜ í ì‘ë™ ì¡°ê±´ë¬¸ 
-    {
-        staminaHealthTime += Time.deltaTime; // ë¦¬ì–¼íƒ€ì„ = í”„ë ˆì„íƒ€ì„ ë³€í™˜ ì½”ë“œ
-        if(staminaHealthTime > 2.0f)
+        if (isJumping && cc.collisionFlags == CollisionFlags.Below)
         {
-            staminaHealthTime = 2.0f;
-            isStaminaHeal = true;
+
+            isJumping = false;
+            yVelocity = 0;
+
         }
-    }
 
-    if(isStaminaHeal) //ìŠ¤íƒœë¯¸ë‚˜ í ì‘ë™ ì¡°ê±´ë¬¸ 
-    {
-        st += sth;
-        if(st > 1000) st = 1000;
-    }
-
-    //ìœ„í—˜ë„ ê°’ ë³€í™˜
-
-    if(isCaution == false)
-    {
-        cautionHealthTime += Time.deltaTime;
-        if(cautionHealthTime > 5.0f)
+        if (Input.GetButtonDown("Jump") && !isJumping)
         {
-            cautionHealthTime = 5.0f;
-            isCaution = true;
+
+            yVelocity = jumpPower;
+            isJumping = true;
+
         }
+
+        //Shift Å° ÀÔ·Â¿¡ µû¸¥ ´Ş¸®±â Á¦¾î Á¶°Ç¹® ¹× ½ºÅÂ¹Ì³Ê °¨¼Ò Á¦¾î
+
+        if (Input.GetKey(KeyCode.RightShift) && st > 0)
+        {
+
+            isRunnig = true;
+            applySpeed = runSpeed;
+            st -= std;
+
+        }
+        else
+        {
+
+            isRunnig = false;
+            applySpeed = walkSpeed;
+
+            StartCoroutine("DelayDamst");
+            StartCoroutine("DelayHilst");
+
+        }
+
+        //ÇöÀç ÇÃ·¹ÀÌ¾î Ã¼·Â ÆÛ¼¾Å×ÀÌÁö¸¦ Ã¼·Â¹ÙÀÇ Value¿¡ ¹İ¿µ
+
+        hpSlider.value = (float)hp / (float)maxHp;
+
+        //ÇöÀç ÇÃ·¹ÀÌ¾î ½ºÅÂ¹Ì³Ê ÆÛ¼¾Å×ÀÌÁî¸¦ Ã¼·Â¹ÙÀÇ Value¿¡ ¹İ¿µ
+
+        stSlider.value = (float)st / (float)maxSt;
+
     }
 
-    if(isCaution)
-    {
-        ct += cth;
-        if(ct < 0) ct = 0;
-    }
-    //í˜„ì¬ í”Œë ˆì´ì–´ ì²´ë ¥ í¼ì„¼í…Œì´ì§€ë¥¼ ì²´ë ¥ë°”ì˜ Valueì— ë°˜ì˜
 
-    hpSlider.value = (float)hp / (float)maxHp;
 
-    stSlider.value = (float)st / (float)maxSt;
-
-    ctSlider.value = (float)ct / (float)minCt;
-
-}
 }
