@@ -34,10 +34,10 @@
   </tr>
     <tr>
     <td align="center"><a href="https://github.com/gjsk132" title="Code">gjsk132</a></td>
-    <td align="center"><a href="https://github.com/gjsk132" title="Code">hhchan15</a></td>
-    <td align="center"><a href="https://github.com/gjsk132" title="Code">junyoungnnn</a></td>
-    <td align="center"><a href="https://github.com/gjsk132" title="Code">ParkHyeon89</a></td>
-    <td align="center"><a href="https://github.com/gjsk132" title="Code">westging</a></td>
+    <td align="center"><a href="https://github.com/hhchan15" title="Code">hhchan15</a></td>
+    <td align="center"><a href="https://github.com/junyoungnnn" title="Code">junyoungnnn</a></td>
+    <td align="center"><a href="https://github.com/ParkHyeon89" title="Code">ParkHyeon89</a></td>
+    <td align="center"><a href="https://github.com/westging" title="Code">westging</a></td>
   </tr>
 </table>
 </div>
