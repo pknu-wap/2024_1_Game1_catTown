@@ -9,10 +9,10 @@ public class Main_PMove : MonoBehaviour
 {
     void CallNextScene ()
     {
-    
-        SceneManager.LoadScene("test", LoadSceneMode.Additive); //미로 1번 
-        SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);//아파트 3번
-        SceneManager.LoadScene("constructionSite", LoadSceneMode.Additive);//공사장 2번
+
+        SceneManager.LoadScene("test", LoadSceneMode.Additive); //미로
+        SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);//아파트
+        SceneManager.LoadScene("constructionSite",  LoadSceneMode.Additive);//공사장
     }
  
 
@@ -54,13 +54,7 @@ public class Main_PMove : MonoBehaviour
 
     public Slider stSlider;
 
-
     //위험도 변수 제어
-    =======
-
-
-    //private int ct = 0; //ct = caution
-
     
     private int ct = 0; //ct = caution
     float cautionHealthTime = 0.0f;
@@ -166,8 +160,9 @@ public class Main_PMove : MonoBehaviour
         SceneManager.LoadScene("ApartmentScene");
     }
     if(Input.GetKeyDown(KeyCode.O)){
-        SceneManager.LoadScene("constructionSite");
-    }
+            SceneManager.LoadScene("constructionSite");
+        }
+
     if(Input.GetKeyDown(KeyCode.I)){
         SceneManager.LoadScene("test");
     }
