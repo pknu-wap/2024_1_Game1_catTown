@@ -10,10 +10,11 @@ public class Main_PMove : MonoBehaviour
     void CallNextScene ()
     {
     
-        SceneManager.LoadScene("test", LoadSceneMode.Additive); //미로
-        SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);//아파트
+        SceneManager.LoadScene("test", LoadSceneMode.Additive); //미로 1번 
+        SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);//아파트 3번
+        SceneManager.LoadScene("constructionSite", LoadSceneMode.Additive);//공사장 2번
     }
-
+ 
 
     // 플레이어 이동 속도
     private float walkSpeed= 3f;
@@ -21,7 +22,7 @@ public class Main_PMove : MonoBehaviour
     private float runSpeed = 6f;
 
     public bool isRunnig = false;
-    public bool isStaminaHeal = true; //코루틴 딜레이에서 불 함수를 통한 스태미너 힐 처리 
+    public bool isStaminaHeal = true; //불 함수를 통한 스태미너 힐 처리 
     public bool isCaution = true;
 
     public float applySpeed;
@@ -31,13 +32,13 @@ public class Main_PMove : MonoBehaviour
 
     //플레이어 체력 변수
 
-    private int hp = 10; //hp = health point
+    public int hp = 10; //hp = health point
 
-    private int maxHp = 10;
-    private int minHp = 0;
+    public int maxHp = 10;
+    public int minHp = 0;
 
-    private int hpd = 2;
-    private int hph = 5;
+    public int hpd = 2;
+    public int hph = 5;
 
     public Slider hpSlider; //ui 머리 위로 감춰둠.
 
@@ -72,14 +73,6 @@ public class Main_PMove : MonoBehaviour
 
     public Slider ctSlider;
 
-    //위험도 및 피격시 ui 이펙트 
-    //public attackP hitEffect;
-
-    public void DamegeAction(int damege)
-    {
-        hp -= hpd;
-    }
-
     //중력, 수직 속도 변수
     float gravity = -20f;
     float yVelocity = 0;
@@ -102,7 +95,7 @@ public class Main_PMove : MonoBehaviour
 
     }
 
-    void LoadData()
+    void LoadData() //플레이어 데이터 씬 이동 시 이전 코드
     {
 
 
@@ -119,7 +112,7 @@ public class Main_PMove : MonoBehaviour
 
         //Shift 키 입력에 따른 달리기 제어 조건문 및 스태미너 감소 제어
 
-    if (Input.GetKey(KeyCode.RightShift) && st > 0 && dir != Vector3.zero) 
+    if (Input.GetMouseButton(0) && st > 0 && dir != Vector3.zero) 
         //점프랑 동일한 구조 함수, 달리기 확인에 필요한 dir값의 좌표 이동에 따른 값 변동의 
         {
            //Debug.Log("나는 달릴거야"); //콘솔 내 실행 디버그
@@ -149,8 +142,6 @@ public class Main_PMove : MonoBehaviour
 
         cc.Move(dir * applySpeed * Time.deltaTime);
         
-
-
         //스페이스바 입력에 따른 점프 제어 조건문
 
     if (isJumping && cc.collisionFlags == CollisionFlags.Below)
@@ -174,10 +165,19 @@ public class Main_PMove : MonoBehaviour
     if(Input.GetKeyDown(KeyCode.P)){
         SceneManager.LoadScene("ApartmentScene");
     }
-    //if(Input.GetKeyDown(KeyCode.o)){}
-
+    if(Input.GetKeyDown(KeyCode.O)){
+        SceneManager.LoadScene("constructionSite");
+    }
     if(Input.GetKeyDown(KeyCode.I)){
         SceneManager.LoadScene("test");
+    }
+    
+    Monster Shadowlop = GameObject.GetComponent<Monster>();
+    Debug.Log(isHitting);
+
+    if(isHitting == true)
+    {
+        hp -= hpd;
     }
 
     if(isStaminaHeal == false) //스태미나 힐 작동 조건문 
@@ -188,6 +188,12 @@ public class Main_PMove : MonoBehaviour
             staminaHealthTime = 2.0f;
             isStaminaHeal = true;
         }
+    }
+    
+    if(isStaminaHeal)
+    {
+        st += sth;
+        if(st < 0) st = 0;
     }
 
     if(isStaminaHeal) //스태미나 힐 작동 조건문 
