@@ -165,13 +165,10 @@ public class Main_PMove : MonoBehaviour
         SceneManager.LoadScene("test");
     }
     
-    Monster Shadowlop = GameObject.GetComponent<Monster>();
-    Debug.Log(isHitting);
+    //Monster Shadowlop = GameObject.GetComponent<Monster>();
+    //Debug.Log(isHitting);
 
-    if(isHitting == true)
-    {
-        hp -= hpd;
-    }
+    //if(isHitting == true) { hp -= hpd; }
 
     if(isStaminaHeal == false) //스태미나 힐 작동 조건문 
     {
