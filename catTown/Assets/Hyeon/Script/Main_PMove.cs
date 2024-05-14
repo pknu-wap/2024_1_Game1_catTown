@@ -159,7 +159,7 @@ public class Main_PMove : MonoBehaviour
         SceneManager.LoadScene("ApartmentScene");
     }
     if(Input.GetKeyDown(KeyCode.O)){
-            SceneManager.LoadScene("constructionSite");
+        SceneManager.LoadScene("constructionSite");
     }
     if(Input.GetKeyDown(KeyCode.I)){
         SceneManager.LoadScene("test");
