@@ -4,68 +4,67 @@ using UnityEngine.AI;
 
 public class Monster : MonoBehaviour
 {
-    public LayerMask whatIsTarget; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½
-    private Main_PMove targetEntity; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
-    private NavMeshAgent navMeshAgent; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ AI ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
-    private Animator monsterAnimator; // ï¿½Ö´Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
-    private bool isAttacking = false; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
-    public bool isHitting = false;
+    public LayerMask whatIsTarget; // ÃßÀû ´ë»ó ·¹ÀÌ¾î
+    private Main_PMove targetEntity; // ÃßÀû ´ë»ó
+    private NavMeshAgent navMeshAgent; // °æ·Î °è»ê AI ¿¡ÀÌÀüÆ®
+    private Animator monsterAnimator; // ¾Ö´Ï¸ÞÀÌÅÍ ÄÄÆ÷³ÍÆ®
+    private bool isAttacking = false; // °ø°Ý ÁßÀÎÁö ¿©ºÎ
 
-    public AudioClip footstepSound; // ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½
-    private AudioSource audioSource; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    public AudioClip footstepSound; // ¹ß ¼Ò¸® ¿Àµð¿À Å¬¸³
+    private AudioSource audioSource; // ¿Àµð¿À ¼Ò½º ÄÄÆ÷³ÍÆ®
 
-    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼
+    // ÃßÀûÇÒ ´ë»óÀÌ Á¸ÀçÇÏ´ÂÁö ¾Ë·ÁÁÖ´Â ÇÁ·ÎÆÛÆ¼
     private bool hasTarget
     {
         get
         {
-            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò´Ù¸ï¿½ true
+            // ÃßÀûÇÒ ´ë»óÀÌ Á¸ÀçÇÏ°í, ´ë»óÀÌ »ç¸ÁÇÏÁö ¾Ê¾Ò´Ù¸é true
             if (targetEntity != null)// && !targetEntity.dead)
             {
                 return true;
             }
 
-            // ï¿½×·ï¿½ï¿½ï¿½ ï¿½Ê´Ù¸ï¿½ false
+            // ±×·¸Áö ¾Ê´Ù¸é false
             return false;
         }
     }
 
     private void Awake()
     {
-        // ï¿½Ê±ï¿½È­
+        // ÃÊ±âÈ­
         navMeshAgent = GetComponent<NavMeshAgent>();
         monsterAnimator = GetComponent<Animator>();
-        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ¿Àµð¿À ¼Ò½º ÄÄÆ÷³ÍÆ® °¡Á®¿À±â
         audioSource = GetComponent<AudioSource>();
-        // ï¿½ï¿½ ï¿½Ò¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        // ¹ß ¼Ò¸® ¿Àµð¿À Å¬¸³ ¼³Á¤
         //audioSource.clip = footstepSound;
         
     }
 
     void Start()
     {
-        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® È°ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½ AIï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¾ ï¿½ï¿½ï¿½ï¿½
+        // °ÔÀÓ ¿ÀºêÁ§Æ® È°¼ºÈ­¿Í µ¿½Ã¿¡ AIÀÇ ÃßÀû ·çÆ¾ ½ÃÀÛ
         StartCoroutine(UpdatePath());
     }
 
     void Update()
     {
-        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½
+        // ÃßÀû ´ë»óÀÇ Á¸Àç ¿©ºÎ¿¡ µû¶ó ´Ù¸¥ ¾Ö´Ï¸ÞÀÌ¼Ç Àç»ý
         monsterAnimator.SetBool("HasTarget", hasTarget);
     }
 
-    // ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+    // ÁÖ±âÀûÀ¸·Î ÃßÀûÇÒ ´ë»óÀÇ À§Ä¡¸¦ Ã£¾Æ °æ·Î °»½Å
     private IEnumerator UpdatePath()
     {
-        // ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        // »ì¾Æ ÀÖ´Â µ¿¾È ¹«ÇÑ ·çÇÁ
         while (true)
         {
             if (!hasTarget)
             {
-                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Úµï¿½
+                // ÃßÀû ´ë»óÀÌ ¾øÀ» ¶§ ÄÚµå
                 Collider[] colliders = Physics.OverlapSphere(transform.position, 20f, whatIsTarget);
 
-                // ï¿½Öºï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½
+                // ÁÖº¯¿¡ ÇÃ·¹ÀÌ¾î°¡ ÀÖ´ÂÁö È®ÀÎ
                 for (int i = 0; i < colliders.Length; i++)
                 {
                     Main_PMove player = colliders[i].GetComponent<Main_PMove>();
@@ -78,33 +77,31 @@ public class Monster : MonoBehaviour
             }
             else
             {
-                // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+                // ÃßÀû ÁßÀÎ °æ¿ì
                 if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2f && !isAttacking)
                 {
-                    // ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+                    // ÇÃ·¹ÀÌ¾î°¡ ÀÏÁ¤ ¹üÀ§ ³»¿¡ ÀÖÀ¸¸é °ø°Ý
                     monsterAnimator.SetBool("isHit", true);
-                    isHitting = true;
-                    
                 }
                 else
                 {
-                    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ß°ï¿½ ï¿½Ù½ï¿½ ï¿½ß°ï¿½
+                    // ÀÏÁ¤ ¹üÀ§ ³»¿¡ ÇÃ·¹ÀÌ¾î°¡ ¾øÀ¸¸é °ø°ÝÀ» ¸ØÃß°í ´Ù½Ã Ãß°Ý
                     monsterAnimator.SetBool("isHit", false);
                     navMeshAgent.isStopped = false;
                     navMeshAgent.SetDestination(targetEntity.transform.position);
-                    isHitting = false;
+              
                 }
             }
 
-            // 0.25ï¿½ï¿½ ï¿½Ö±ï¿½ï¿½ Ã³ï¿½ï¿½ ï¿½Ýºï¿½
+            // 0.25ÃÊ ÁÖ±â·Î Ã³¸® ¹Ýº¹
             yield return new WaitForSeconds(0.25f);
         }
     }
 
-    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
+    // ¿Àµð¿À¸¦ Àç»ýÇÏ´Â ÇÔ¼ö
     void PlayAudio()
     {
-        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
+        // ¿Àµð¿À Àç»ý
         audioSource.Play();
     }
 }
