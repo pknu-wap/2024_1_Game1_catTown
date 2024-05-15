@@ -9,15 +9,13 @@ public class Jody : MonoBehaviour
     public LayerMask whatIsTarget; // 적 대상 레이어
     private NavMeshAgent navMeshAgent; // 경로 계산 AI 에이전트
     private Animator amyAnimator; // 애니메이터 컴포넌트
-    private Player targetEntity; // 추적 대상
+    private Main_PMove targetEntity; // 추적 대상
+    private Transform JodyTransform;
     private int currentPointIndex = 0;
     private bool surprised = true;
     [SerializeField] int noiseLevel = 0;
 
-    // 노이즈 레벨이 일정 수치에 도달하면 Jody가 잠에서 깸.
-    // 잠에서 깨었을때 거실을 둘러 보는데 거실에 적이 있으면 추적해서 공격.
-    // 적이 없을 경우 노이즈 레벨을 초기화하고 다시 잠.
-
+    // 노이즈 레벨이 일정 수치에 도달하면 Jody가 잠에서 깨서 적에게 달려가서 공격.
 
 
     // 추적할 대상이 존재하는지 알려주는 프로퍼티
@@ -26,7 +24,7 @@ public class Jody : MonoBehaviour
         get
         {
             // 추적할 대상이 존재하고, 대상이 사망하지 않았다면 true
-            if (targetEntity != null && !targetEntity.dead)
+            if (targetEntity != null /*&& !targetEntity.dead)*/)
             {
                 return true;
             }
@@ -42,6 +40,7 @@ public class Jody : MonoBehaviour
         // 초기화
         navMeshAgent = GetComponent<NavMeshAgent>();
         amyAnimator = GetComponent<Animator>();
+        JodyTransform = GetComponent<Transform>();
     }
 
     void Start()
@@ -67,33 +66,37 @@ public class Jody : MonoBehaviour
             if (!hasTarget)
             {
                 // 주변에 적이 있는지 확인
-                Collider[] colliders = Physics.OverlapSphere(transform.position, 10f, whatIsTarget);
+                Collider[] colliders = Physics.OverlapSphere(transform.position, 100f, whatIsTarget);
                 for (int i = 0; i < colliders.Length; i++)
                 {
-                    Player player = colliders[i].GetComponent<Player>();
-                    if (player != null && !player.dead)
+                    Main_PMove player = colliders[i].GetComponent<Main_PMove>();
+                    if (player != null /*&& !player.dead*/)
                     {
                         targetEntity = player;
                         break;
                     }
                 }
+                Debug.Log("no");
             }
             else // 적을 발견한 경우
             {
+                Debug.Log("surprised");
                 // 멈춰서서 발견 애니메이션 재생
                 amyAnimator.SetBool("HasTarget", true);
                 if (surprised)
                 {
-                    Debug.Log("surprised");
+                    
                     float navmMeshSpeed = navMeshAgent.speed;
                     navMeshAgent.speed = 0;
-                    yield return new WaitForSeconds(2.5f);
+                    JodyTransform.position = new Vector3(-1f, 0.7f, -2f);
+                    yield return new WaitForSeconds(15.0f);
                     navMeshAgent.speed = navmMeshSpeed;
                     surprised = false;
                 }
                 // 적과의 거리를 확인하여 일정 범위 내에 있으면 추적 시작
-                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 10f)
+                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 100f)
                 {
+                    Debug.Log("running");
                     // 추적 중인 애니메이션 재생
                     amyAnimator.SetBool("isRunning", true);
                     navMeshAgent.SetDestination(targetEntity.transform.position);
@@ -102,6 +105,7 @@ public class Jody : MonoBehaviour
                     {
                         // 플레이어가 일정 범위 내에 있으면 공격
                         amyAnimator.SetTrigger("Attack");
+                        Debug.Log("attck");
                     }
                 }
             }
