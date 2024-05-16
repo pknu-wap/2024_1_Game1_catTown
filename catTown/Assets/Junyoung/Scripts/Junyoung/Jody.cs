@@ -85,11 +85,15 @@ public class Jody : MonoBehaviour
                 amyAnimator.SetBool("HasTarget", true);
                 if (surprised)
                 {
-                    
                     float navmMeshSpeed = navMeshAgent.speed;
                     navMeshAgent.speed = 0;
-                    JodyTransform.position = new Vector3(-1f, 0.7f, -2f);
-                    yield return new WaitForSeconds(15.0f);
+                    JodyTransform.position = new Vector3(-1.78821f, 0.5f, -2.611f);
+                    yield return new WaitForSeconds(6.0f);
+                    JodyTransform.rotation = Quaternion.Euler(0, 90f, 0);
+                    yield return new WaitForSeconds(6.5f);
+                    JodyTransform.rotation = Quaternion.Euler(0, 0, 0);
+                    JodyTransform.position = new Vector3(-1.78821f, 0f, -1.5f);
+                    yield return new WaitForSeconds(12.0f);
                     navMeshAgent.speed = navmMeshSpeed;
                     surprised = false;
                 }

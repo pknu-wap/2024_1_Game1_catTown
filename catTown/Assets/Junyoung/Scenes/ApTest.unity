@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -109,9 +109,9 @@ NavMeshSettings:
     agentRadius: 0.1
     agentHeight: 2
     agentSlope: 45
-    agentClimb: 0.4
+    agentClimb: 0.85
     ledgeDropHeight: 2
-    maxJumpAcrossDistance: 0
+    maxJumpAcrossDistance: 2
     minRegionArea: 2
     manualCellSize: 0
     cellSize: 0.033333335
@@ -2207,6 +2207,10 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 808951037086242261, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 808951037086242262, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -2323,6 +2327,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4a3c4e9ae9b122e449659fdb803fb1dc, type: 2}
+    - target: {fileID: 808951037310115339, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 808951037310115339, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 808951037310115339, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 808951037310115339, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.477
+      objectReference: {fileID: 0}
+    - target: {fileID: 808951037310115339, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.868
+      objectReference: {fileID: 0}
+    - target: {fileID: 808951037310115339, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 808951037311263467, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
@@ -3226,6 +3254,10 @@ PrefabInstance:
     - target: {fileID: 808951038438710256, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 808951038438710263, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 808951038441941526, guid: 49f576a03ece56a4e9c640ed081f6a68, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6145,7 +6177,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 96291631181201563, guid: ac8596b898421cd488fb9400fc10dac2, type: 3}
       propertyPath: m_StoppingDistance
-      value: 2
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 2337214068717685665, guid: ac8596b898421cd488fb9400fc10dac2, type: 3}
       propertyPath: m_Name
@@ -8883,7 +8915,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1046272142942876974, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1046272142942876974, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8929,6 +8961,10 @@ PrefabInstance:
       propertyPath: stSlider
       value: 
       objectReference: {fileID: 642794674055316194}
+    - target: {fileID: 4518192400990488216, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
+      propertyPath: rotSpeed
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 7061183298513390267, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
