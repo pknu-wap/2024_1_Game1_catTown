@@ -15,6 +15,6 @@ public class CircuitObject : MonoBehaviour
     private void OnMouseDown()
     {
         // 전송
-        puzzleManager.OnCircuitButtonClicked(index);
+        puzzleManager.ButtonClicked(index);
     }
 }
