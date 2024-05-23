@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4344944948247243907}
   - component: {fileID: 5815406245740624163}
   - component: {fileID: 1415440820842693294}
+  - component: {fileID: 6736606621798702770}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -120,6 +121,10 @@ MonoBehaviour:
   isStaminaHeal: 1
   isCaution: 1
   applySpeed: 0
+  hp: 10
+  maxHp: 10
+  minHp: 0
+  hph: 5
   hpSlider: {fileID: 9012912458468820393}
   stSlider: {fileID: 0}
   ctSlider: {fileID: 0}
@@ -178,6 +183,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &6736606621798702770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1489384002958546282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4077bfe8b230c849a88f66a6073b527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRespawn: {fileID: 0}
 --- !u!1 &2782954899007727940
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +338,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 200
+  Target: {fileID: 1489384002958546282}
+  CameraSpeed: 10
 --- !u!1 &3566366011886546494
 GameObject:
   m_ObjectHideFlags: 0

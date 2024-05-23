@@ -10390,42 +10390,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
   m_PrefabInstance: {fileID: 2120011750}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2121964726 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1489384002958546282, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
+--- !u!114 &2121964735 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6736606621798702770, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
   m_PrefabInstance: {fileID: 274848669089366070}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2121964734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121964726}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d08e392fa07b2fa4ca554599ab35ca11, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2121964735
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121964726}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e4077bfe8b230c849a88f66a6073b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRespawn: {fileID: 387943505}
 --- !u!114 &2121964736 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4344944948247243907, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
   m_PrefabInstance: {fileID: 274848669089366070}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2121964726}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 15607dbd3bd4c8b42856ebda9b636956, type: 3}
@@ -10565,6 +10546,10 @@ PrefabInstance:
       propertyPath: stSlider
       value: 
       objectReference: {fileID: 476377534}
+    - target: {fileID: 6736606621798702770, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
+      propertyPath: playerRespawn
+      value: 
+      objectReference: {fileID: 387943505}
     - target: {fileID: 7061183298513390267, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -10572,13 +10557,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1489384002958546282, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2121964734}
-    - targetCorrespondingSourceObject: {fileID: 1489384002958546282, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2121964735}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b4b8b01c75779bc41864f99bc9006932, type: 3}
 --- !u!114 &559298073257658397
 MonoBehaviour:
@@ -10678,7 +10657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7911964603512431793, guid: 1ae9f5be6a6230940a9d563926f3972c, type: 3}
       propertyPath: m_StoppingDistance
-      value: 2
+      value: 1.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
