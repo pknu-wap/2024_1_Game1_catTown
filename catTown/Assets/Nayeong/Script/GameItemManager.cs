@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class GameItemManager : MonoBehaviour
 {
-    public static GameManager Instance { get; private set; }
+    public static GameItemManager Instance { get; private set; }
 
     // 플레이어의 체력 변수
     private float playerHealth = 100f;
