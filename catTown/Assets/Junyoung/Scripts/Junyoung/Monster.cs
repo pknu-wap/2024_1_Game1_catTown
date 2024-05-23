@@ -10,9 +10,11 @@ public class Monster : MonoBehaviour
     private Animator monsterAnimator; // �ִϸ����� ������Ʈ
     private bool isAttacking = false; // ���� ������ ����
     public bool isHitting = false;
+    private Transform monsterTransform;
 
     public AudioClip footstepSound; // �� �Ҹ� ����� Ŭ��
     private AudioSource audioSource; // ����� �ҽ� ������Ʈ
+    [SerializeField] Transform monsterRespawn;
 
     // ������ ����� �����ϴ��� �˷��ִ� ������Ƽ
     private bool hasTarget
@@ -37,6 +39,7 @@ public class Monster : MonoBehaviour
         monsterAnimator = GetComponent<Animator>();
         // ����� �ҽ� ������Ʈ ��������
         audioSource = GetComponent<AudioSource>();
+        monsterTransform = GetComponent<Transform>();
         // �� �Ҹ� ����� Ŭ�� ����
         //audioSource.clip = footstepSound;
         
@@ -63,7 +66,7 @@ public class Monster : MonoBehaviour
             if (!hasTarget)
             {
                 // ���� ����� ���� �� �ڵ�
-                Collider[] colliders = Physics.OverlapSphere(transform.position, 20f, whatIsTarget);
+                Collider[] colliders = Physics.OverlapSphere(transform.position, 10f, whatIsTarget);
 
                 // �ֺ��� �÷��̾ �ִ��� Ȯ��
                 for (int i = 0; i < colliders.Length; i++)
@@ -75,6 +78,9 @@ public class Monster : MonoBehaviour
                         break;
                     }
                 }
+                // 5초뒤 추격
+                monsterTransform.position = monsterRespawn.position;
+                yield return new WaitForSeconds(5.0f);
             }
             else
             {
@@ -84,7 +90,6 @@ public class Monster : MonoBehaviour
                     // �÷��̾ ���� ���� ���� ������ ����
                     monsterAnimator.SetBool("isHit", true);
                     isHitting = true;
-                    
                 }
                 else
                 {
@@ -106,5 +111,10 @@ public class Monster : MonoBehaviour
     {
         // ����� ���
         audioSource.Play();
+    }
+
+    public void Respawn()
+    {
+        transform.position = monsterRespawn.position;
     }
 }
