@@ -2605,7 +2605,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d08e392fa07b2fa4ca554599ab35ca11, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 6429785128060683002}
 --- !u!114 &6342060315833700766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2619,6 +2618,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 200
+  Target: {fileID: 8948009026864822236}
+  CameraSpeed: 10
 --- !u!4 &6429785128060683002
 Transform:
   m_ObjectHideFlags: 0
@@ -2758,10 +2759,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isRunnig: 0
   isStaminaHeal: 1
-  isHealPointItem: 0
   isCaution: 1
-  isHitting: 0
   applySpeed: 0
+  hp: 10
+  maxHp: 10
+  minHp: 0
+  hph: 5
   hpSlider: {fileID: 1409861155}
   stSlider: {fileID: 357174229}
   ctSlider: {fileID: 2053312927}
