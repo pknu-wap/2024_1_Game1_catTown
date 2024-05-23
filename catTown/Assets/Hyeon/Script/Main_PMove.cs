@@ -92,7 +92,7 @@ public class Main_PMove : MonoBehaviour
 
     }
 
-    void FixedUpdate()
+    void Update()
     {
         
         float h = Input.GetAxis("Horizontal");
