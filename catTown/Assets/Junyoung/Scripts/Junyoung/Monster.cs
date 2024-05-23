@@ -9,9 +9,7 @@ public class Monster : MonoBehaviour
     private NavMeshAgent navMeshAgent; // ��� ��� AI ������Ʈ
     private Animator monsterAnimator; // �ִϸ����� ������Ʈ
     private bool isAttacking = false; // ���� ������ ����
-    public bool isHitting; //공격 모션 딜레이
-    private float attackTimer = 0f;
-    private Main_PMove player;
+    public bool isHitting = false;
 
     public AudioClip footstepSound; // �� �Ҹ� ����� Ŭ��
     private AudioSource audioSource; // ����� �ҽ� ������Ʈ
@@ -41,7 +39,6 @@ public class Monster : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
         // �� �Ҹ� ����� Ŭ�� ����
         //audioSource.clip = footstepSound;
-    
         
     }
 
@@ -71,7 +68,7 @@ public class Monster : MonoBehaviour
                 // �ֺ��� �÷��̾ �ִ��� Ȯ��
                 for (int i = 0; i < colliders.Length; i++)
                 {
-                    player = colliders[i].GetComponent<Main_PMove>();
+                    Main_PMove player = colliders[i].GetComponent<Main_PMove>();
                     if (player != null) //&& !player.dead)
                     {
                         targetEntity = player;
@@ -84,28 +81,9 @@ public class Monster : MonoBehaviour
                 // ���� ���� ���
                 if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2f && !isAttacking)
                 {
-                   
                     // �÷��̾ ���� ���� ���� ������ ����
                     monsterAnimator.SetBool("isHit", true);
-
-                    
-                     
-                    // if(attackTimer>5.0f)
-                    // {
-                    
-                    // monsterAnimator.SetBool("isHit", false);
-                    // attackTimer += Time.deltaTime;
-                    // player.hp -= 2;
-                    // Debug.Log(player.hp);
-
-                    // }
-                    // else
-                    // {
-                    //     attackTimer = 0f;
-                    // }
-                
-                    // isHitting = true; 
-                                
+                    isHitting = true;
                 }
                 else
                 {
@@ -115,7 +93,6 @@ public class Monster : MonoBehaviour
                     navMeshAgent.SetDestination(targetEntity.transform.position);
                     isHitting = false;
                 }
-
             }
 
             // 0.25�� �ֱ�� ó�� �ݺ�
@@ -129,5 +106,4 @@ public class Monster : MonoBehaviour
         // ����� ���
         audioSource.Play();
     }
-
 }
