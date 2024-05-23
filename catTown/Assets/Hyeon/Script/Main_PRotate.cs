@@ -25,6 +25,11 @@ public class Main_PRotate : MonoBehaviour
         // 물제 회전 
         transform.eulerAngles = new Vector3(0, mx, 0);
 
+        // if(Main_Menu.mm.gState != Main_Menu.GameState.Run)
+        // {
+        //     return;
+        // }
+
 
     }
 }

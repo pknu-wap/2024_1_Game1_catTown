@@ -12,8 +12,7 @@ public class Main_PMove : MonoBehaviour
         SceneManager.LoadScene("test", LoadSceneMode.Additive); //미로
         SceneManager.LoadScene("ApartmentScene",  LoadSceneMode.Additive);//아파트
         SceneManager.LoadScene("constructionSite",  LoadSceneMode.Additive);//공사장
-    }
- 
+    }    
 
     // 플레이어 이동 속도
     private float walkSpeed= 3f;
@@ -36,7 +35,6 @@ public class Main_PMove : MonoBehaviour
     public int maxHp = 10;
     public int minHp = 0;
 
-    public int hpd = 2;
     public int hph = 5;
 
     public Slider hpSlider; //ui 머리 위로 감춰둠.
@@ -48,7 +46,7 @@ public class Main_PMove : MonoBehaviour
     private int maxSt = 1000;
     private int minSt = -5;
 
-    private int std = 10; // stemina damega
+    private int std = 10; // stemina damage
     private int sth = 5; // stemina heal
 
     public Slider stSlider;
@@ -94,7 +92,8 @@ public class Main_PMove : MonoBehaviour
 
     }
 
-    void Update(){
+    void FixedUpdate()
+    {
         
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -117,6 +116,7 @@ public class Main_PMove : MonoBehaviour
             applySpeed = runSpeed;
             st -= std;
         }
+
     else{
 
         isRunnig = false;
@@ -134,6 +134,11 @@ public class Main_PMove : MonoBehaviour
         dir.y = yVelocity;
 
         cc.Move(dir * applySpeed * Time.deltaTime);
+
+        ///if(Main_Menu.mm.gState != Main_Menu.GameState.Run)
+        // {
+        //     return;
+        // }
         
         //스페이스바 입력에 따른 점프 제어 조건문
 
@@ -164,11 +169,6 @@ public class Main_PMove : MonoBehaviour
     if(Input.GetKeyDown(KeyCode.I)){
         SceneManager.LoadScene("test");
     }
-    
-    //Monster Shadowlop = GameObject.GetComponent<Monster>();
-    //Debug.Log(isHitting);
-
-    //if(isHitting == true) { hp -= hpd; }
 
     if(isStaminaHeal == false) //스태미나 힐 작동 조건문 
     {
@@ -209,6 +209,7 @@ public class Main_PMove : MonoBehaviour
         ct += cth;
         if(ct < 0) ct = 0;
     }
+
     //현재 플레이어 체력 퍼센테이지를 체력바의 Value에 반영
 
     hpSlider.value = (float)hp / (float)maxHp;
@@ -217,5 +218,5 @@ public class Main_PMove : MonoBehaviour
 
     ctSlider.value = (float)ct / (float)minCt;
 
-}
+    }
 }

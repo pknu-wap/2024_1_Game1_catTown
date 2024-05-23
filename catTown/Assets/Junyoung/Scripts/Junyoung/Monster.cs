@@ -90,7 +90,6 @@ public class Monster : MonoBehaviour
                     // �÷��̾ ���� ���� ���� ������ ����
                     monsterAnimator.SetBool("isHit", true);
                     isHitting = true;
-                    
                 }
                 else
                 {
