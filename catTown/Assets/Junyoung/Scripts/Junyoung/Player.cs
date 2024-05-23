@@ -10,11 +10,10 @@ public class Player : MonoBehaviour
     [SerializeField] float mouseX;
     [SerializeField] float rotateSpeed;
     [SerializeField] Vector3 direction;
-    public bool dead { get; protected set; } // ��� ����
+    public bool dead { get; protected set; }
 
     protected virtual void OnEnable()
     {
-        // ������� ���� ���·� ����
         dead = false;
         
     }
@@ -39,7 +38,6 @@ public class Player : MonoBehaviour
 
         direction.Normalize();
 
-        // TransformDirection : �ڱⰡ �ٶ󺸰� �ִ� �������� �̵��ϴ� �Լ��Դϴ�.
         transform.position += transform.TransformDirection(direction) * speed * Time.deltaTime;
     }
 
