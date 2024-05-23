@@ -11,8 +11,8 @@ public class Portal : MonoBehaviour
     {
         Debug.Log("Change Scene");
 
-        // 플레이어가 포털 위에 있는지 확인하고 F 키를 눌렀는지 확인
-        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.F))
+        // 플레이어가 포털 위에 있는지 확인하고 E 키를 눌렀는지 확인
+        if (other.CompareTag("Player") && Input.GetKeyDown(KeyCode.E))
         {
             
             // 다음 씬으로 이동
