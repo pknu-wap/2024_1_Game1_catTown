@@ -10,7 +10,7 @@ public class Amy : MonoBehaviour
     public LayerMask whatIsTarget; // 적 대상 레이어
     private NavMeshAgent navMeshAgent; // 경로 계산 AI 에이전트
     private Animator amyAnimator; // 애니메이터 컴포넌트
-    private Player targetEntity; // 추적 대상
+    private Main_PMove targetEntity; // 추적 대상
     private int currentPointIndex = 0;
     private bool surprised = true;
     // 추적할 대상이 존재하는지 알려주는 프로퍼티
@@ -19,7 +19,7 @@ public class Amy : MonoBehaviour
         get
         {
             // 추적할 대상이 존재하고, 대상이 사망하지 않았다면 true
-            if (targetEntity != null && !targetEntity.dead)
+            if (targetEntity != null /*&& !targetEntity.dead*/)
             {
                 return true;
             }
@@ -70,8 +70,8 @@ public class Amy : MonoBehaviour
                 Collider[] colliders = Physics.OverlapSphere(transform.position, 10f, whatIsTarget);
                 for (int i = 0; i < colliders.Length; i++)
                 {
-                    Player player = colliders[i].GetComponent<Player>();
-                    if (player != null && !player.dead)
+                    Main_PMove player = colliders[i].GetComponent<Main_PMove>();
+                    if (player != null /*&& !player.dead*/)
                     {
                         targetEntity = player;
                         break;

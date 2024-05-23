@@ -92,7 +92,8 @@ public class Main_PMove : MonoBehaviour
 
     }
 
-    void FixedUpdate(){
+    void FixedUpdate()
+    {
         
         float h = Input.GetAxis("Horizontal");
         float v = Input.GetAxis("Vertical");
@@ -217,5 +218,5 @@ public class Main_PMove : MonoBehaviour
 
     ctSlider.value = (float)ct / (float)minCt;
 
-}
+    }
 }
