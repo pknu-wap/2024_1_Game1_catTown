@@ -15,7 +15,7 @@ public class InteractionItem : MonoBehaviour
         {
             player = GameObject.Find("Player");
 
-            healValue = other.GetComponent<ItemStatus>().healValue;
+            healValue = other.GetComponent<ItemStatus>().HealAmount;
             if (healValue > 0)
             {
                 Debug.Log(healValue+"만큼 회복");
@@ -25,7 +25,7 @@ public class InteractionItem : MonoBehaviour
                 Debug.Log(healValue+"만큼 감소");
             }
 
-            player.GetComponent<Main_PMove>().hp += other.GetComponent<ItemStatus>().healValue;
+            player.GetComponent<Main_PMove>().hp += other.GetComponent<ItemStatus>().HealAmount;
             
             other.gameObject.SetActive(false);
         }

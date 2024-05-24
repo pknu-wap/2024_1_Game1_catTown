@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class ItemStatus : MonoBehaviour
 {
-    public int healValue;
+    [SerializeField] private int healAmount;
+    public int HealAmount => healAmount;
 
     private float rotationSpeed = 50f;
     private float bobSpeed = 1.5f;
