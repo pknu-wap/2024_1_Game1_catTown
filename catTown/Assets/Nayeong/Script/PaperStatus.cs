@@ -15,10 +15,15 @@ public class PaperStatus : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        // Player이면
         if (other.gameObject.tag == "Player")
         {
             InteractionText.Instance.textDisappear();
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                Debug.Log("Show Paper Image");
+
+                // 스프라이트 이미지 띄우기.
+            }
         }
     }
 }
