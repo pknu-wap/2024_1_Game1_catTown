@@ -17,10 +17,19 @@ public class InteractionText : MonoBehaviour
         }
     }
 
+    /// <summary>
+    /// "[Q]" appear
+    ///  Object Collider detect (OnTriggerEnter)
+    /// </summary>
     public void textAppear()
     {
         basicText.gameObject.SetActive(true);
     }
+
+    /// <summary>
+    /// "[Q]" disappear
+    /// Object Collider detect (OnTriggerExit)
+    /// </summary>
     public void textDisappear()
     {
         basicText.gameObject.SetActive(false);
