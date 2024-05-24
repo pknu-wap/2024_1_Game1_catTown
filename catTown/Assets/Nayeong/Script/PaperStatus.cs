@@ -1,29 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class PaperStatus : MonoBehaviour
 {
-    private void OnTriggerEnter(Collider other)
-    {   
-        if(other.gameObject.tag == "Player")
+    [SerializeField]
+    private int ImageIndex;
+
+    private bool isImageAppear = false;
+    private bool isEnter = false;
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log("충돌");
-            InteractionText.Instance.textAppear();
+            if (!isImageAppear && isEnter)
+            {
+                InteractionUI.Instance.imageAppear(ImageIndex - 1);
+                InteractionUI.Instance.textDisappear();
+                isImageAppear = true;
+            }
+            else
+            {
+                InteractionUI.Instance.imageDisAppear(ImageIndex - 1);
+                InteractionUI.Instance.textAppear();
+                isImageAppear = false;
+            }
+
         }
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Player")
+        {
+            InteractionUI.Instance.textAppear();
+            isEnter = true;
+        }
+
+    }
+
+    // FixedUpdate() -> 시간 간격으로 분할해서 돌아감. 
+    // 키 입력같은 건 Update()
+    // 물리적인 움직임이 FixedUpdate()
+    // private void OnTriggerStay ( 사용 불가능 )
 
     private void OnTriggerExit(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            InteractionText.Instance.textDisappear();
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                Debug.Log("Show Paper Image");
-
-                // 스프라이트 이미지 띄우기.
-            }
+            InteractionUI.Instance.textDisappear();
+            isEnter = false;
         }
+
     }
 }

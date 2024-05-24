@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class InteractionText : MonoBehaviour
+public class InteractionUI : MonoBehaviour
 {
-    public static InteractionText Instance;
+    public static InteractionUI Instance;
 
     [SerializeField] private Text basicText;
+    [SerializeField] private Image[] paper = new Image[8];
 
     private void Awake()
     {
@@ -33,5 +34,17 @@ public class InteractionText : MonoBehaviour
     public void textDisappear()
     {
         basicText.gameObject.SetActive(false);
+    }
+
+    // paper image appear ( i : image index )
+    public void imageAppear(int i)
+    {
+        paper[i].gameObject.SetActive(true);
+    }
+
+    // paper image disappear ( i : image index )
+    public void imageDisAppear(int i)
+    {
+        paper[i].gameObject.SetActive(false);
     }
 }
