@@ -8,7 +8,7 @@ using UnityEngine;
 public class ShowPlayerStatus : MonoBehaviour
 {
     GameObject player;
-    float interval = 2f;
+    public float interval = 2f;
 
     void Start()
     {
