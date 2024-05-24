@@ -22,5 +22,6 @@ public class RespawnManager : MonoBehaviour
         player.Respawn();
         monster.Respawn();
         gameOverPanel.SetActive(false); // 리스폰할 때 Game Over 패널 비활성화
+        Time.timeScale = 1.0f;
     }
 }

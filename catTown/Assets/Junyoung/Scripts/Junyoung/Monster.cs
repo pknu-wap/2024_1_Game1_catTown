@@ -12,7 +12,7 @@ public class Monster : MonoBehaviour
     public bool isHitting = false;
     private Transform monsterTransform;
     private Main_PMove player;
-    private float attactTimer = 5f;
+    private float attactTimer = 0f;
 
     public AudioClip footstepSound; // �� �Ҹ� ����� Ŭ��
     private AudioSource audioSource; // ����� �ҽ� ������Ʈ
@@ -57,6 +57,7 @@ public class Monster : MonoBehaviour
     {
         // ���� ����� ���� ���ο� ���� �ٸ� �ִϸ��̼� ���
         monsterAnimator.SetBool("HasTarget", hasTarget);
+        attactTimer += Time.deltaTime;
     }
 
     // �ֱ������� ������ ����� ��ġ�� ã�� ��� ����
@@ -87,14 +88,21 @@ public class Monster : MonoBehaviour
             else
             {
                 // ���� ���� ���
-                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2.5f && !isAttacking && attactTimer >= 1.0f && player.hp > 0)
+                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2.5f && !isAttacking && attactTimer >= 3.0f && player.hp > 0)
                 {
                     // �÷��̾ ���� ���� ���� ������ ����
+                    
                     attactTimer = 0;
                     monsterAnimator.SetBool("isHit", true);
                     isHitting = true;
                     player.hp -= 2;
                     Debug.Log("attack");
+                    
+                    Debug.Log("Player HP: " + player.hp);
+                    if(player.hp <= 0)
+                    {
+                        Time.timeScale = 0f;
+                    }
                 }
                 else
                 {
@@ -103,7 +111,6 @@ public class Monster : MonoBehaviour
                     navMeshAgent.isStopped = false;
                     navMeshAgent.SetDestination(targetEntity.transform.position);
                     isHitting = false;
-                    attactTimer += Time.deltaTime;
                 }
                 
             }
