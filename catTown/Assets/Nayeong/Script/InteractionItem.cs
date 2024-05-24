@@ -35,10 +35,10 @@ public class InteractionItem : MonoBehaviour
         }
 
         // increased Caution Rate
-        if (other.CompareTag("CautionObject"))
+        /*if (other.CompareTag("CautionObject"))
         {
             var cautionValue = other.GetComponent<CautionStatus>().CautionAmount;
-        }
+        }*/
 
     }
 
