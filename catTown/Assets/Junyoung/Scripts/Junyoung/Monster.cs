@@ -99,7 +99,7 @@ public class Monster : MonoBehaviour
                     Debug.Log("attack");
                     
                     Debug.Log("Player HP: " + player.hp);
-                    if(player.hp <= 0)
+                    if (player.hp <= 0)
                     {
                         Time.timeScale = 0f;
                     }
@@ -126,8 +126,8 @@ public class Monster : MonoBehaviour
         // ����� ���
         audioSource.Play();
     }
-    public void Respawn()
-    {
-        monsterTransform.position = monsterRespawn.position;
-    }
+    //public void Respawn()
+    //{
+    //    monsterTransform.position = monsterRespawn.position;
+    //}
 }
