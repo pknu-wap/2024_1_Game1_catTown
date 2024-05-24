@@ -17,10 +17,10 @@ public class ItemStatus : MonoBehaviour
 
     void Update()
     {
-        // ������ ȸ��
+        // set bobSpeed
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
 
-        // �� �Ʒ� ������
+        // set bobHeight
         float newY = originalY + Mathf.Sin(Time.time * bobSpeed) * bobHeight;
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }

@@ -7,29 +7,39 @@ public class InteractionItem : MonoBehaviour
 {
     GameObject player;
 
-    private int healValue;
+    private void Awake() // already find player
+    {
+        player = GameObject.Find("Player");
+    }
 
     private void OnTriggerEnter(Collider other)
-    {
+    {   
+        // increased & decreased HP
         if (other.CompareTag("HpItem"))
         {
-            player = GameObject.Find("Player");
+            // player = GameObject.Find("Player");
 
-            healValue = other.GetComponent<ItemStatus>().HealAmount;
+            var healValue = other.GetComponent<ItemStatus>().HealAmount;
             if (healValue > 0)
             {
-                Debug.Log(healValue+"��ŭ ȸ��");
+                Debug.Log(healValue + " increased");
             }
             else
             {
-                Debug.Log(healValue+"��ŭ ����");
+                Debug.Log(-healValue + " decreased");
             }
 
             player.GetComponent<Main_PMove>().hp += other.GetComponent<ItemStatus>().HealAmount;
-            
+
             other.gameObject.SetActive(false);
         }
 
+        // increased Caution Rate
+        if (other.CompareTag("CautionObject"))
+        {
+            var cautionValue = other.GetComponent<CautionStatus>().CautionAmount;
+        }
+
     }
-    
+
 }
