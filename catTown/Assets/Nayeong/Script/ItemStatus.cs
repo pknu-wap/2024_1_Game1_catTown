@@ -1,11 +1,12 @@
 using UnityEngine;
 
-public class ItemMoving : MonoBehaviour
+public class ItemStatus : MonoBehaviour
 {
-    public float rotationSpeed = 50f;
-    public float bobSpeed = 1.5f;
-    public float bobHeight = 0.3f;
+    public int healValue;
 
+    private float rotationSpeed = 50f;
+    private float bobSpeed = 1.5f;
+    private float bobHeight = 0.3f;
     private float originalY;
 
     void Start()
