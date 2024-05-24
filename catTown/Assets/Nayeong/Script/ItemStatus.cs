@@ -2,7 +2,8 @@ using UnityEngine;
 
 public class ItemStatus : MonoBehaviour
 {
-    public int healValue;
+    [SerializeField] private int healAmount;
+    public int HealAmount => healAmount;
 
     private float rotationSpeed = 50f;
     private float bobSpeed = 1.5f;
@@ -16,10 +17,10 @@ public class ItemStatus : MonoBehaviour
 
     void Update()
     {
-        // ¾ÆÀÌÅÛ È¸Àü
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ È¸ï¿½ï¿½
         transform.Rotate(Vector3.up * rotationSpeed * Time.deltaTime);
 
-        // À§ ¾Æ·¡ ¿òÁ÷ÀÓ
+        // ï¿½ï¿½ ï¿½Æ·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         float newY = originalY + Mathf.Sin(Time.time * bobSpeed) * bobHeight;
         transform.position = new Vector3(transform.position.x, newY, transform.position.z);
     }

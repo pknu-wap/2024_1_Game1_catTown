@@ -15,17 +15,17 @@ public class InteractionItem : MonoBehaviour
         {
             player = GameObject.Find("Player");
 
-            healValue = other.GetComponent<ItemStatus>().healValue;
+            healValue = other.GetComponent<ItemStatus>().HealAmount;
             if (healValue > 0)
             {
-                Debug.Log(healValue+"¸¸Å­ È¸º¹");
+                Debug.Log(healValue+"ï¿½ï¿½Å­ È¸ï¿½ï¿½");
             }
             else
             {
-                Debug.Log(healValue+"¸¸Å­ °¨¼Ò");
+                Debug.Log(healValue+"ï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½");
             }
 
-            player.GetComponent<Main_PMove>().hp += other.GetComponent<ItemStatus>().healValue;
+            player.GetComponent<Main_PMove>().hp += other.GetComponent<ItemStatus>().HealAmount;
             
             other.gameObject.SetActive(false);
         }
