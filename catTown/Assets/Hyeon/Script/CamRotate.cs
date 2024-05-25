@@ -14,7 +14,7 @@ public class CamRotate : MonoBehaviour
         float hz = 0;   
     
         float Uh = 1.0f;
-        float Dh = 0.5f;
+        float Dh = 0.2f;
 
         public GameObject Target;
 
@@ -28,7 +28,7 @@ public class CamRotate : MonoBehaviour
         
     }
 
-    void FixedUpdate()
+    void LateUpdate()
     {
      // 마우스 입력 받음.
      float mouse_X = Input.GetAxis("Mouse X");
