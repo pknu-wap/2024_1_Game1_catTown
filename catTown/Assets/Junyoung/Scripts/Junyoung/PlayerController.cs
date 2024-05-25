@@ -6,15 +6,11 @@ using UnityEngine.AI;
 public class PlayerController : MonoBehaviour
 {
     private Main_PMove main_PMove;
-    private Rigidbody rigidbody;
-    [SerializeField] Transform playerRespawn;
 
     private void Awake()
     {
         // Player 스크립트를 같은 GameObject에서 찾습니다
         main_PMove = GetComponent<Main_PMove>();
-        rigidbody = GetComponent<Rigidbody>();
-
     }
     // Start is called before the first frame update
     void Start()
@@ -24,10 +20,10 @@ public class PlayerController : MonoBehaviour
         {
             Debug.LogError("Player 스크립트를 찾을 수 없습니다!");
         }
-        if (playerRespawn == null)
-        {
-            Debug.LogError("PlayerRespawn Transform이 설정되지 않았습니다!");
-        }
+        //if (playerRespawn == null)
+        //{
+        //    Debug.LogError("PlayerRespawn Transform이 설정되지 않았습니다!");
+        //}
     }
 
     // Update is called once per frame

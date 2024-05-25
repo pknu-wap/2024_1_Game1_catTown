@@ -2175,11 +2175,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4976853331106008, guid: 57bc482487154a64085c1d0847e454b3, type: 3}
   m_PrefabInstance: {fileID: 466938979}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &472486913 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2637725547701431623, guid: 84794450a5794b14690ea4b41f474335, type: 3}
-  m_PrefabInstance: {fileID: 5705952762933238212}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &476377534 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 642794674309667330, guid: 9fb45716a2de31e488f22d08e594c573, type: 3}
@@ -3374,7 +3369,7 @@ Transform:
   m_GameObject: {fileID: 664550024}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.059000015, y: 4.11, z: 52.32}
+  m_LocalPosition: {x: 0.518, y: 4.998, z: 51.587}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -10452,7 +10447,6 @@ MonoBehaviour:
   main_PMove: {fileID: 5469822079417208527}
   monster: {fileID: 1870756957}
   gameOverPanel: {fileID: 1884937867}
-  playerRespawnPoint: {fileID: 472486913}
 --- !u!1001 &669858156351142807
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10606,6 +10600,10 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8859366686999139481, guid: 76af994777b452d42b310ff7fabe3ec8, type: 3}
+      propertyPath: playerRespawnPoint
+      value: 
+      objectReference: {fileID: 387943505}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

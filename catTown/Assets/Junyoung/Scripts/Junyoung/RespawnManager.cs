@@ -11,7 +11,6 @@ public class RespawnManager : MonoBehaviour
     public Main_PMove main_PMove;
     public Monster monster;
     public GameObject gameOverPanel; // Game Over UI 패널
-    [SerializeField] Transform playerRespawnPoint;
 
     void Awake()
     {
@@ -35,43 +34,16 @@ public class RespawnManager : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
         }
-        if(Input.GetKeyDown(KeyCode.F))
-        {
-            Debug.Log("e");
-            Ret();
-        }
+        
     }
 
     public void RespawnAll()
     {
-        
-
-        // 나머지 리스폰 작업들...
-
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        main_PMove.hp = 10;
-       
-        // 플레이어의 위치를 리스폰 포인트로 이동합니다.
-        if (player != null && playerRespawnPoint != null)
-        {
-            player.transform.position = playerRespawnPoint.position;
-            Debug.Log("위치변경");
-        }
-        Time.timeScale = 1.0f;
-        //player.Respawn();
+        main_PMove.Respawn();
         //monster.Respawn();
-        //gameOverPanel.SetActive(false); // 리스폰할 때 Game Over 패널 비활성화
-        //Time.timeScale = 1.0f;
+        gameOverPanel.SetActive(false); // 리스폰할 때 Game Over 패널 비활성화
+        Time.timeScale = 1.0f;
     }
-    public void Ret()
-    {
-        Debug.Log("클릭");
-        GameObject targetObject = GameObject.Find("Player"); // 변경할 오브젝트의 이름으로 검색
 
-        if (targetObject != null && playerRespawnPoint != null)
-        {
-            targetObject.transform.position = playerRespawnPoint.position;
-            Debug.Log("위치변경");
-        }
-    }
 }
