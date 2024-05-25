@@ -11,6 +11,8 @@ public class Monster : MonoBehaviour
     private bool isAttacking = false; // ���� ������ ����
     public bool isHitting = false;
     private Transform monsterTransform;
+    private Main_PMove player;
+    private float attactTimer = 0f;
 
     public AudioClip footstepSound; // �� �Ҹ� ����� Ŭ��
     private AudioSource audioSource; // ����� �ҽ� ������Ʈ
@@ -55,6 +57,7 @@ public class Monster : MonoBehaviour
     {
         // ���� ����� ���� ���ο� ���� �ٸ� �ִϸ��̼� ���
         monsterAnimator.SetBool("HasTarget", hasTarget);
+        attactTimer += Time.deltaTime;
     }
 
     // �ֱ������� ������ ����� ��ġ�� ã�� ��� ����
@@ -71,7 +74,7 @@ public class Monster : MonoBehaviour
                 // �ֺ��� �÷��̾ �ִ��� Ȯ��
                 for (int i = 0; i < colliders.Length; i++)
                 {
-                    Main_PMove player = colliders[i].GetComponent<Main_PMove>();
+                    player = colliders[i].GetComponent<Main_PMove>();
                     if (player != null) //&& !player.dead)
                     {
                         targetEntity = player;
@@ -80,16 +83,26 @@ public class Monster : MonoBehaviour
                 }
                 // 5초뒤 추격
                 monsterTransform.position = monsterRespawn.position;
-                yield return new WaitForSeconds(5.0f);
+                yield return new WaitForSeconds(4.5f);
             }
             else
             {
                 // ���� ���� ���
-                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2f && !isAttacking)
+                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2.5f && !isAttacking && attactTimer >= 3.0f && player.hp > 0)
                 {
                     // �÷��̾ ���� ���� ���� ������ ����
+                    
+                    attactTimer = 0;
                     monsterAnimator.SetBool("isHit", true);
                     isHitting = true;
+                    player.hp -= 2;
+                    Debug.Log("attack");
+                    
+                    Debug.Log("Player HP: " + player.hp);
+                    if (player.hp <= 0)
+                    {
+                        Time.timeScale = 0f;
+                    }
                 }
                 else
                 {
@@ -99,6 +112,7 @@ public class Monster : MonoBehaviour
                     navMeshAgent.SetDestination(targetEntity.transform.position);
                     isHitting = false;
                 }
+                
             }
 
             // 0.25�� �ֱ�� ó�� �ݺ�
@@ -112,9 +126,8 @@ public class Monster : MonoBehaviour
         // ����� ���
         audioSource.Play();
     }
-
-    public void Respawn()
-    {
-        transform.position = monsterRespawn.position;
-    }
+    //public void Respawn()
+    //{
+    //    monsterTransform.position = monsterRespawn.position;
+    //}
 }
