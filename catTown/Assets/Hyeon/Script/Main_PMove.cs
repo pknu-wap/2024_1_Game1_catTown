@@ -189,17 +189,20 @@ public class Main_PMove : MonoBehaviour
     // 리스폰
     public void Respawn()
     {
-        GameObject targetObject = GameObject.Find("Player"); // 변경할 오브젝트의 이름으로 검색
-
-        if (targetObject != null && playerRespawnPoint != null)
+        if (hp <= 0)
         {
-            // 캐릭터 컨트롤러 비활성화
-            cc.enabled = false;
-            targetObject.transform.position = playerRespawnPoint.position;
-            // 캐릭터 컨트롤러 다시 활성화
-            cc.enabled = true;
-            Debug.Log("위치변경");
-            hp = 10;
+            GameObject targetObject = GameObject.Find("Player"); // 변경할 오브젝트의 이름으로 검색
+
+            if (targetObject != null && playerRespawnPoint != null)
+            {
+                // 캐릭터 컨트롤러 비활성화
+                cc.enabled = false;
+                targetObject.transform.position = playerRespawnPoint.position;
+                // 캐릭터 컨트롤러 다시 활성화
+                cc.enabled = true;
+                Debug.Log("위치변경");
+                hp = 10;
+            }
         }
     }
 }

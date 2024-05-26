@@ -34,7 +34,7 @@ public class RespawnManager : MonoBehaviour
         {
             gameOverPanel.SetActive(true);
         }
-        
+
     }
 
     public void RespawnAll()
