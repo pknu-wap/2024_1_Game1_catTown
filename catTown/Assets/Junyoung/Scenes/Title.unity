@@ -795,6 +795,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e41f6da4e72d2ac40a90301d213aa329, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startButton: {fileID: 0}
 --- !u!1 &1406107032
 GameObject:
   m_ObjectHideFlags: 0
@@ -1164,12 +1165,12 @@ GameObject:
   - component: {fileID: 1949525584}
   - component: {fileID: 1949525583}
   m_Layer: 5
-  m_Name: Scene2 Button
+  m_Name: Scene2Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1949525582
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1237,6 +1238,18 @@ MonoBehaviour:
       - m_Target: {fileID: 225080815}
         m_TargetAssemblyTypeName: TitleManager, Assembly-CSharp
         m_MethodName: LoadScene2
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1141968720}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: ActiveConstructButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1376,12 +1389,12 @@ GameObject:
   - component: {fileID: 2041668794}
   - component: {fileID: 2041668793}
   m_Layer: 5
-  m_Name: Scene3 Button
+  m_Name: Scene3Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2041668792
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1449,6 +1462,18 @@ MonoBehaviour:
       - m_Target: {fileID: 225080815}
         m_TargetAssemblyTypeName: TitleManager, Assembly-CSharp
         m_MethodName: LoadScene3
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1141968720}
+        m_TargetAssemblyTypeName: DataManager, Assembly-CSharp
+        m_MethodName: ActiveApartButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
