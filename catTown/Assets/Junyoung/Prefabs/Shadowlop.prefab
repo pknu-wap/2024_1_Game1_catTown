@@ -118,7 +118,7 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 2
+  m_Speed: 2.25
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
@@ -146,5 +146,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   isHitting: 0
-  footstepSound: {fileID: 8300000, guid: fb3ab1ffd6b8cb243bdf9c678dfc3c44, type: 3}
   monsterRespawn: {fileID: 0}
+  attackSound: {fileID: 8300000, guid: 63b55187d757f314fae5d9a98b022eb4, type: 3}
+  stepSound: {fileID: 8300000, guid: 3eb45fd36cac54a438b3bdb688ceb1af, type: 3}
+  footstepInterval: 0.5
+  initialDelay: 4.5
