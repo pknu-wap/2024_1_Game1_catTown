@@ -51,6 +51,7 @@ public class Main_PMove : MonoBehaviour
 
     public Slider stSlider;
 
+<<<<<<< Updated upstream
     //위험도 변수 제어
     
     private int ct = 0; //ct = caution
@@ -62,6 +63,14 @@ public class Main_PMove : MonoBehaviour
     private int ctd = 10;
     private int cth = 5;
 
+=======
+    // 위험도 변수 제어
+    public int ct = 0; // ct = caution
+    public float cautionHealthTime = 0.0f;
+    public int maxCt = 50;
+    public int ctd = 10;
+    public int cth = 5;
+>>>>>>> Stashed changes
     public Slider ctSlider;
 
     //중력, 수직 속도 변수

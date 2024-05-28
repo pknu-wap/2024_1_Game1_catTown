@@ -9,6 +9,8 @@ public class Main_Menu : MonoBehaviour
     
     public static Main_Menu mm;
 
+    public GameObject MainM;
+
     public void Awake()
     {
         if(mm == null)
@@ -35,21 +37,21 @@ public class Main_Menu : MonoBehaviour
     Main_PMove Player;
 
     public GameObject gameOption;
+    //if(Input.GetButtonDown("Escape")){
+        public void OpenOtion()
+        {
+            gameOption.SetActive(true);
+            Time.timeScale = 0f;
+            gState = GameState.Pause;
+        }
 
-    public void OpenOtion()
-    {
-        gameOption.SetActive(true);
-        Time.timeScale = 0f;
-        gState = GameState.Pause;
-    }
-
-    public void closeOption()
-    {
-        gameOption.SetActive(false);
-        Time.timeScale = 1.0f;
-        gState = GameState.Run;
-    }
-
+        public void closeOption()
+        {
+            gameOption.SetActive(false);
+            Time.timeScale = 1.0f;
+            gState = GameState.Run;
+        }
+    //}
     public void Restart()
     {
         Time.timeScale = 1.0f;
@@ -89,13 +91,27 @@ public class Main_Menu : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Player.hp <= 0)
-        {
-            gameLabel.SetActive(true);
-            gameText.text = "GameOver";
+
+        // if(Input.GetButtonDown(KeyCode.Escape))
+        // {
+        //     if(Pause){
+        //         {
+        //             MainM.SetActive(true);
+        //         }
+        //     }
+        // }    
+        // else
+        // {
+        //     MainM.SetActive(false);        
+        // }
+
+        // if(Player.hp <= 0)
+        // {
+        //     gameLabel.SetActive(true);
+        //     gameText.text = "GameOver";
             
-            gameText.color = new Color32(255,0,0,255);
-            gState = GameState.GameOver;
-        }
+        //     gameText.color = new Color32(255,0,0,255);
+        //     gState = GameState.GameOver;
+        // }
     }
 }
