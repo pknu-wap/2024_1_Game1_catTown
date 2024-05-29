@@ -17,7 +17,7 @@ public class ShowPlayerStatus : MonoBehaviour
 
     IEnumerator DebugHPRoutine()
     {
-        while(true)
+        while (true)
         {
             yield return new WaitForSeconds(interval);
             player = GameObject.Find("Player");
