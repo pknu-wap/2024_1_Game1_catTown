@@ -14,6 +14,8 @@ public class Jody : MonoBehaviour
     private int currentPointIndex = 0;
     private bool surprised = true;
     [SerializeField] int noiseLevel = 0;
+    [SerializeField] Transform wakeUpPoint;
+    [SerializeField] Transform sleepPoint;
 
     // 노이즈 레벨이 일정 수치에 도달하면 Jody가 잠에서 깨서 적에게 달려가서 공격.
 
@@ -87,12 +89,12 @@ public class Jody : MonoBehaviour
                 {
                     float navmMeshSpeed = navMeshAgent.speed;
                     navMeshAgent.speed = 0;
-                    JodyTransform.position = new Vector3(-1.78821f, 0.5f, -2.611f);
+                    JodyTransform.position = sleepPoint.position;
                     yield return new WaitForSeconds(6.0f);
                     JodyTransform.rotation = Quaternion.Euler(0, 90f, 0);
                     yield return new WaitForSeconds(6.5f);
                     JodyTransform.rotation = Quaternion.Euler(0, 0, 0);
-                    JodyTransform.position = new Vector3(-1.78821f, 0f, -1.5f);
+                    JodyTransform.position = wakeUpPoint.position;
                     yield return new WaitForSeconds(12.0f);
                     navMeshAgent.speed = navmMeshSpeed;
                     surprised = false;
