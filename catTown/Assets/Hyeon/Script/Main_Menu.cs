@@ -70,10 +70,6 @@ public class Main_Menu : MonoBehaviour
 
         gameText = gameLabel.GetComponent<Text>();
 
-        gameText.text = "Ready...";
-
-        gameText.color = new Color32(225, 178,0,0);
-
         StartCoroutine(ReadytoStart());
 
     }
