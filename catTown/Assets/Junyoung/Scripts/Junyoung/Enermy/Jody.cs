@@ -6,10 +6,10 @@ using UnityEngine.AI;
 
 public class Jody : MonoBehaviour
 {
-    public LayerMask whatIsTarget; // Àû ´ë»ó ·¹ÀÌ¾î
-    private NavMeshAgent navMeshAgent; // °æ·Î °è»ê AI ¿¡ÀÌÀüÆ®
-    private Animator amyAnimator; // ¾Ö´Ï¸ÞÀÌÅÍ ÄÄÆ÷³ÍÆ®
-    private Main_PMove targetEntity; // ÃßÀû ´ë»ó
+    public LayerMask whatIsTarget; // ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ì¾ï¿½
+    private NavMeshAgent navMeshAgent; // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ AI ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    private Animator amyAnimator; // ï¿½Ö´Ï¸ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
+    private Main_PMove targetEntity; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     private Transform JodyTransform;
     private int currentPointIndex = 0;
     private bool surprised = true;
@@ -17,21 +17,21 @@ public class Jody : MonoBehaviour
     [SerializeField] Transform wakeUpPoint;
     [SerializeField] Transform sleepPoint;
 
-    // ³ëÀÌÁî ·¹º§ÀÌ ÀÏÁ¤ ¼öÄ¡¿¡ µµ´ÞÇÏ¸é Jody°¡ Àá¿¡¼­ ±ú¼­ Àû¿¡°Ô ´Þ·Á°¡¼­ °ø°Ý.
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ Jodyï¿½ï¿½ ï¿½á¿¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 
 
-    // ÃßÀûÇÒ ´ë»óÀÌ Á¸ÀçÇÏ´ÂÁö ¾Ë·ÁÁÖ´Â ÇÁ·ÎÆÛÆ¼
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ï¿½ï¿½ ï¿½Ë·ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ¼
     private bool hasTarget
     {
         get
         {
-            // ÃßÀûÇÒ ´ë»óÀÌ Á¸ÀçÇÏ°í, ´ë»óÀÌ »ç¸ÁÇÏÁö ¾Ê¾Ò´Ù¸é true
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½, ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Ò´Ù¸ï¿½ true
             if (targetEntity != null /*&& !targetEntity.dead)*/)
             {
                 return true;
             }
 
-            // ±×·¸Áö ¾Ê´Ù¸é false
+            // ï¿½×·ï¿½ï¿½ï¿½ ï¿½Ê´Ù¸ï¿½ false
             return false;
         }
     }
@@ -39,7 +39,7 @@ public class Jody : MonoBehaviour
 
     private void Awake()
     {
-        // ÃÊ±âÈ­
+        // ï¿½Ê±ï¿½È­
         navMeshAgent = GetComponent<NavMeshAgent>();
         amyAnimator = GetComponent<Animator>();
         JodyTransform = GetComponent<Transform>();
@@ -47,27 +47,31 @@ public class Jody : MonoBehaviour
 
     void Start()
     {
-        // °ÔÀÓ ¿ÀºêÁ§Æ® È°¼ºÈ­¿Í µ¿½Ã¿¡ AIÀÇ ÃßÀû ·çÆ¾ ½ÃÀÛ
-        StartCoroutine(UpdatePath());
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ® È°ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½Ã¿ï¿½ AIï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ¾ ï¿½ï¿½ï¿½ï¿½
+        if (targetEntity.get_ct() >= targetEntity.get_maxCt())
+        {
+            Debug.Log("WakeUP");
+            StartCoroutine(UpdatePath());
+        }
     }
 
     void Update()
     {
-        // ÃßÀû ´ë»óÀÇ Á¸Àç ¿©ºÎ¿¡ µû¶ó ´Ù¸¥ ¾Ö´Ï¸ÞÀÌ¼Ç Àç»ý
+        // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½
         amyAnimator.SetBool("HasTarget", hasTarget);
 
     }
 
-    // ÁÖ±âÀûÀ¸·Î ÃßÀûÇÒ ´ë»óÀÇ À§Ä¡¸¦ Ã£¾Æ °æ·Î °»½Å
+    // ï¿½Ö±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ä¡ï¿½ï¿½ Ã£ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
     private IEnumerator UpdatePath()
     {
-        // »ì¾Æ ÀÖ´Â µ¿¾È ¹«ÇÑ ·çÇÁ
+        // ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         while (true)
         {
-            // ÀûÀ» ¹ß°ßÇÏÁö ¾ÊÀº °æ¿ì
+            // ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             if (!hasTarget)
             {
-                // ÁÖº¯¿¡ ÀûÀÌ ÀÖ´ÂÁö È®ÀÎ
+                // ï¿½Öºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ï¿½ï¿½ È®ï¿½ï¿½
                 Collider[] colliders = Physics.OverlapSphere(transform.position, 100f, whatIsTarget);
                 for (int i = 0; i < colliders.Length; i++)
                 {
@@ -80,10 +84,10 @@ public class Jody : MonoBehaviour
                 }
                 Debug.Log("no");
             }
-            else // ÀûÀ» ¹ß°ßÇÑ °æ¿ì
+            else // ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             {
                 Debug.Log("surprised");
-                // ¸ØÃç¼­¼­ ¹ß°ß ¾Ö´Ï¸ÞÀÌ¼Ç Àç»ý
+                // ï¿½ï¿½ï¿½ç¼­ï¿½ï¿½ ï¿½ß°ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½
                 amyAnimator.SetBool("HasTarget", true);
                 if (surprised)
                 {
@@ -99,24 +103,24 @@ public class Jody : MonoBehaviour
                     navMeshAgent.speed = navmMeshSpeed;
                     surprised = false;
                 }
-                // Àû°úÀÇ °Å¸®¸¦ È®ÀÎÇÏ¿© ÀÏÁ¤ ¹üÀ§ ³»¿¡ ÀÖÀ¸¸é ÃßÀû ½ÃÀÛ
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å¸ï¿½ï¿½ï¿½ È®ï¿½ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                 if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 100f)
                 {
                     Debug.Log("running");
-                    // ÃßÀû ÁßÀÎ ¾Ö´Ï¸ÞÀÌ¼Ç Àç»ý
+                    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö´Ï¸ï¿½ï¿½Ì¼ï¿½ ï¿½ï¿½ï¿½
                     amyAnimator.SetBool("isRunning", true);
                     navMeshAgent.SetDestination(targetEntity.transform.position);
-                    // ÃßÀû ÁßÀÎ °æ¿ì
+                    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
                     if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2f)
                     {
-                        // ÇÃ·¹ÀÌ¾î°¡ ÀÏÁ¤ ¹üÀ§ ³»¿¡ ÀÖÀ¸¸é °ø°Ý
+                        // ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
                         amyAnimator.SetTrigger("Attack");
                         Debug.Log("attck");
                     }
                 }
             }
 
-            // 0.25ÃÊ ÁÖ±â·Î Ã³¸® ¹Ýº¹
+            // 0.25ï¿½ï¿½ ï¿½Ö±ï¿½ï¿½ Ã³ï¿½ï¿½ ï¿½Ýºï¿½
             yield return new WaitForSeconds(0.25f);
         }
     }
