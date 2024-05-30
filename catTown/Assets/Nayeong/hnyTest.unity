@@ -1015,7 +1015,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1123920766}
   - {fileID: 1965679213}
   - {fileID: 881348776}
   - {fileID: 827103588}
@@ -2061,7 +2060,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1123920766}
   m_Layer: 0
-  m_Name: ExplodingBottle
+  m_Name: CautionObject_7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2076,13 +2075,13 @@ Transform:
   m_GameObject: {fileID: 1123920765}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.52, y: 0, z: 2.44}
+  m_LocalPosition: {x: -8, y: 0, z: -5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1881785619}
   - {fileID: 1434579080}
-  m_Father: {fileID: 701487631}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173650457
 GameObject:
@@ -2486,7 +2485,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 9127186685924032220, guid: 344f2b6ade7a1c94f841578f818617ee, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.25
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9127186685924032220, guid: 344f2b6ade7a1c94f841578f818617ee, type: 3}
       propertyPath: m_LocalPosition.y
@@ -2494,7 +2493,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9127186685924032220, guid: 344f2b6ade7a1c94f841578f818617ee, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.31
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9127186685924032220, guid: 344f2b6ade7a1c94f841578f818617ee, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2527,6 +2526,10 @@ PrefabInstance:
     - target: {fileID: 9127186685924032221, guid: 344f2b6ade7a1c94f841578f818617ee, type: 3}
       propertyPath: m_Name
       value: BrokenBottle
+      objectReference: {fileID: 0}
+    - target: {fileID: 9127186685924032221, guid: 344f2b6ade7a1c94f841578f818617ee, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -3891,11 +3894,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 7292808117586842926, guid: 542c92fb752aed142a91ef2ae943eda2, type: 3}
       propertyPath: m_Name
-      value: Bottle
+      value: breakable
       objectReference: {fileID: 0}
     - target: {fileID: 7961962770413981588, guid: 542c92fb752aed142a91ef2ae943eda2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7961962770413981588, guid: 542c92fb752aed142a91ef2ae943eda2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3903,7 +3906,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7961962770413981588, guid: 542c92fb752aed142a91ef2ae943eda2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.26
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7961962770413981588, guid: 542c92fb752aed142a91ef2ae943eda2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -4759,17 +4762,9 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7171015349642619007, guid: c13641297378f4142a32741eda12b163, type: 3}
-      propertyPath: m_Name
-      value: fractions
-      objectReference: {fileID: 0}
     - target: {fileID: 8666678035348464316, guid: c13641297378f4142a32741eda12b163, type: 3}
       propertyPath: m_Name
       value: CautionObject_3
-      objectReference: {fileID: 0}
-    - target: {fileID: 9096703705073525015, guid: c13641297378f4142a32741eda12b163, type: 3}
-      propertyPath: m_Name
-      value: breakable
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4784,14 +4779,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 161157297437608804, guid: fc618d49ee825054085823c090d246c2, type: 3}
-      propertyPath: m_Name
-      value: breakable
-      objectReference: {fileID: 0}
-    - target: {fileID: 2810258109536045299, guid: fc618d49ee825054085823c090d246c2, type: 3}
-      propertyPath: m_Name
-      value: fractions
-      objectReference: {fileID: 0}
     - target: {fileID: 4963150745447170156, guid: fc618d49ee825054085823c090d246c2, type: 3}
       propertyPath: m_Name
       value: CautionObject_1
@@ -4893,14 +4880,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CautionObject_6
       objectReference: {fileID: 0}
-    - target: {fileID: 3803856664450238274, guid: 6b1bbdfbf9266bb40b717ff40c9fe92f, type: 3}
-      propertyPath: m_Name
-      value: breakable
-      objectReference: {fileID: 0}
-    - target: {fileID: 4663783357767038273, guid: 6b1bbdfbf9266bb40b717ff40c9fe92f, type: 3}
-      propertyPath: m_Name
-      value: fractions
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4914,10 +4893,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 536485907358338707, guid: 02ba71c1880ec284fb5f0b384acb7694, type: 3}
-      propertyPath: m_Name
-      value: fractions
-      objectReference: {fileID: 0}
     - target: {fileID: 2584996661593375586, guid: 02ba71c1880ec284fb5f0b384acb7694, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6
@@ -4962,10 +4937,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CautionObject_5
       objectReference: {fileID: 0}
-    - target: {fileID: 7470093689695460301, guid: 02ba71c1880ec284fb5f0b384acb7694, type: 3}
-      propertyPath: m_Name
-      value: breakable
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4979,10 +4950,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 616182030495045467, guid: 21bbd57b11461ac4f81dcbf5813344fb, type: 3}
-      propertyPath: m_Name
-      value: breakable
-      objectReference: {fileID: 0}
     - target: {fileID: 890640804776788434, guid: 21bbd57b11461ac4f81dcbf5813344fb, type: 3}
       propertyPath: m_LocalPosition.x
       value: -3
@@ -5027,10 +4994,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: CautionObject_2
       objectReference: {fileID: 0}
-    - target: {fileID: 5453420570020085800, guid: 21bbd57b11461ac4f81dcbf5813344fb, type: 3}
-      propertyPath: m_Name
-      value: fractions
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5047,10 +5010,6 @@ PrefabInstance:
     - target: {fileID: 180125664090254573, guid: 404ab37eef244c3458dff7af4e698ef2, type: 3}
       propertyPath: m_Name
       value: CautionObject_4
-      objectReference: {fileID: 0}
-    - target: {fileID: 431664687784545553, guid: 404ab37eef244c3458dff7af4e698ef2, type: 3}
-      propertyPath: m_Name
-      value: fractions
       objectReference: {fileID: 0}
     - target: {fileID: 2431879464425065834, guid: 404ab37eef244c3458dff7af4e698ef2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5092,10 +5051,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4930680809699480248, guid: 404ab37eef244c3458dff7af4e698ef2, type: 3}
-      propertyPath: m_Name
-      value: breakable
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5127,3 +5082,4 @@ SceneRoots:
   - {fileID: 8692737310484609169}
   - {fileID: 8556738419790636209}
   - {fileID: 7260613179311272270}
+  - {fileID: 1123920766}
