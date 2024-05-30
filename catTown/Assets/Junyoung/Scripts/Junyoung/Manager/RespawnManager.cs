@@ -5,31 +5,31 @@ using UnityEngine.SceneManagement;
 
 public class RespawnManager : MonoBehaviour
 {
-    public static RespawnManager instance; // ½Ì±ÛÅæ ÀÎ½ºÅÏ½º
+    public static RespawnManager instance; // ï¿½Ì±ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½
 
     public PlayerController player;
     public Main_PMove main_PMove;
-    public Monster monster;
-    public GameObject gameOverPanel; // Game Over UI ÆÐ³Î
+    //public Monster monster;
+    public GameObject gameOverPanel; // Game Over UI ï¿½Ð³ï¿½
 
-    void Awake()
+    void Start()
     {
         //player = GetComponent<PlayerController>();
-        //// RespawnManagerÀÇ ÀÎ½ºÅÏ½º°¡ ÀÌ¹Ì ÀÖÀ¸¸é »õ·Î »ý¼ºµÇ´Â °ÍÀ» ¹æÁöÇÕ´Ï´Ù.
+        //// RespawnManagerï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½Ì¹ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
         //if (instance == null)
         //{
         //    instance = this;
-        //    DontDestroyOnLoad(gameObject); // ¾ÀÀ» ÀÌµ¿ÇØµµ ¿ÀºêÁ§Æ®¸¦ ÆÄ±«ÇÏÁö ¾Ê½À´Ï´Ù.
+        //    DontDestroyOnLoad(gameObject); // ï¿½ï¿½ï¿½ï¿½ ï¿½Ìµï¿½ï¿½Øµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ê½ï¿½ï¿½Ï´ï¿½.
         //}
         //else
         //{
-        //    Destroy(gameObject); // ÀÌ¹Ì ÀÎ½ºÅÏ½º°¡ ÀÖ´Â °æ¿ì Áßº¹µÈ ¿ÀºêÁ§Æ®¸¦ ÆÄ±«ÇÕ´Ï´Ù.
+        //    Destroy(gameObject); // ï¿½Ì¹ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½ ï¿½ßºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½Õ´Ï´ï¿½.
         //}
     }
 
     void Update()
     {
-        // ÇÃ·¹ÀÌ¾î°¡ Á×¾úÀ» ¶§ Game Over UI¸¦ È°¼ºÈ­ÇÕ´Ï´Ù.
+        // ï¿½Ã·ï¿½ï¿½Ì¾î°¡ ï¿½×¾ï¿½ï¿½ï¿½ ï¿½ï¿½ Game Over UIï¿½ï¿½ È°ï¿½ï¿½È­ï¿½Õ´Ï´ï¿½.
         if (player != null && main_PMove.hp <= 0)
         {
             gameOverPanel.SetActive(true);
@@ -42,7 +42,7 @@ public class RespawnManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         main_PMove.Respawn();
         //monster.Respawn();
-        gameOverPanel.SetActive(false); // ¸®½ºÆùÇÒ ¶§ Game Over ÆÐ³Î ºñÈ°¼ºÈ­
+        gameOverPanel.SetActive(false); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Game Over ï¿½Ð³ï¿½ ï¿½ï¿½È°ï¿½ï¿½È­
         Time.timeScale = 1.0f;
     }
 
