@@ -45,7 +45,7 @@ public class drawerScript : MonoBehaviour
 
     void playDrawerAnimation()
     {
-        if (is_PlayerEnter && Input.GetKeyUp(KeyCode.E))
+        if (is_PlayerEnter && Input.GetKeyUp(KeyCode.F))
         {            
             Debug.Log("open");
             anim.SetTrigger("Open");
