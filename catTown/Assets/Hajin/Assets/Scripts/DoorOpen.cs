@@ -24,7 +24,7 @@ public class DoorOpen : MonoBehaviour
 
     void Update()
     {
-        if ( is_Open && Input.GetKeyDown(KeyCode.Space))
+        if ( is_Open && Input.GetKeyDown(KeyCode.F))
         {
             CloseDoor();
         }
@@ -34,7 +34,7 @@ public class DoorOpen : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            if ( !is_Open && Input.GetKeyDown(KeyCode.Space))
+            if ( !is_Open && Input.GetKeyDown(KeyCode.F))
             {
                 OpenDoor();
             }
