@@ -43,8 +43,6 @@ public class Main_PMove : MonoBehaviour
     private int cth = 5;
     public Slider ctSlider;
 
-    [SerializeField] Transform playerRespawnPoint;
-
     public int get_ct()
     {
         return ct;
@@ -54,6 +52,8 @@ public class Main_PMove : MonoBehaviour
     {
         return maxCt;
     }
+
+    [SerializeField] Transform playerRespawnPoint;
 
     private void Start()
     {
