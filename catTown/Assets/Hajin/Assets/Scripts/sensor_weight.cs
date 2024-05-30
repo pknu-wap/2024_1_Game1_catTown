@@ -4,6 +4,7 @@ public class WeightDetection : MonoBehaviour
 {
     public float weightThreshold = 10f; 
     public GameObject objectToDestroy; 
+    Animator anim;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -13,7 +14,7 @@ public class WeightDetection : MonoBehaviour
             float weight = rb.mass; 
             if (weight >= weightThreshold)
             {
-                Destroy(objectToDestroy); 
+                anim.SetTrigger("Open");
             }
         }
     }
