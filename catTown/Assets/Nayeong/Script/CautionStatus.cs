@@ -9,13 +9,34 @@ public class CautionStatus : MonoBehaviour
 
     private bool isCollidedWithPlayer = false;
 
-    private void OnTriggerEnter(Collider other)
-    {   
-        if (other.CompareTag("Player"))
+    private Transform breakableObject = null;
+    private Transform cautionObject = null;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+
+        if (collision.transform.tag == "Player")
         {
             isCollidedWithPlayer = true;
+
+        }
+    }
+
+    void Awake()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            if (transform.GetChild(i).name == "breakable")
+            {
+                breakableObject = transform.GetChild(i);
+            }
+            else
+            {
+                cautionObject = transform.GetChild(i);
+            }
         }
 
-
     }
+ 
 }
+

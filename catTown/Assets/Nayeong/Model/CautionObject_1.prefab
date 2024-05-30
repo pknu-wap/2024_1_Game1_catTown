@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8563358723841629602}
   m_Layer: 0
-  m_Name: Normal
+  m_Name: breakable
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -42,9 +42,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9041069995705564479}
-  - component: {fileID: 3054564016164017033}
-  - component: {fileID: 5244470810335614793}
   - component: {fileID: 5894547442311879616}
+  - component: {fileID: 2840287202779193697}
+  - component: {fileID: 4255708502263643024}
   m_Layer: 0
   m_Name: CautionObject_1
   m_TagString: Untagged
@@ -69,7 +69,20 @@ Transform:
   - {fileID: 3943686569586163196}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &3054564016164017033
+--- !u!114 &5894547442311879616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4963150745447170156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8553e69176490f44d88dc5fd04680618, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cautionAmount: 0
+--- !u!54 &2840287202779193697
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,7 +109,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!64 &5244470810335614793
+--- !u!64 &4255708502263643024
 MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -118,19 +131,6 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 1295581581132493854, guid: 144f81467bcfe7f4190e93f767e74526, type: 3}
---- !u!114 &5894547442311879616
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4963150745447170156}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8553e69176490f44d88dc5fd04680618, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cautionAmount: 0
 --- !u!1 &6740717479137253962
 GameObject:
   m_ObjectHideFlags: 0
@@ -311,7 +311,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5636959924584143644, guid: 02af3f7645118454f94a58768dc08baf, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5636959924584143644, guid: 02af3f7645118454f94a58768dc08baf, type: 3}
       propertyPath: m_LocalPosition.z
@@ -347,7 +347,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6881572769840279059, guid: 02af3f7645118454f94a58768dc08baf, type: 3}
       propertyPath: m_Name
-      value: Creacked
+      value: fractions
       objectReference: {fileID: 0}
     - target: {fileID: 6881572769840279059, guid: 02af3f7645118454f94a58768dc08baf, type: 3}
       propertyPath: m_IsActive
