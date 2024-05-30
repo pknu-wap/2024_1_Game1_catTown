@@ -80,7 +80,7 @@ public class Main_PMove : MonoBehaviour
         dir.y = 0; // 수직 방향 제거
 
         // Shift 키 입력에 따른 달리기 제어 및 스태미나 감소
-        if (Input.GetMouseButton(0) && st > 0 && dir != Vector3.zero)
+        if (Input.GetMouseButton(0) && st > 0 && dir != Vector3.zero) //좌shift로 변경
         {
             isStaminaHeal = false;
             staminaHealthTime = 0.0f; // 스태미나 힐 리셋
