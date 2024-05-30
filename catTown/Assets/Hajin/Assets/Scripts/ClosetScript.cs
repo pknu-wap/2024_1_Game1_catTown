@@ -28,7 +28,7 @@ public class ClosetScript : MonoBehaviour
         {            
             is_PlayerEnter = true;            
         }
-        Debug.Log(is_PlayerEnter);
+        //Debug.Log(is_PlayerEnter);
     }
     // 콜라이더를 가진 객체가 콜라이더 범위 밖으로 나갔고 그 객체가 플레이어라면
     void OnTriggerExit(Collider other)
@@ -37,7 +37,7 @@ public class ClosetScript : MonoBehaviour
         {
             is_PlayerEnter = false;
         }
-        Debug.Log(is_PlayerEnter);
+        //Debug.Log(is_PlayerEnter);
     }
 
     void playDrawerAnimation()
