@@ -45,6 +45,16 @@ public class Main_PMove : MonoBehaviour
 
     [SerializeField] Transform playerRespawnPoint;
 
+    public int get_ct()
+    {
+        return ct;
+    }
+
+    public int get_maxCt()
+    {
+        return maxCt;
+    }
+
     private void Start()
     {
         // 캐릭터 컨트롤러 컴포넌트 받아오기
