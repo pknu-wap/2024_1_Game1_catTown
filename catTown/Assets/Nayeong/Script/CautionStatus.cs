@@ -8,12 +8,27 @@ public class CautionStatus : MonoBehaviour
     public int CautionAmount => cautionAmount;
 
     private bool isCollidedWithPlayer = false;
+    private int collidedCount = 0;
+
+    private bool isbroken = false;
 
     private Transform breakableObject = null;
     private Transform cautionObject = null;
 
     private void OnCollisionEnter(Collision collision)
     {
+        if (!isbroken)
+        {
+            collidedCount++;
+
+            if (collidedCount == 4)
+            {
+                isbroken = true;
+
+                breakableObject.gameObject.SetActive(false);
+                cautionObject.gameObject.SetActive(true);
+            }
+        }
 
         if (collision.transform.tag == "Player")
         {
@@ -35,8 +50,6 @@ public class CautionStatus : MonoBehaviour
                 cautionObject = transform.GetChild(i);
             }
         }
-
     }
- 
 }
 
