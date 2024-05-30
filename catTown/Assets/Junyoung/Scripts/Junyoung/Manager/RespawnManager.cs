@@ -5,32 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class RespawnManager : MonoBehaviour
 {
-    public static RespawnManager instance; // �̱��� �ν��Ͻ�
+    public static RespawnManager instance;
 
     public PlayerController player;
     public Main_PMove main_PMove;
-    //public Monster monster;
-    public GameObject gameOverPanel; // Game Over UI �г�
+    public GameObject gameOverPanel;
 
+ 
     void Start()
     {
-        //player = GetComponent<PlayerController>();
-        //// RespawnManager�� �ν��Ͻ��� �̹� ������ ���� �����Ǵ� ���� �����մϴ�.
-        //if (instance == null)
-        //{
-        //    instance = this;
-        //    DontDestroyOnLoad(gameObject); // ���� �̵��ص� ������Ʈ�� �ı����� �ʽ��ϴ�.
-        //}
-        //else
-        //{
-        //    Destroy(gameObject); // �̹� �ν��Ͻ��� �ִ� ��� �ߺ��� ������Ʈ�� �ı��մϴ�.
-        //}
     }
 
     void Update()
     {
-        Debug.Log(main_PMove.hp);
-        // �÷��̾ �׾��� �� Game Over UI�� Ȱ��ȭ�մϴ�.
         if (player != null && main_PMove.hp <= 0)
         {
             Debug.Log("gameover UI Active");
@@ -43,8 +30,7 @@ public class RespawnManager : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         main_PMove.Respawn();
-        //monster.Respawn();
-        gameOverPanel.SetActive(false); // �������� �� Game Over �г� ��Ȱ��ȭ
+        gameOverPanel.SetActive(false);
         Time.timeScale = 1.0f;
     }
 
