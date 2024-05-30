@@ -11,6 +11,7 @@ public class Jody : MonoBehaviour
     private Animator amyAnimator; // �ִϸ����� ������Ʈ
     private Main_PMove targetEntity; // ���� ���
     private Transform JodyTransform;
+    private Main_PMove player;
     private int currentPointIndex = 0;
     private bool surprised = true;
     [SerializeField] int noiseLevel = 0;
@@ -75,7 +76,7 @@ public class Jody : MonoBehaviour
                 Collider[] colliders = Physics.OverlapSphere(transform.position, 100f, whatIsTarget);
                 for (int i = 0; i < colliders.Length; i++)
                 {
-                    Main_PMove player = colliders[i].GetComponent<Main_PMove>();
+                    player = colliders[i].GetComponent<Main_PMove>();
                     if (player != null /*&& !player.dead*/)
                     {
                         targetEntity = player;
@@ -116,6 +117,13 @@ public class Jody : MonoBehaviour
                         // �÷��̾ ���� ���� ���� ������ ����
                         amyAnimator.SetTrigger("Attack");
                         Debug.Log("attck");
+                        player.hp -= 2;
+
+                        Debug.Log("Player HP: " + player.hp);
+                        if (player.hp <= 0)
+                        {
+                            Time.timeScale = 0f;
+                        }
                     }
                 }
             }
