@@ -13,6 +13,7 @@ public class drawerScript : MonoBehaviour
     {
 
         anim = GetComponent<Animator>();
+        player = GameObject.FindGameObjectWithTag("Player");
 
         is_PlayerEnter = false;
         is_DrawerOpen = false;
@@ -44,7 +45,7 @@ public class drawerScript : MonoBehaviour
 
     void playDrawerAnimation()
     {
-        if (is_PlayerEnter && Input.GetKeyUp(KeyCode.E))
+        if (is_PlayerEnter && Input.GetKeyUp(KeyCode.F))
         {            
             Debug.Log("open");
             anim.SetTrigger("Open");

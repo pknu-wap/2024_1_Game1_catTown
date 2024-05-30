@@ -524,7 +524,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3732954950876106205
 Transform:
   m_ObjectHideFlags: 0
@@ -1342,7 +1342,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &8849175170735251451
 Transform:
   m_ObjectHideFlags: 0
@@ -1873,6 +1873,7 @@ GameObject:
   - component: {fileID: 4283715337328159756}
   - component: {fileID: 6714748216273996137}
   - component: {fileID: 463612926374330189}
+  - component: {fileID: 5280286276850471703}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1960,16 +1961,15 @@ MonoBehaviour:
   isRunnig: 0
   isStaminaHeal: 1
   isCaution: 1
+  isJumping: 0
+  jumpPower: 5
   applySpeed: 0
   hp: 10
   maxHp: 10
-  minHp: 0
-  hph: 5
   hpSlider: {fileID: 6552409264792117095}
   stSlider: {fileID: 0}
   ctSlider: {fileID: 0}
-  jumpPower: 5
-  isJumping: 0
+  playerRespawnPoint: {fileID: 0}
 --- !u!114 &143160880017976282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2048,7 +2048,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4077bfe8b230c849a88f66a6073b527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerRespawn: {fileID: 0}
+--- !u!135 &5280286276850471703
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899736438926915127}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7944499270910057966
 GameObject:
   m_ObjectHideFlags: 0
