@@ -41,6 +41,7 @@ public class Main_PMove : MonoBehaviour
     private int maxCt = 50;
     private int ctd = 10;
     private int cth = 5;
+    
     public Slider ctSlider;
 
     public int get_ct()
