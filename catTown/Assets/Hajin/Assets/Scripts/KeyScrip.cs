@@ -17,6 +17,7 @@ public class KeyScrip : MonoBehaviour
     void Update()
     {
         pickupKey();
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
 
