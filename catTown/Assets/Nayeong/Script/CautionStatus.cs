@@ -20,9 +20,12 @@ public class CautionStatus : MonoBehaviour
 
     GameObject player;
 
+    private MeshCollider breakableMeshCollider = null;
+
     void Awake()
     {
         player = GameObject.Find("Player");
+        breakableMeshCollider = GetComponent<MeshCollider>();
 
         for (int i = 0; i < transform.childCount; i++)
         {
@@ -49,12 +52,13 @@ public class CautionStatus : MonoBehaviour
                 isbroken = true;
 
                 breakableObject.gameObject.SetActive(false);
+                breakableMeshCollider.enabled = false;
                 
                 // Need to add code : increase cautionAmount when broken
                 //player.GetComponent<Main_PMove>().ct += brokenCautionAmount;
                 Debug.Log(brokenCautionAmount);
-
                 cautionObject.gameObject.SetActive(true);
+
             }
         }
 
