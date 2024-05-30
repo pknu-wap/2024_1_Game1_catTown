@@ -75,7 +75,6 @@ public class Main_PMove : MonoBehaviour
         HandleJump();
         HandleSceneSwitching();
         HandleStamina();
-        HandleCaution();
         UpdateUI();
     }
 
@@ -167,25 +166,6 @@ public class Main_PMove : MonoBehaviour
             st += sth;
             if (st < 0) st = 0;
             if (st > maxSt) st = maxSt;
-        }
-    }
-
-    void HandleCaution()
-    {
-        if (!isCaution)
-        {
-            cautionHealthTime += Time.deltaTime;
-            if (cautionHealthTime > 5.0f)
-            {
-                isCaution = true;
-            }
-        }
-
-        if (isCaution)
-        {
-            ct += cth;
-            if (ct < 0) ct = 0;
-            if (ct > maxCt) ct = maxCt;
         }
     }
 

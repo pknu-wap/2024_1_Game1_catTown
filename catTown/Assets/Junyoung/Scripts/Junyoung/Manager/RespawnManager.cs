@@ -29,9 +29,11 @@ public class RespawnManager : MonoBehaviour
 
     void Update()
     {
+        Debug.Log(main_PMove.hp);
         // �÷��̾ �׾��� �� Game Over UI�� Ȱ��ȭ�մϴ�.
         if (player != null && main_PMove.hp <= 0)
         {
+            Debug.Log("gameover UI Active");
             gameOverPanel.SetActive(true);
         }
 
