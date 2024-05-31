@@ -4,14 +4,27 @@ using UnityEngine;
 
 public class BGM2Trigger : MonoBehaviour
 {
+    private AudioManager audioManager;
+
+    void Start()
+    {
+        // AudioManager ì¸ìŠ¤í„´ìŠ¤ë¥¼ ì°¾ìŠµë‹ˆë‹¤.
+        audioManager = FindObjectOfType<AudioManager>();
+
+        // AudioManagerë¥¼ ì°¾ì§€ ëª»í•œ ê²½ìš° ê²½ê³  ë©”ì‹œì§€ ì¶œë ¥
+        if (audioManager == null)
+        {
+            Debug.LogWarning("AudioManager instance not found.");
+        }
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-            // backgroundMusic2·Î ¹è°æ À½¾Ç º¯°æ
-            if (AudioManager.instance != null && AudioManager.instance.backgroundMusic2 != null)
+            if (audioManager != null && audioManager.backgroundMusic2 != null)
             {
-                AudioManager.instance.ChangeBackgroundMusic(AudioManager.instance.backgroundMusic2);
+                audioManager.ChangeBackgroundMusic(audioManager.backgroundMusic2);
             }
             else
             {
