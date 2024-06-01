@@ -7,7 +7,7 @@ public class ItemStatus : MonoBehaviour
 
     private float rotationSpeed = 50f;
     private float bobSpeed = 1.5f;
-    private float bobHeight = 0.3f;
+    private float bobHeight = 0.2f;
     private float originalY;
 
     void Start()
