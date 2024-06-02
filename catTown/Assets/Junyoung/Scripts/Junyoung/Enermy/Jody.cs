@@ -38,6 +38,14 @@ public class Jody : MonoBehaviour
         }
     }
 
+    void UPing()
+    {
+        if(player.ct == player.maxCt)
+        {
+            wakeUP = true;
+        }
+
+    }
 
     private void Awake()
     {
