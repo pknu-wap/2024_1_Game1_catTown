@@ -12,12 +12,14 @@ public class Main_PMove : MonoBehaviour
     private float gravity = -20f;
     private float yVelocity = 0f;
 
-    public bool isRunnig = false;
+    public bool isRunning = false;
     public bool isStaminaHeal = true; // 불 함수를 통한 스태미너 힐 처리 
     public bool isCaution = true;
     public bool isJumping = false;
     public float jumpPower = 5f;
     public float applySpeed;
+
+    public SphereCollider SphereCollider;
 
     // 캐릭터 컨트롤러 변수
     CharacterController cc;
@@ -63,7 +65,11 @@ public class Main_PMove : MonoBehaviour
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
+<<<<<<< HEAD
 
+=======
+        SphereCollider = GetComponent<SphereCollider>();
+>>>>>>> Player#3
     }
 
     void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드
@@ -78,6 +84,15 @@ public class Main_PMove : MonoBehaviour
         HandleSceneSwitching();
         HandleStamina();
         UpdateUI();
+        HandleHP()
+    }
+
+    void HandleHP()
+    {
+
+        if(hp > 10){
+            hp = maxHp;
+        }
     }
 
     void HandleMovement()
@@ -95,13 +110,13 @@ public class Main_PMove : MonoBehaviour
         {
             isStaminaHeal = false;
             staminaHealthTime = 0.0f; // 스태미나 힐 리셋
-            isRunnig = true;
+            isRunning = true;
             applySpeed = runSpeed;
             st -= std;
         }
         else
         {
-            isRunnig = false;
+            isRunning = false;
             applySpeed = walkSpeed;
         }
 
@@ -171,6 +186,32 @@ public class Main_PMove : MonoBehaviour
         }
     }
 
+<<<<<<< HEAD
+=======
+    //HP max 제한
+
+    // 만약 max > 가 될 때, joby > wakeUp > true
+
+    void HandleCaution()
+    {
+        if (!isCaution)
+        {
+            cautionHealthTime += Time.deltaTime;
+            if (cautionHealthTime > 5.0f)
+            {
+                isCaution = true;
+            }
+        }
+
+        if (isCaution)
+        {
+            ct += cth;
+            if (ct < 0) ct = 0;
+            if (ct > maxCt) ct = maxCt;
+        }
+    }
+
+>>>>>>> Player#3
     void UpdateUI()
     {
         hpSlider.value = (float)hp / maxHp;

@@ -10,11 +10,11 @@ public class CamRotate : MonoBehaviour
         float mx = 0;
         float my = 0;
 
-        float hx = 0;
-        float hz = 0;   
+        int hx = 0;
+        int hz = 0;   
     
         float Uh = 1.0f;
-        float Dh = 0.2f;
+        float Dh = 0.1f;
 
         public GameObject Target;
 
@@ -50,7 +50,7 @@ public class CamRotate : MonoBehaviour
     if(Input.GetKey(KeyCode.E)){
         TargetPosition = new Vector3(
             Target.transform.position.x + hx,
-            Target.transform.position.y - Dh,
+            Target.transform.position.y + Dh,
             Target.transform.position.z + hz
             );
         

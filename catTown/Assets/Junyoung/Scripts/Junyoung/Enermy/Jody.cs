@@ -19,6 +19,7 @@ public class Jody : MonoBehaviour
     [SerializeField] Transform sleepPoint;
     public bool wakeUP = false;
 
+
     // ������ ������ ���� ��ġ�� �����ϸ� Jody�� �ῡ�� ���� ������ �޷����� ����.
 
 
