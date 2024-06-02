@@ -56,6 +56,7 @@ public class DataManager : MonoBehaviour
     {
         string data = JsonUtility.ToJson(saveData);
         File.WriteAllText(path + filename, data);
+
     }
 
     public void LoadData()
@@ -78,6 +79,32 @@ public class DataManager : MonoBehaviour
         else
         {
             Debug.Log("세이브 파일이 없습니다.");
+        }
+    }
+
+    public void ResetData() 
+    {
+        saveData.constructionSave = false;
+        saveData.apartSave = false;
+        SaveData();
+        // Canvas 오브젝트를 찾습니다.
+        GameObject canvas = GameObject.Find("Canvas");
+        if (canvas != null)
+        {
+            // Canvas의 자식인 Image 오브젝트를 찾습니다.
+            Transform imageTransform = canvas.transform.Find("Image");
+            if (imageTransform != null)
+            {
+                // Image의 자식인 Scene2Button 오브젝트를 찾습니다.
+                Transform scene2ButtonTransform = imageTransform.Find("Scene2Button");
+                Transform scene3ButtonTransform = imageTransform.Find("Scene3Button");
+                if (scene2ButtonTransform != null && scene3ButtonTransform != null)
+                {
+                    scene2ButtonTransform.gameObject.SetActive(false);
+                    scene3ButtonTransform.gameObject.SetActive(false);
+                    
+                }
+            }
         }
     }
 

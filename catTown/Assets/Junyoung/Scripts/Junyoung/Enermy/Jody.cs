@@ -17,6 +17,7 @@ public class Jody : MonoBehaviour
     [SerializeField] int noiseLevel = 0;
     [SerializeField] Transform wakeUpPoint;
     [SerializeField] Transform sleepPoint;
+    public bool wakeUP = false;
 
 
     // ������ ������ ���� ��ġ�� �����ϸ� Jody�� �ῡ�� ���� ������ �޷����� ����.
@@ -58,7 +59,7 @@ public class Jody : MonoBehaviour
     void Start()
     {
         // ���� ������Ʈ Ȱ��ȭ�� ���ÿ� AI�� ���� ��ƾ ����
-        if (targetEntity.get_ct() >= targetEntity.get_maxCt())
+        if (wakeUP)
         {
             Debug.Log("WakeUP");
             StartCoroutine(UpdatePath());

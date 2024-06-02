@@ -9,7 +9,7 @@ public class drawerScript : MonoBehaviour
     public bool is_DrawerOpen;
     public GameObject player;
 
-    private void Awake()
+    private void Start()
     {
 
         anim = GetComponent<Animator>();

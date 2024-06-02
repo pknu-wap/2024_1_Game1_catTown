@@ -39,12 +39,17 @@ public class TitleManager : MonoBehaviour
         Debug.Log(DataManager.instance.saveData.apartSave);
     }
 
+    public void Reset()
+    {
+        DataManager.instance.ResetData();
+    }
+
     private void StartScene2()
     {
         SceneManager.LoadScene("constructionSite");
     }
     private void StartScene3()
     {
-        SceneManager.LoadScene("ApTest");
+        SceneManager.LoadScene("ApartmentScene");
     }
 }
