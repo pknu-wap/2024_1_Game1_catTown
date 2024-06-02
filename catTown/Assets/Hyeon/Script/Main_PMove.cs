@@ -44,6 +44,8 @@ public class Main_PMove : MonoBehaviour
     
     public Slider ctSlider;
 
+    //[SerializeField] Transform playerRespawnPoint;
+    //private Transform playerRespawnPoint;
     public int get_ct()
     {
         return ct;
@@ -54,8 +56,6 @@ public class Main_PMove : MonoBehaviour
         return maxCt;
     }
 
-    [SerializeField] Transform playerRespawnPoint;
-
     private void Start()
     {
         // 캐릭터 컨트롤러 컴포넌트 받아오기
@@ -63,6 +63,7 @@ public class Main_PMove : MonoBehaviour
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
+
     }
 
     void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드
@@ -76,7 +77,6 @@ public class Main_PMove : MonoBehaviour
         HandleJump();
         HandleSceneSwitching();
         HandleStamina();
-        HandleCaution();
         UpdateUI();
     }
 
@@ -171,25 +171,6 @@ public class Main_PMove : MonoBehaviour
         }
     }
 
-    void HandleCaution()
-    {
-        if (!isCaution)
-        {
-            cautionHealthTime += Time.deltaTime;
-            if (cautionHealthTime > 5.0f)
-            {
-                isCaution = true;
-            }
-        }
-
-        if (isCaution)
-        {
-            ct += cth;
-            if (ct < 0) ct = 0;
-            if (ct > maxCt) ct = maxCt;
-        }
-    }
-
     void UpdateUI()
     {
         hpSlider.value = (float)hp / maxHp;
@@ -203,12 +184,12 @@ public class Main_PMove : MonoBehaviour
         if (hp <= 0)
         {
             GameObject targetObject = GameObject.Find("Player"); // 변경할 오브젝트의 이름으로 검색
-
-            if (targetObject != null && playerRespawnPoint != null)
+            GameObject playerRespawnManager = GameObject.Find("PlayerRespawn"); // 변경할 오브젝트의 이름으로 검색
+            if (targetObject != null)
             {
                 // 캐릭터 컨트롤러 비활성화
                 cc.enabled = false;
-                targetObject.transform.position = playerRespawnPoint.position;
+                targetObject.transform.position = playerRespawnManager.transform.position;
                 // 캐릭터 컨트롤러 다시 활성화
                 cc.enabled = true;
                 Debug.Log("위치변경");
