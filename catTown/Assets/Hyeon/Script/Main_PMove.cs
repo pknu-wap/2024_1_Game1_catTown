@@ -38,16 +38,17 @@ public class Main_PMove : MonoBehaviour
     public Slider stSlider;
 
     // 위험도 변수 제어
-    private int ct = 0; // ct = caution
-    private float cautionHealthTime = 0.0f;
-    private int maxCt = 50;
-    private int ctd = 10;
-    private int cth = 5;
+    public int ct = 0; // ct = caution
+    public float cautionHealthTime = 0.0f;
+    public int maxCt = 50;
+    public int ctd = 10;
+    public int cth = 5;
     
     public Slider ctSlider;
 
     //[SerializeField] Transform playerRespawnPoint;
     //private Transform playerRespawnPoint;
+
     public int get_ct()
     {
         return ct;
@@ -65,11 +66,7 @@ public class Main_PMove : MonoBehaviour
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
-<<<<<<< HEAD
-
-=======
         SphereCollider = GetComponent<SphereCollider>();
->>>>>>> Player#3
     }
 
     void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드
@@ -84,7 +81,7 @@ public class Main_PMove : MonoBehaviour
         HandleSceneSwitching();
         HandleStamina();
         UpdateUI();
-        HandleHP()
+        HandleHP();
     }
 
     void HandleHP()
@@ -185,13 +182,7 @@ public class Main_PMove : MonoBehaviour
             if (st > maxSt) st = maxSt;
         }
     }
-
-<<<<<<< HEAD
-=======
-    //HP max 제한
-
-    // 만약 max > 가 될 때, joby > wakeUp > true
-
+    
     void HandleCaution()
     {
         if (!isCaution)
@@ -211,7 +202,6 @@ public class Main_PMove : MonoBehaviour
         }
     }
 
->>>>>>> Player#3
     void UpdateUI()
     {
         hpSlider.value = (float)hp / maxHp;
