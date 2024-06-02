@@ -12,7 +12,7 @@ public class Main_PMove : MonoBehaviour
     private float gravity = -20f;
     private float yVelocity = 0f;
 
-    public bool isRunnig = false;
+    public bool isRunning = false;
     public bool isStaminaHeal = true; // 불 함수를 통한 스태미너 힐 처리 
     public bool isCaution = true;
     public bool isJumping = false;
@@ -81,6 +81,15 @@ public class Main_PMove : MonoBehaviour
         HandleStamina();
         HandleCaution();
         UpdateUI();
+        HandleHP()
+    }
+
+    void HandleHP()
+    {
+
+        if(hp > 10){
+            hp = maxHp;
+        }
     }
 
     void HandleMovement()
@@ -98,13 +107,13 @@ public class Main_PMove : MonoBehaviour
         {
             isStaminaHeal = false;
             staminaHealthTime = 0.0f; // 스태미나 힐 리셋
-            isRunnig = true;
+            isRunning = true;
             applySpeed = runSpeed;
             st -= std;
         }
         else
         {
-            isRunnig = false;
+            isRunning = false;
             applySpeed = walkSpeed;
         }
 

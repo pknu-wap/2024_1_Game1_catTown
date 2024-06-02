@@ -18,6 +18,7 @@ public class Jody : MonoBehaviour
     [SerializeField] Transform wakeUpPoint;
     [SerializeField] Transform sleepPoint;
 
+
     // ������ ������ ���� ��ġ�� �����ϸ� Jody�� �ῡ�� ���� ������ �޷����� ����.
 
 
