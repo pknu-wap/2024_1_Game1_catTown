@@ -4,12 +4,10 @@ using UnityEngine.AI;
 
 public class Monster : MonoBehaviour
 {
-    public LayerMask whatIsTarget; // ���� ��� ���̾�
-    private Main_PMove targetEntity; // ���� ���
-    private NavMeshAgent navMeshAgent; // ��� ��� AI ������Ʈ
-    private Animator monsterAnimator; // �ִϸ����� ������Ʈ
-    private bool isAttacking = false; // ���� ������ ����
-    public bool isHitting = false;
+    public LayerMask whatIsTarget;
+    private Main_PMove targetEntity; 
+    private NavMeshAgent navMeshAgent; 
+    private Animator monsterAnimator; 
     private Transform monsterTransform;
     [SerializeField] Transform monsterRespawn;
     private Main_PMove player;
@@ -25,29 +23,22 @@ public class Monster : MonoBehaviour
     private bool initialDelayPassed = false;
     public bool speedUp = false;
 
-
-    // ������ ����� �����ϴ��� �˷��ִ� ������Ƽ
     private bool hasTarget
     {
         get
         {
-            // ������ ����� �����ϰ�, ����� ������� �ʾҴٸ� true
-            if (targetEntity != null)// && !targetEntity.dead)
+            if (targetEntity != null)
             {
                 return true;
             }
-
-            // �׷��� �ʴٸ� false
             return false;
         }
     }
 
     private void Awake()
     {
-        // �ʱ�ȭ
         navMeshAgent = GetComponent<NavMeshAgent>();
         monsterAnimator = GetComponent<Animator>();
-        // ����� �ҽ� ������Ʈ ��������
         monsterTransform = GetComponent<Transform>();
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
@@ -59,14 +50,11 @@ public class Monster : MonoBehaviour
 
     void Start()
     {
-        
-        // ���� ������Ʈ Ȱ��ȭ�� ���ÿ� AI�� ���� ��ƾ ����
         StartCoroutine(UpdatePath());
     }
 
     void Update()
     {
-        // ���� ����� ���� ���ο� ���� �ٸ� �ִϸ��̼� ���
         monsterAnimator.SetBool("HasTarget", hasTarget);
         attactTimer += Time.deltaTime;
         // 발소리 재생 타이머
@@ -87,22 +75,18 @@ public class Monster : MonoBehaviour
         }    
     }
 
-    // �ֱ������� ������ ����� ��ġ�� ã�� ��� ����
     private IEnumerator UpdatePath()
     {
-        // ��� �ִ� ���� ���� ����
         while (true)
         {
             if (!hasTarget)
             {
-                // ���� ����� ���� �� �ڵ�
                 Collider[] colliders = Physics.OverlapSphere(transform.position, 10f, whatIsTarget);
 
-                // �ֺ��� �÷��̾ �ִ��� Ȯ��
                 for (int i = 0; i < colliders.Length; i++)
                 {
                     player = colliders[i].GetComponent<Main_PMove>();
-                    if (player != null) //&& !player.dead)
+                    if (player != null)
                     {
                         targetEntity = player;
                         break;
@@ -114,14 +98,12 @@ public class Monster : MonoBehaviour
             }
             else
             {
-                // ���� ���� ���
-                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2.5f && !isAttacking && attactTimer >= 3.0f && player.hp > 0)
+                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2.5f && attactTimer >= 3.0f && player.hp > 0)
                 {
-                    // �÷��̾ ���� ���� ���� ������ ����
                     PlayAttackSound();
                     attactTimer = 0;
-                    monsterAnimator.SetBool("isHit", true);
-                    isHitting = true;
+                    monsterAnimator.SetTrigger("Hit");
+                   
                     player.hp -= 2;
                     Debug.Log("attack");
 
@@ -133,16 +115,12 @@ public class Monster : MonoBehaviour
                 }
                 else
                 {
-                    // ���� ���� ���� �÷��̾ ������ ������ ���߰� �ٽ� �߰�
-                    monsterAnimator.SetBool("isHit", false);
+                    
                     navMeshAgent.isStopped = false;
                     navMeshAgent.SetDestination(targetEntity.transform.position);
-                    isHitting = false;
                 }
 
             }
-
-            // 0.25�� �ֱ�� ó�� �ݺ�
             yield return new WaitForSeconds(0.25f);
         }
     }

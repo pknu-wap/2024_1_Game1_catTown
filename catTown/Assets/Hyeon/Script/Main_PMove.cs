@@ -12,12 +12,14 @@ public class Main_PMove : MonoBehaviour
     private float gravity = -20f;
     private float yVelocity = 0f;
 
-    public bool isRunnig = false;
+    public bool isRunning = false;
     public bool isStaminaHeal = true; // 불 함수를 통한 스태미너 힐 처리 
     public bool isCaution = true;
     public bool isJumping = false;
     public float jumpPower = 5f;
     public float applySpeed;
+
+    public SphereCollider SphereCollider;
 
     // 캐릭터 컨트롤러 변수
     CharacterController cc;
@@ -36,15 +38,17 @@ public class Main_PMove : MonoBehaviour
     public Slider stSlider;
 
     // 위험도 변수 제어
-    private int ct = 0; // ct = caution
-    private float cautionHealthTime = 0.0f;
-    private int maxCt = 50;
-    private int ctd = 10;
-    private int cth = 5;
+    public int ct = 0; // ct = caution
+    public float cautionHealthTime = 0.0f;
+    public int maxCt = 50;
+    public int ctd = 10;
+    public int cth = 5;
+    
     public Slider ctSlider;
 
     //[SerializeField] Transform playerRespawnPoint;
     //private Transform playerRespawnPoint;
+
     public int get_ct()
     {
         return ct;
@@ -62,7 +66,7 @@ public class Main_PMove : MonoBehaviour
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
-
+        SphereCollider = GetComponent<SphereCollider>();
     }
 
     void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드
@@ -77,6 +81,15 @@ public class Main_PMove : MonoBehaviour
         HandleSceneSwitching();
         HandleStamina();
         UpdateUI();
+        HandleHP();
+    }
+
+    void HandleHP()
+    {
+
+        if(hp > 10){
+            hp = maxHp;
+        }
     }
 
     void HandleMovement()
@@ -94,13 +107,13 @@ public class Main_PMove : MonoBehaviour
         {
             isStaminaHeal = false;
             staminaHealthTime = 0.0f; // 스태미나 힐 리셋
-            isRunnig = true;
+            isRunning = true;
             applySpeed = runSpeed;
             st -= std;
         }
         else
         {
-            isRunnig = false;
+            isRunning = false;
             applySpeed = walkSpeed;
         }
 
@@ -167,6 +180,25 @@ public class Main_PMove : MonoBehaviour
             st += sth;
             if (st < 0) st = 0;
             if (st > maxSt) st = maxSt;
+        }
+    }
+    
+    void HandleCaution()
+    {
+        if (!isCaution)
+        {
+            cautionHealthTime += Time.deltaTime;
+            if (cautionHealthTime > 5.0f)
+            {
+                isCaution = true;
+            }
+        }
+
+        if (isCaution)
+        {
+            ct += cth;
+            if (ct < 0) ct = 0;
+            if (ct > maxCt) ct = maxCt;
         }
     }
 
