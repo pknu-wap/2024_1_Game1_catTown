@@ -6,7 +6,7 @@ public class drawerScript : MonoBehaviour
 {
     Animator anim;
     bool is_PlayerEnter; // Player가 범위 안에 왔는지를 판별할 bool 타입 변수
-    public bool is_DrawerOpen;
+    public bool is_nextPossible;
     public GameObject player;
 
     private void Start()
@@ -16,7 +16,7 @@ public class drawerScript : MonoBehaviour
         player = GameObject.FindGameObjectWithTag("Player");
 
         is_PlayerEnter = false;
-        is_DrawerOpen = false;
+        is_nextPossible = false;
     }
    
 	void Update ()
@@ -49,7 +49,7 @@ public class drawerScript : MonoBehaviour
         {            
             Debug.Log("open");
             anim.SetTrigger("Open");
-            is_DrawerOpen = true;
+            is_nextPossible = true;
         }
 
 

@@ -62,6 +62,7 @@ public class Main_PMove : MonoBehaviour
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
+        SphereCollider = GetComponent<SphereCollider>();
     }
 
     void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드
@@ -77,6 +78,15 @@ public class Main_PMove : MonoBehaviour
         HandleStamina();
         HandleCaution();
         UpdateUI();
+        HandleHP();
+    }
+
+    void HandleHP()
+    {
+
+        if(hp > 10){
+            hp = maxHp;
+        }
     }
 
     void HandleMovement()
@@ -169,6 +179,10 @@ public class Main_PMove : MonoBehaviour
             if (st > maxSt) st = maxSt;
         }
     }
+
+    //HP max 제한
+
+    // 만약 max > 가 될 때, joby > wakeUp > true
 
     void HandleCaution()
     {
