@@ -54,14 +54,14 @@ public class CautionStatus : MonoBehaviour
             }
         }
 
-        if (!isbroken)
+        /*if (!isbroken)
         {
             Debug.Log(breakableObject.name);
         }
         else
         {
             Debug.Log(cautionObject.name);
-        }
+        }*/
 
         if (collision.transform.tag == "Player")
         {

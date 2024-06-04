@@ -22,6 +22,7 @@ public class ShowPlayerStatus : MonoBehaviour
             yield return new WaitForSeconds(interval);
             player = GameObject.Find("Player");
             Debug.Log("Player HP : " + player.GetComponent<Main_PMove>().hp);
+            Debug.Log("Player CT : " + player.GetComponent<Main_PMove>().ct);
         }
     }
 }
