@@ -19,7 +19,7 @@ public class InteractionUI : MonoBehaviour
     }
 
     /// <summary>
-    /// "[Q]" appear
+    /// "[F]" appear
     ///  Object Collider detect (OnTriggerEnter)
     /// </summary>
     public void textAppear()
@@ -28,7 +28,7 @@ public class InteractionUI : MonoBehaviour
     }
 
     /// <summary>
-    /// "[Q]" disappear
+    /// "[F]" disappear
     /// Object Collider detect (OnTriggerExit)
     /// </summary>
     public void textDisappear()

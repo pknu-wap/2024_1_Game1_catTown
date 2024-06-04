@@ -12,13 +12,14 @@ public class Main_PMove : MonoBehaviour
     private float gravity = -20f;
     private float yVelocity = 0f;
 
-    public bool isRunnig = false;
+    public bool isRunning = false;
     public bool isStaminaHeal = true; // 불 함수를 통한 스태미너 힐 처리 
     public bool isCaution = true;
     public bool isJumping = false;
     public float jumpPower = 5f;
     public float applySpeed;
-    public SphereCollider sphereCollider;
+
+    public SphereCollider SphereCollider;
 
     // 캐릭터 컨트롤러 변수
     CharacterController cc;
@@ -37,12 +38,16 @@ public class Main_PMove : MonoBehaviour
     public Slider stSlider;
 
     // 위험도 변수 제어
-    private int ct = 0; // ct = caution
-    private float cautionHealthTime = 0.0f;
-    private int maxCt = 50;
-    private int ctd = 10;
-    private int cth = 5;
+    public int ct = 0; // ct = caution
+    public float cautionHealthTime = 0.0f;
+    public int maxCt = 50;
+    public int ctd = 10;
+    public int cth = 5;
+    
     public Slider ctSlider;
+
+    //[SerializeField] Transform playerRespawnPoint;
+    //private Transform playerRespawnPoint;
 
     public int get_ct()
     {
@@ -54,8 +59,6 @@ public class Main_PMove : MonoBehaviour
         return maxCt;
     }
 
-    [SerializeField] Transform playerRespawnPoint;
-
     private void Start()
     {
         // 캐릭터 컨트롤러 컴포넌트 받아오기
@@ -63,7 +66,7 @@ public class Main_PMove : MonoBehaviour
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
-        sphereCollider = GetComponent<SphereCollider>();
+        SphereCollider = GetComponent<SphereCollider>();
     }
 
     void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드
@@ -77,7 +80,6 @@ public class Main_PMove : MonoBehaviour
         HandleJump();
         HandleSceneSwitching();
         HandleStamina();
-        HandleCaution();
         UpdateUI();
         HandleHP();
     }
@@ -105,13 +107,13 @@ public class Main_PMove : MonoBehaviour
         {
             isStaminaHeal = false;
             staminaHealthTime = 0.0f; // 스태미나 힐 리셋
-            isRunnig = true;
+            isRunning = true;
             applySpeed = runSpeed;
             st -= std;
         }
         else
         {
-            isRunnig = false;
+            isRunning = false;
             applySpeed = walkSpeed;
         }
 
@@ -180,11 +182,7 @@ public class Main_PMove : MonoBehaviour
             if (st > maxSt) st = maxSt;
         }
     }
-
-    //HP max 제한
-
-    // 만약 max > 가 될 때, joby > wakeUp > true
-
+    
     void HandleCaution()
     {
         if (!isCaution)
@@ -217,12 +215,12 @@ public class Main_PMove : MonoBehaviour
         if (hp <= 0)
         {
             GameObject targetObject = GameObject.Find("Player"); // 변경할 오브젝트의 이름으로 검색
-
-            if (targetObject != null && playerRespawnPoint != null)
+            GameObject playerRespawnManager = GameObject.Find("PlayerRespawn"); // 변경할 오브젝트의 이름으로 검색
+            if (targetObject != null)
             {
                 // 캐릭터 컨트롤러 비활성화
                 cc.enabled = false;
-                targetObject.transform.position = playerRespawnPoint.position;
+                targetObject.transform.position = playerRespawnManager.transform.position;
                 // 캐릭터 컨트롤러 다시 활성화
                 cc.enabled = true;
                 Debug.Log("위치변경");

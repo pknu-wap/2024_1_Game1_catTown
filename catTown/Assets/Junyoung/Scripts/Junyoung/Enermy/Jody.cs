@@ -1,15 +1,13 @@
-using System;
 using System.Collections;
-using Unity.Services.Analytics.Internal;
 using UnityEngine;
 using UnityEngine.AI;
 
 public class Jody : MonoBehaviour
 {
-    public LayerMask whatIsTarget; // �� ��� ���̾�
-    private NavMeshAgent navMeshAgent; // ��� ��� AI ������Ʈ
-    private Animator amyAnimator; // �ִϸ����� ������Ʈ
-    private Main_PMove targetEntity; // ���� ���
+    public LayerMask whatIsTarget;
+    private NavMeshAgent navMeshAgent;
+    private Animator JodyAnimator;
+    private Main_PMove targetEntity;
     private Transform JodyTransform;
     private Main_PMove player;
     private int currentPointIndex = 0;
@@ -17,67 +15,77 @@ public class Jody : MonoBehaviour
     [SerializeField] int noiseLevel = 0;
     [SerializeField] Transform wakeUpPoint;
     [SerializeField] Transform sleepPoint;
+    public bool wakeUP = false;
 
-    // ������ ������ ���� ��ġ�� �����ϸ� Jody�� �ῡ�� ���� ������ �޷����� ����.
+    private bool isCoroutineRunning = false;
 
-
-    // ������ ����� �����ϴ��� �˷��ִ� ������Ƽ
     private bool hasTarget
     {
         get
         {
-            // ������ ����� �����ϰ�, ����� ������� �ʾҴٸ� true
-            if (targetEntity != null /*&& !targetEntity.dead)*/)
-            {
-                return true;
-            }
-
-            // �׷��� �ʴٸ� false
-            return false;
+            return targetEntity != null;
         }
     }
 
+    void UPing()
+    {
+        if (player.ct == player.maxCt)
+        {
+            wakeUP = true;
+        }
+    }
 
     private void Awake()
     {
-        // �ʱ�ȭ
         navMeshAgent = GetComponent<NavMeshAgent>();
-        amyAnimator = GetComponent<Animator>();
+        JodyAnimator = GetComponent<Animator>();
         JodyTransform = GetComponent<Transform>();
     }
 
     void Start()
     {
-        // ���� ������Ʈ Ȱ��ȭ�� ���ÿ� AI�� ���� ��ƾ ����
-        if (targetEntity.get_ct() >= targetEntity.get_maxCt())
-        {
-            Debug.Log("WakeUP");
-            StartCoroutine(UpdatePath());
-        }
+
     }
 
     void Update()
     {
-        // ���� ����� ���� ���ο� ���� �ٸ� �ִϸ��̼� ���
-        amyAnimator.SetBool("HasTarget", hasTarget);
+        JodyAnimator.SetBool("HasTarget", hasTarget);
 
+        if (!isCoroutineRunning && (CheckPlayerDistance(1f) || wakeUP))
+        {
+            isCoroutineRunning = true;
+            StartCoroutine(UpdatePath());
+        }
     }
 
-    // �ֱ������� ������ ����� ��ġ�� ã�� ��� ����
+    private bool CheckPlayerDistance(float distance)
+    {
+        Collider[] colliders = Physics.OverlapSphere(transform.position, distance, whatIsTarget);
+        for (int i = 0; i < colliders.Length; i++)
+        {
+            player = colliders[i].GetComponent<Main_PMove>();
+            if (player != null)
+            {
+                targetEntity = player;
+                return true;
+            }
+        }
+        return false;
+    }
+
     private IEnumerator UpdatePath()
     {
-        // ��� �ִ� ���� ���� ����
+        isCoroutineRunning = true;
+
         while (true)
         {
-            // ���� �߰����� ���� ���
             if (!hasTarget)
             {
-                // �ֺ��� ���� �ִ��� Ȯ��
                 Collider[] colliders = Physics.OverlapSphere(transform.position, 100f, whatIsTarget);
                 for (int i = 0; i < colliders.Length; i++)
                 {
                     player = colliders[i].GetComponent<Main_PMove>();
-                    if (player != null /*&& !player.dead*/)
+                    if (player != null)
                     {
                         targetEntity = player;
                         break;
@@ -85,39 +93,40 @@ public class Jody : MonoBehaviour
                 }
                 Debug.Log("no");
             }
-            else // ���� �߰��� ���
+            else
             {
                 Debug.Log("surprised");
-                // ���缭�� �߰� �ִϸ��̼� ���
-                amyAnimator.SetBool("HasTarget", true);
+
+                JodyAnimator.SetBool("HasTarget", true);
                 if (surprised)
                 {
-                    float navmMeshSpeed = navMeshAgent.speed;
+                    float navMeshSpeed = navMeshAgent.speed;
                     navMeshAgent.speed = 0;
                     JodyTransform.position = sleepPoint.position;
-                    yield return new WaitForSeconds(6.0f);
+                    yield return new WaitForSeconds(5.0f);
+                    JodyAnimator.SetTrigger("LookAround");
+                    Debug.Log("rotate");
                     JodyTransform.rotation = Quaternion.Euler(0, 90f, 0);
                     yield return new WaitForSeconds(6.5f);
+                    JodyAnimator.SetTrigger("Surprised");
                     JodyTransform.rotation = Quaternion.Euler(0, 0, 0);
                     JodyTransform.position = wakeUpPoint.position;
-                    yield return new WaitForSeconds(12.0f);
-                    navMeshAgent.speed = navmMeshSpeed;
+                    yield return new WaitForSeconds(8.0f);
+                    navMeshAgent.speed = navMeshSpeed;
                     surprised = false;
                 }
-                // ������ �Ÿ��� Ȯ���Ͽ� ���� ���� ���� ������ ���� ����
-                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 100f)
+
+                if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 100f && !surprised)
                 {
                     Debug.Log("running");
-                    // ���� ���� �ִϸ��̼� ���
-                    amyAnimator.SetBool("isRunning", true);
+                    JodyAnimator.SetBool("isRunning", true);
                     navMeshAgent.SetDestination(targetEntity.transform.position);
-                    // ���� ���� ���
                     if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 2f)
                     {
-                        // �÷��̾ ���� ���� ���� ������ ����
-                        amyAnimator.SetTrigger("Attack");
+                        JodyAnimator.SetTrigger("Attack");
                         Debug.Log("attck");
-                        player.hp -= 2;
+                        yield return new WaitForSeconds(1.0f);
+                        player.hp -= 10;
 
                         Debug.Log("Player HP: " + player.hp);
                         if (player.hp <= 0)
@@ -127,8 +136,6 @@ public class Jody : MonoBehaviour
                     }
                 }
             }
-
-            // 0.25�� �ֱ�� ó�� �ݺ�
             yield return new WaitForSeconds(0.25f);
         }
     }

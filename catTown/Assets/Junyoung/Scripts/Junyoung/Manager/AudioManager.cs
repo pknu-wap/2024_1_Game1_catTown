@@ -4,46 +4,46 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
-    public static AudioManager instance; // ½Ì±ÛÅæ ÀÎ½ºÅÏ½º
+    //public static AudioManager instance; // ï¿½Ì±ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½
 
     public AudioClip backgroundMusic1;
     public  AudioClip backgroundMusic2;
     public AudioClip backgroundMusic3;
-    private AudioSource audioSource; // ¿Àµð¿À ¼Ò½º ÄÄÆ÷³ÍÆ®
+    private AudioSource audioSource; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ò½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®
 
     void Awake()
     {
-        // ½Ì±ÛÅæ ÀÎ½ºÅÏ½º ¼³Á¤
-        if (instance == null)
-        {
-            instance = this;
-            DontDestroyOnLoad(gameObject); // ¾À ÀüÈ¯ ½Ã ¿Àµð¿À ¸Å´ÏÀú°¡ ÆÄ±«µÇÁö ¾Êµµ·Ï ¼³Á¤
-        }
-        else
-        {
-            Destroy(gameObject);
-            return; // ±âÁ¸ ÀÎ½ºÅÏ½º°¡ Á¸ÀçÇÏ¸é ÃÊ±âÈ­¸¦ ÁßÁöÇÕ´Ï´Ù.
-        }
+        //// ï¿½Ì±ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //if (instance == null)
+        //{
+        //    instance = this;
+        //    DontDestroyOnLoad(gameObject); // ï¿½ï¿½ ï¿½ï¿½È¯ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Å´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Êµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+        //}
+        //else
+        //{
+        //    Destroy(gameObject);
+        //    return; // ï¿½ï¿½ï¿½ï¿½ ï¿½Î½ï¿½ï¿½Ï½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½Ê±ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
+        //}
     }
 
     void Start()
     {
-        // AudioSource ÄÄÆ÷³ÍÆ®¸¦ °¡Á®¿À°Å³ª ¾øÀ¸¸é Ãß°¡ÇÕ´Ï´Ù.
+        // AudioSource ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ß°ï¿½ï¿½Õ´Ï´ï¿½.
         audioSource = GetComponent<AudioSource>();
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
         }
 
-        // ¹è°æ À½¾Ç ¼³Á¤
+        // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
         if (backgroundMusic1 != null)
         {
             audioSource.clip = backgroundMusic1;
 
-            // ¹Ýº¹ Àç»ý ¼³Á¤
+            // ï¿½Ýºï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
             audioSource.loop = true;
 
-            // ¹è°æ À½¾Ç Àç»ý
+            // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
             PlayBackgroundMusic();
         }
         else
@@ -52,18 +52,19 @@ public class AudioManager : MonoBehaviour
         }
     }
 
-    // ¹è°æ À½¾ÇÀ» Àç»ýÇÏ´Â ÇÔ¼ö
+    // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
     public void PlayBackgroundMusic()
     {
-        // ¿Àµð¿À Àç»ý
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
         audioSource.Play();
     }
 
-    // ¹è°æ À½¾ÇÀ» º¯°æÇÏ°í Àç»ýÇÏ´Â ÇÔ¼ö
+    // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Ô¼ï¿½
     public void ChangeBackgroundMusic(AudioClip newClip)
     {
         if (newClip != null)
         {
+            Debug.Log("complete change BGM");
             audioSource.clip = newClip;
             audioSource.Play();
         }
