@@ -40,7 +40,7 @@ public class Main_PMove : MonoBehaviour
     // 위험도 변수 제어
     public int ct = 0; // ct = caution
     public float cautionHealthTime = 0.0f;
-    public int maxCt = 50;
+    public int maxCt = 200;
     public int ctd = 10;
     public int cth = 5;
     
