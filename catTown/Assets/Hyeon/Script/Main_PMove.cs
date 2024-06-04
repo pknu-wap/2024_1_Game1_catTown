@@ -18,6 +18,7 @@ public class Main_PMove : MonoBehaviour
     public bool isJumping = false;
     public float jumpPower = 5f;
     public float applySpeed;
+    public SphereCollider sphereCollider;
 
     // 캐릭터 컨트롤러 변수
     CharacterController cc;
@@ -62,7 +63,7 @@ public class Main_PMove : MonoBehaviour
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
-        SphereCollider = GetComponent<SphereCollider>();
+        sphereCollider = GetComponent<SphereCollider>();
     }
 
     void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드
