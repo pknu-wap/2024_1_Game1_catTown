@@ -79,7 +79,8 @@ public class Main_Menu : MonoBehaviour
 
         StartCoroutine(ReadytoStart());
 
-        gameOption = gameObject.SetActive(false);
+        // this code has error
+        gameOption.SetActive(false);
 
     }
 
