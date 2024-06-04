@@ -10,14 +10,14 @@ public class KeyScrip : MonoBehaviour
     public GameObject player;
     void Start()
     {
-        
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     // Update is called once per frame
     void Update()
     {
         pickupKey();
-        player = GameObject.FindGameObjectWithTag("Player");
+        
     }
 
 
@@ -35,7 +35,7 @@ public class KeyScrip : MonoBehaviour
 
     void pickupKey()
     {
-        if (is_PlayerEnter && Input.GetKeyUp(KeyCode.E))
+        if (is_PlayerEnter && Input.GetKeyUp(KeyCode.F))
         {            
             Debug.Log("Picked up a key");
             is_havingKey = true;
