@@ -41,7 +41,11 @@ public class Jody : MonoBehaviour
 
     void UPing()
     {
+<<<<<<< Updated upstream
         if(player.ct == player.maxCt)
+=======
+        if (player.ct == 50)
+>>>>>>> Stashed changes
         {
             wakeUP = true;
         }
