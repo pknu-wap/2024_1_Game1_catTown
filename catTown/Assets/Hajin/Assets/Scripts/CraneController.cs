@@ -26,11 +26,16 @@ public class CraneController : MonoBehaviour
     private bool isMoving = false; // 이동 여부
     private bool isRotating = false; // 회전 여부
 
+    private GameObject player; // 플레이어
+    private bool isPlayerOnCrane = false; // 플레이어가 크레인 위에 있는지 여부
+
     void Start()
     {
         neckOriginalPosition = neckObject.transform.position; 
         targetPosition = craneObject.transform.position;
         targetRotation = craneObject.transform.rotation;
+
+        player = GameObject.FindWithTag("Player"); // 플레이어를 찾습니다.
     }
 
     void Update()
@@ -92,6 +97,24 @@ public class CraneController : MonoBehaviour
             {
                 isRotating = false;
             }
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            isPlayerOnCrane = true;
+            player.transform.SetParent(craneObject.transform);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            isPlayerOnCrane = false;
+            player.transform.SetParent(null);
         }
     }
 
