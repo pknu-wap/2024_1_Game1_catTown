@@ -29,7 +29,8 @@ public class Jody : MonoBehaviour
 
     void UPing()
     {
-        if (player.ct == player.maxCt)
+        if (player.ct == 50)
+
         {
             wakeUP = true;
         }
