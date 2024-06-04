@@ -58,6 +58,23 @@ public class InteractionItem : MonoBehaviour
                 player.GetComponent<Main_PMove>().ct += 2;
             }
         }
+        else if (collision.gameObject.CompareTag("CautionNotBroken"))
+        {
+            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+
+            var cautionAmount = collision.transform.GetComponent<GetCautionValue>().CautionAmount;
+
+            player.GetComponent<Main_PMove>().ct += cautionAmount;
+
+            if (rb != null)
+            {
+                Vector3 direction = collision.contacts[0].point - transform.position;
+                direction = -direction.normalized;
+
+                rb.AddForce(direction * 2f, ForceMode.Impulse);
+            }
+        }
+        
     }
 
     public int noiseAmount = 0;

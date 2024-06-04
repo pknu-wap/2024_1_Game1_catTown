@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.Rendering;
 using UnityEngine;
 
@@ -9,7 +10,8 @@ public class CautionStatus : MonoBehaviour
     private bool isCollidedWithPlayer = false;
 
     private int collidedCount = 0;
-    private bool isbroken = false;
+
+    private bool isBroken = false;
 
     [SerializeField]
     private int brokenCautionAmount = 20;
@@ -47,7 +49,7 @@ public class CautionStatus : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // need to fix Collision of Caution Object
-        if (!isbroken)
+        if (!isBroken)
         {
             collidedCount++;
             if (collidedCount == 5)
@@ -81,7 +83,7 @@ public class CautionStatus : MonoBehaviour
 
     IEnumerator OnBroken()
     {
-        isbroken = true;
+        isBroken = true;
 
         breakableObject.gameObject.SetActive(false);
 
