@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
 using UnityEditor.Experimental.Rendering;
@@ -46,19 +47,10 @@ public class CautionStatus : MonoBehaviour
         if (!isbroken)
         {
             collidedCount++;
-
-            if (collidedCount == 4)
+            if (collidedCount == 5)
             {
-                isbroken = true;
-
-                breakableObject.gameObject.SetActive(false);
-                breakableMeshCollider.enabled = false;
-                
-                // Need to add code : increase cautionAmount when broken
-                //player.GetComponent<Main_PMove>().ct += brokenCautionAmount;
-                Debug.Log(brokenCautionAmount);
-                cautionObject.gameObject.SetActive(true);
-
+                // Broken Time delay ( to enable MeshCollider )
+                StartCoroutine("Broken");
             }
         }
 
@@ -80,6 +72,22 @@ public class CautionStatus : MonoBehaviour
         {
             isCollidedWithPlayer = false;
         }
+    }
+
+    IEnumerator Broken()
+    {
+        isbroken = true;
+
+        breakableObject.gameObject.SetActive(false);
+
+        // Need to add code : increase cautionAmount when broken
+        //player.GetComponent<Main_PMove>().ct += brokenCautionAmount;
+        Debug.Log(brokenCautionAmount);
+        cautionObject.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(1);
+
+        breakableMeshCollider.enabled = false;
     }
 }
 
