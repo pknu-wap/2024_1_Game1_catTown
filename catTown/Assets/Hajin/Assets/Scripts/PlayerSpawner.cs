@@ -11,9 +11,15 @@ public class PlayerSpawner : MonoBehaviour
     {
         if (spawnTransform != null)
         {
+            Debug.Log("일단 통과");
             // 플레이어를 스폰하고 생성된 오브젝트를 반환
             return Instantiate(playerPrefab, spawnTransform.position, spawnTransform.rotation);
         }
         return null;
+    }
+
+    public void Awake()
+    {
+        SpawnPlayer();
     }
 }
