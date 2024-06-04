@@ -15,6 +15,10 @@ public class CautionStatus : MonoBehaviour
     private int brokenCautionAmount = 20;
     public int BrokenCautionAmount => brokenCautionAmount;
 
+    [SerializeField]
+    private int fractionsCautionAmount = 2;
+    public int FractionsCautionAmount => fractionsCautionAmount;
+
     private Transform breakableObject = null;
     private Transform cautionObject = null;
 

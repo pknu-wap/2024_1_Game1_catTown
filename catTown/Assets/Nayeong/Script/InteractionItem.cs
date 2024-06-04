@@ -39,7 +39,48 @@ public class InteractionItem : MonoBehaviour
         {
             var cautionValue = other.GetComponent<CautionStatus>().CautionAmount;
         }*/
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Noise");
+        if (collision.gameObject.CompareTag("CautionFraction"))
+        {
+            noiseAmount += 1;
+
+            if (noiseAmount == 1)
+            {
+                StartCoroutine(OnDecreasedNoise());
+            }
+
+            if (noiseAmount > limitNoise)
+            {
+                player.GetComponent<Main_PMove>().ct += 2;
+            }
+        }
+    }
+
+    public int noiseAmount = 0;
+    private int limitNoise = 10;
+
+    IEnumerator OnDecreasedNoise()
+    {    
+        while (noiseAmount > 0)
+        {
+            Debug.Log("In Coroutine" + noiseAmount);
+
+            var beforePos = gameObject.transform.position;
+            yield return new WaitForSeconds(0.5f);
+
+            if (beforePos == gameObject.transform.position)
+            {
+                noiseAmount -= 10;
+            }
+
+            noiseAmount -= 1;
+
+        }
+        noiseAmount = 0;
     }
 
 }
