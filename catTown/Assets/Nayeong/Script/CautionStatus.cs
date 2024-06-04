@@ -6,7 +6,6 @@ using UnityEngine;
 
 public class CautionStatus : MonoBehaviour
 { 
-
     private bool isCollidedWithPlayer = false;
 
     private int collidedCount = 0;
@@ -50,7 +49,9 @@ public class CautionStatus : MonoBehaviour
             if (collidedCount == 5)
             {
                 // Broken Time delay ( to enable MeshCollider )
-                StartCoroutine("Broken");
+                StartCoroutine("OnBroken");
+                InteractionUI.Instance.GiveCaution(BrokenCautionAmount);
+                Debug.Log("OnBroken");
             }
         }
 
@@ -74,7 +75,7 @@ public class CautionStatus : MonoBehaviour
         }
     }
 
-    IEnumerator Broken()
+    IEnumerator OnBroken()
     {
         isbroken = true;
 
@@ -82,7 +83,6 @@ public class CautionStatus : MonoBehaviour
 
         // Need to add code : increase cautionAmount when broken
         //player.GetComponent<Main_PMove>().ct += brokenCautionAmount;
-        Debug.Log(brokenCautionAmount);
         cautionObject.gameObject.SetActive(true);
 
         yield return new WaitForSeconds(1);
