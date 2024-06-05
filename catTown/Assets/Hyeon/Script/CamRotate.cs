@@ -14,7 +14,7 @@ public class CamRotate : MonoBehaviour
         int hz = 0;   
     
         float Uh = 1.0f;
-        float Dh = 0.1f;
+        float Dh = 0.4f;
 
         public GameObject Target;
 
