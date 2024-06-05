@@ -19,7 +19,7 @@ public class Main_PMove : MonoBehaviour
     public float jumpPower = 5f;
     public float applySpeed;
 
-    public SphereCollider SphereCollider;
+    private MeshCollider meshCollider;
 
     // 캐릭터 컨트롤러 변수
     CharacterController cc;
@@ -59,6 +59,11 @@ public class Main_PMove : MonoBehaviour
         return maxCt;
     }
 
+    private void Awake()
+    {
+        meshCollider = GetComponent<MeshCollider>();
+    }
+
     private void Start()
     {
         // 캐릭터 컨트롤러 컴포넌트 받아오기
@@ -66,7 +71,6 @@ public class Main_PMove : MonoBehaviour
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
-        SphereCollider = GetComponent<SphereCollider>();
     }
 
     void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드

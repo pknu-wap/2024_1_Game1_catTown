@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 8295821640675656179}
   m_Layer: 0
   m_Name: Kettle_c06_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 1016920076149163345}
   m_Layer: 0
   m_Name: Kettle_c08_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -316,7 +316,7 @@ GameObject:
   - component: {fileID: 6380023978376952627}
   m_Layer: 0
   m_Name: Kettle_c04_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -450,7 +450,7 @@ GameObject:
   - component: {fileID: 1371977882160897445}
   m_Layer: 0
   m_Name: Kettle_c01_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -617,7 +617,7 @@ GameObject:
   - component: {fileID: 3164793193170692331}
   m_Layer: 0
   m_Name: Kettle_c09_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -898,7 +898,7 @@ Transform:
   m_GameObject: {fileID: 4963150745447170156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5}
+  m_LocalPosition: {x: -16.455738, y: 28.428995, z: 12.107658}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -918,7 +918,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8553e69176490f44d88dc5fd04680618, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cautionAmount: 0
+  brokenCautionAmount: 20
+  fractionsCautionAmount: 2
 --- !u!54 &2840287202779193697
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -983,7 +984,7 @@ GameObject:
   - component: {fileID: 4100617135546600170}
   m_Layer: 0
   m_Name: Kettle_c02_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1241,7 +1242,7 @@ GameObject:
   - component: {fileID: 8653017781591041438}
   m_Layer: 0
   m_Name: Kettle_c10_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1458,7 +1459,7 @@ GameObject:
   - component: {fileID: 7811335967036274722}
   m_Layer: 0
   m_Name: Kettle_c03_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1592,7 +1593,7 @@ GameObject:
   - component: {fileID: 2084567644260311422}
   m_Layer: 0
   m_Name: Kettle_c05_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1726,7 +1727,7 @@ GameObject:
   - component: {fileID: 7847327468076484705}
   m_Layer: 0
   m_Name: Kettle_c07_Baked
-  m_TagString: Untagged
+  m_TagString: CautionFraction
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
