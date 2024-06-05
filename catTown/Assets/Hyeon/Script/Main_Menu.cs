@@ -78,9 +78,8 @@ public class Main_Menu : MonoBehaviour
         gameText = gameLabel.GetComponent<Text>();
 
         StartCoroutine(ReadytoStart());
-
+        
         state = true;
-
     }
 
     IEnumerator ReadytoStart(){
