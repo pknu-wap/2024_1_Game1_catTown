@@ -7,20 +7,19 @@ public class PlayerSpawner : MonoBehaviour
     public GameObject playerPrefab; // 플레이어 프리팹을 연결할 변수
     public Transform spawnTransform; // 플레이어를 스폰할 위치를 가진 오브젝트의 Transform
 
-    void Awake()
-    {
-        SpawnPlayer();
-    }
-
-    void SpawnPlayer()
+    public GameObject SpawnPlayer()
     {
         if (spawnTransform != null)
         {
-            // 플레이어를 스폰
-            Instantiate(playerPrefab, spawnTransform.position, spawnTransform.rotation);
+            Debug.Log("일단 통과");
+            // 플레이어를 스폰하고 생성된 오브젝트를 반환
+            return Instantiate(playerPrefab, spawnTransform.position, spawnTransform.rotation);
         }
+        return null;
+    }
 
+    public void Awake()
+    {
+        SpawnPlayer();
     }
 }
-
-

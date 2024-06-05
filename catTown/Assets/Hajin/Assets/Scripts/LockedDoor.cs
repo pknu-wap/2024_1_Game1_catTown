@@ -8,16 +8,24 @@ public class LockedDoor : MonoBehaviour
     bool is_PlayerEnter = false;
     bool is_Open = false;
     public GameObject player;
+    public GameObject key;
+
     Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(key != null)
+        {
+            is_havingKey = key.GetComponent<KeyScrip>().is_havingKey;
+        }
+
         playAnimation();
     }
     
@@ -28,15 +36,20 @@ public class LockedDoor : MonoBehaviour
             is_PlayerEnter = true;            
         }
         Debug.Log(is_PlayerEnter);
+        Debug.Log("is_havingKey");
     }
 
-        void playAnimation()
+    void playAnimation()
     {
-        if (is_PlayerEnter && Input.GetKeyUp(KeyCode.E) && is_havingKey)
-        {            
-            Debug.Log("open");
-            anim.SetTrigger("Open");
-            is_Open = true;
+        if (is_PlayerEnter && Input.GetKeyUp(KeyCode.F))
+        { 
+            if (is_havingKey)
+            {
+                Debug.Log("open");
+                anim.SetTrigger("Open");
+                is_Open = true; 
+            }           
+            
         }
 
 

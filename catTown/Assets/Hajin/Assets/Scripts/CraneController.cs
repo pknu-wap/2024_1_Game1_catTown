@@ -20,14 +20,49 @@ public class CraneController : MonoBehaviour
     private Vector3 neckOriginalPosition; 
     private bool isNeckMoving = false; 
 
+    private Vector3 targetPosition; // 목표 위치
+    private Quaternion targetRotation; // 목표 회전
+
+    private bool isMoving = false; // 이동 여부
+    private bool isRotating = false; // 회전 여부
+
+    private GameObject player; // 플레이어
+    private bool isPlayerOnCrane = false; // 플레이어가 크레인 위에 있는지 여부
+
     void Start()
     {
         neckOriginalPosition = neckObject.transform.position; 
+        targetPosition = craneObject.transform.position;
+        targetRotation = craneObject.transform.rotation;
+
+        player = GameObject.FindWithTag("Player"); // 플레이어를 찾습니다.
     }
 
     void Update()
     {
-    
+        // 마우스 클릭 감지
+        if (Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hit;
+            if (Physics.Raycast(ray, out hit))
+            {
+                if (hit.collider.gameObject == button1)
+                {
+                    HandleButtonClick(button1);
+                }
+                else if (hit.collider.gameObject == button2)
+                {
+                    HandleButtonClick(button2);
+                }
+                else if (hit.collider.gameObject == button3)
+                {
+                    HandleButtonClick(button3);
+                }
+            }
+        }
+
+        // 물체 집기/놓기
         if (Input.GetKeyDown(KeyCode.E))
         {
             if (is_Grabbing)
@@ -40,10 +75,46 @@ public class CraneController : MonoBehaviour
             }
         }
 
-
         if (is_Grabbing && grabbedObject != null)
         {
             MoveGrabbedObject(); 
+        }
+
+        // 부드럽게 이동 및 회전
+        if (isMoving)
+        {
+            craneObject.transform.position = Vector3.MoveTowards(craneObject.transform.position, targetPosition, moveSpeed * Time.deltaTime);
+            if (Vector3.Distance(craneObject.transform.position, targetPosition) < 0.01f)
+            {
+                isMoving = false;
+            }
+        }
+
+        if (isRotating)
+        {
+            craneObject.transform.rotation = Quaternion.RotateTowards(craneObject.transform.rotation, targetRotation, rotateSpeed * Time.deltaTime);
+            if (Quaternion.Angle(craneObject.transform.rotation, targetRotation) < 0.1f)
+            {
+                isRotating = false;
+            }
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            isPlayerOnCrane = true;
+            player.transform.SetParent(craneObject.transform);
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (other.gameObject == player)
+        {
+            isPlayerOnCrane = false;
+            player.transform.SetParent(null);
         }
     }
 
@@ -51,31 +122,37 @@ public class CraneController : MonoBehaviour
     {
         if (button == button1)
         {
+            Debug.Log("Button 1 clicked");
             RotateLeft();
         }
         else if (button == button2)
         {
+            Debug.Log("Button 2 clicked");
             MoveForward();
         }
         else if (button == button3)
         {
+            Debug.Log("Button 3 clicked");
             RotateRight();
         }
     }
 
     private void RotateLeft()
     {
-        craneObject.transform.Rotate(Vector3.up * -rotateSpeed * Time.deltaTime);
+        targetRotation *= Quaternion.Euler(0, -rotateSpeed, 0);
+        isRotating = true;
     }
 
     private void MoveForward()
     {
-        craneObject.transform.Translate(Vector3.forward * moveSpeed * Time.deltaTime);
+        targetPosition += craneObject.transform.forward * moveSpeed;
+        isMoving = true;
     }
 
     private void RotateRight()
     {
-        craneObject.transform.Rotate(Vector3.up * rotateSpeed * Time.deltaTime);
+        targetRotation *= Quaternion.Euler(0, rotateSpeed, 0);
+        isRotating = true;
     }
 
     private void GrabObject()
@@ -109,7 +186,6 @@ public class CraneController : MonoBehaviour
 
     private void MoveGrabbedObject()
     {
-
         grabbedObject.transform.position = neckObject.transform.position + Vector3.up * neckOffsetY;
     }
 
@@ -124,7 +200,6 @@ public class CraneController : MonoBehaviour
     private void MoveNeckDown()
     {
         neckObject.transform.position = Vector3.MoveTowards(neckObject.transform.position, neckOriginalPosition + Vector3.down * 10f, neckDownSpeed * Time.deltaTime);
-
 
         if (Vector3.Distance(neckObject.transform.position, neckOriginalPosition + Vector3.down * 10f) < 0.01f)
         {

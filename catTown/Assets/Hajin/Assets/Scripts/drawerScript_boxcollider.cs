@@ -5,17 +5,17 @@ using UnityEngine;
 public class drawerScript_boxcollider : MonoBehaviour
 {
     public GameObject ob;
-    bool is_DrawerOpen;
+    bool is_nextPossible;
 
     void Awake()
     {
         gameObject.GetComponent<BoxCollider>().enabled = false;
-        is_DrawerOpen = ob.GetComponent<drawerScript>().is_DrawerOpen;
+        is_nextPossible = ob.GetComponent<drawerScript>().is_nextPossible;
     }
 
-    void is_nextPossible ()
+    void is_NextPossible ()
     {
-        if (is_DrawerOpen == true)
+        if (is_nextPossible == true)
         {
             gameObject.GetComponent<BoxCollider>().enabled = true;
         }
@@ -23,6 +23,6 @@ public class drawerScript_boxcollider : MonoBehaviour
 
     void Update()
     {
-        is_nextPossible();
+        is_NextPossible();
     }
 }

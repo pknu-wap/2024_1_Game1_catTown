@@ -58,7 +58,7 @@ public class Main_Menu : MonoBehaviour
     public void Open_Close()
     {   
         if(Input.GetKeyDown(KeyCode.Escape) | Input.GetKeyDown(KeyCode.M))
-        //if(Input.GetButtonDown("Escape"))
+        //if(Input.GetButtonDown("Cancel"))
         {
             if(state == true)
             {
