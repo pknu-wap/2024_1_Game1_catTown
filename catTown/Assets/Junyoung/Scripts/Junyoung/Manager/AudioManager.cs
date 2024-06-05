@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
     public  AudioClip backgroundMusic2;
     public AudioClip backgroundMusic3;
     private AudioSource audioSource; // ����� �ҽ� ������Ʈ
+    private bool isVolumnOff = false;
 
     void Awake()
     {
@@ -71,6 +72,20 @@ public class AudioManager : MonoBehaviour
         else
         {
             Debug.LogWarning("New background music clip is not assigned.");
+        }
+    }
+
+    public void TurnVolumn()
+    {
+        if(!isVolumnOff)
+        { 
+            audioSource.volume = 0;
+            isVolumnOff = true;
+        }
+        else
+        {
+            audioSource.volume = 1;
+            isVolumnOff = false;
         }
     }
 }
