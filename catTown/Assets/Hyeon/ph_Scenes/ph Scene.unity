@@ -2031,6 +2031,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1758709516}
   - component: {fileID: 1758709517}
+  - component: {fileID: 1758709518}
   m_Layer: 0
   m_Name: 'Menu Empty '
   m_TagString: Untagged
@@ -2074,7 +2075,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gState: 0
   gameLabel: {fileID: 1479056106}
-  gameOption: {fileID: 0}
+  gameOption: {fileID: 1758709515}
+  state: 1
+--- !u!114 &1758709518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1758709515}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2818674ad2be6824b91bbdc7d2768970, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1854693389
 GameObject:
   m_ObjectHideFlags: 0
@@ -2337,6 +2351,10 @@ PrefabInstance:
     - target: {fileID: 3998498386057245427, guid: 76af994777b452d42b310ff7fabe3ec8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5280286276850471703, guid: 76af994777b452d42b310ff7fabe3ec8, type: 3}
+      propertyPath: m_Radius
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 7899736438926915127, guid: 76af994777b452d42b310ff7fabe3ec8, type: 3}
       propertyPath: m_Name

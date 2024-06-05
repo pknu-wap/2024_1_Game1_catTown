@@ -35,6 +35,8 @@ public class Main_Menu : MonoBehaviour
 
     public GameObject gameOption;
 
+    public bool state;
+
 
     void Restart()
     {
@@ -47,27 +49,25 @@ public class Main_Menu : MonoBehaviour
         Application.Quit();
     }
 
-    void Opening(){
-        if(Input.GetKeyDown(KeyCode.M))
-        //if(Input.GetButtonDown("Escape"))
-        {
-            void OpenOtion()
-            {
-                gameOption.SetActive(true);
-                Time.timeScale = 0f;
-                gState = GameState.Pause;
-            }
-        }
-        else
-        {
-            void closeOption()
-            {
-                gameOption.SetActive(false);
-                Time.timeScale = 1.0f;
-                gState = GameState.Run;
-            }
-        } 
-    }    
+    // void Opening(){
+        
+    //     if(Input.GetKeyDown(KeyCode.M))
+    //     //if(Input.GetButtonDown("Escape"))
+    //     {
+    //             Debug.Log("작동하는 듯");
+    //             gameOption.SetActive(true);
+    //             Time.timeScale = 0f;
+    //             gState = GameState.Pause;
+    //     }
+    //     else
+    //     {
+    //             Debug.Log("작동 안 하는 듯");
+    //             gameOption.SetActive(false);
+    //             Time.timeScale = 1.0f;
+    //             gState = GameState.Run;
+            
+    //     } 
+    // }    
     // Start is called before the first frame update
     void Start()
     {
@@ -79,7 +79,7 @@ public class Main_Menu : MonoBehaviour
 
         StartCoroutine(ReadytoStart());
 
-        gameOption = gameObject.SetActive(false);
+        state = true;
 
     }
 
@@ -99,6 +99,30 @@ public class Main_Menu : MonoBehaviour
             gState = GameState.GameOver;
         }
         
-        Opening();
+              
+        if(Input.GetKeyDown(KeyCode.M))
+        //if(Input.GetButtonDown("Escape"))
+        {
+            if(state == true)
+            {
+                Debug.Log("작동하는 듯");
+                gameOption.SetActive(true);
+
+                state = false;
+
+                Time.timeScale = 0f;
+                gState = GameState.Pause;
+            }    
+            else
+            {
+                Debug.Log("작동 안 하는 듯");
+                gameOption.SetActive(false);
+
+                state = true;
+                Time.timeScale = 1.0f;
+                gState = GameState.Run;
+            
+            } 
+        }
     }
 }
