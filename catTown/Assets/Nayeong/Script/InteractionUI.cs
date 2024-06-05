@@ -7,6 +7,8 @@ public class InteractionUI : MonoBehaviour
 {
     public static InteractionUI Instance;
 
+    GameObject player;
+
     [SerializeField] private Text basicText;
     [SerializeField] private Image[] paper = new Image[8];
 
@@ -16,6 +18,8 @@ public class InteractionUI : MonoBehaviour
         {
             Instance = this;
         }
+
+        player = GameObject.Find("Player");
     }
 
     /// <summary>
@@ -47,4 +51,11 @@ public class InteractionUI : MonoBehaviour
     {
         paper[i].gameObject.SetActive(false);
     }
+
+    // give Caution Amount to Player
+    public void GiveCaution(int ct)
+    {
+        player.GetComponent<Main_PMove>().ct += ct;   
+    }
+
 }
