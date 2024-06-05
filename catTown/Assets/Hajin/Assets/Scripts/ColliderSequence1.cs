@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 
-public class ColliderSequence : MonoBehaviour
+public class ColliderSequence1 : MonoBehaviour
 {
     public GameObject activatingObject; 
     public GameObject previousObject;
@@ -25,7 +25,7 @@ public class ColliderSequence : MonoBehaviour
     {
         if (is_nextPossible)
         {
-            activatingObject.SetActive(true);
+            activatingObject.SetActive(false);
         }
     }
 }

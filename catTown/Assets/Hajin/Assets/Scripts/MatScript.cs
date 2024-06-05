@@ -2,10 +2,11 @@ using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 
-public class ColliderSequence : MonoBehaviour
+public class MatScript : MonoBehaviour
 {
     public GameObject activatingObject; 
-    public GameObject previousObject;
+    public GameObject BlockingObject;
+    public bool is_keyPossible = false;
     public bool is_nextPossible;
     
     private void Start() 
@@ -14,7 +15,7 @@ public class ColliderSequence : MonoBehaviour
     }
     private void Update()
     {
-        is_nextPossible = previousObject.GetComponent<drawerScript>().is_nextPossible;
+        is_nextPossible = BlockingObject.activeSelf;
         is_PreviousObjectActivated();
 
         
@@ -23,9 +24,10 @@ public class ColliderSequence : MonoBehaviour
 
     void is_PreviousObjectActivated()
     {
-        if (is_nextPossible)
+        if (is_nextPossible == false)
         {
             activatingObject.SetActive(true);
+            is_keyPossible = true;
         }
     }
 }

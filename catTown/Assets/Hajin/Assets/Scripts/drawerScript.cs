@@ -6,13 +6,14 @@ public class drawerScript : MonoBehaviour
 {
     Animator anim;
     bool is_PlayerEnter; // Player가 범위 안에 왔는지를 판별할 bool 타입 변수
+    public GameObject parentObject;
     public bool is_nextPossible;
     public GameObject player;
 
     private void Start()
     {
 
-        anim = GetComponent<Animator>();
+        anim = parentObject.GetComponent<Animator>();
         player = GameObject.FindGameObjectWithTag("Player");
 
         is_PlayerEnter = false;
