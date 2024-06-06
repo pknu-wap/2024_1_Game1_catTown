@@ -21,6 +21,7 @@ public class ActivateGravity : MonoBehaviour
         if (other.gameObject == player)
         {
             rb.useGravity = true;
+            rb.isKinematic = false;
         }
     }
 }
