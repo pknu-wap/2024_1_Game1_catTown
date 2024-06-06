@@ -818,6 +818,8 @@ PrefabInstance:
     - {fileID: 7499448721086782842, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
     - {fileID: 217220886, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
     - {fileID: 217220885, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
+    - {fileID: 1133900638, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
+    - {fileID: 217220884, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 1795197037430562696, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
@@ -836,12 +838,18 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5341955133804256074, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1730935870}
+    - targetCorrespondingSourceObject: {fileID: 5341955133804256074, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1730935874}
     - targetCorrespondingSourceObject: {fileID: 7334539273898789907, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1717421111}
     - targetCorrespondingSourceObject: {fileID: 7334539273898789907, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1717421118}
+    - targetCorrespondingSourceObject: {fileID: 7334539273898789907, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1717421122}
     - targetCorrespondingSourceObject: {fileID: 8108280843827582508, guid: b9f258a086096d24aa7861fa20deed65, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1505657869}
@@ -4304,8 +4312,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20158541, y: 1.4435287, z: 0.5447372}
-  m_Center: {x: 0.07344164, y: 0.00000008940697, z: 0.24663901}
+  m_Size: {x: 0.7545504, y: 1.2777325, z: 0.667372}
+  m_Center: {x: 0.34992412, y: -0.3770067, z: 0.19173777}
 --- !u!1 &484513878
 GameObject:
   m_ObjectHideFlags: 0
@@ -11787,6 +11795,27 @@ MonoBehaviour:
   activatingObject: {fileID: 2060270599}
   previousObject: {fileID: 1517894569}
   is_nextPossible: 0
+--- !u!65 &1717421122
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1717421104}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20158567, y: 1.4435287, z: 0.544737}
+  m_Center: {x: 0.073441125, y: -0.00000008940697, z: -0.24663836}
 --- !u!1 &1718005577
 GameObject:
   m_ObjectHideFlags: 0
@@ -11902,6 +11931,27 @@ MonoBehaviour:
   activatingObject: {fileID: 474885210}
   previousObject: {fileID: 1517894569}
   is_nextPossible: 0
+--- !u!65 &1730935874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1730935856}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.20158541, y: 1.4435287, z: 0.5447372}
+  m_Center: {x: 0.07344164, y: 0.00000008940697, z: 0.24663901}
 --- !u!1 &1740974324
 GameObject:
   m_ObjectHideFlags: 0
@@ -14069,8 +14119,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2060270600}
-  - component: {fileID: 2060270602}
   - component: {fileID: 2060270601}
+  - component: {fileID: 2060270602}
   m_Layer: 0
   m_Name: TriggerBoxFridgeR
   m_TagString: Untagged
@@ -14127,8 +14177,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.20158567, y: 1.4435287, z: 0.544737}
-  m_Center: {x: 0.073441125, y: -0.00000008940697, z: -0.24663836}
+  m_Size: {x: 0.6399268, y: 1.3716006, z: 0.86947155}
+  m_Center: {x: 0.29261166, y: -0.3254459, z: -0.2106247}
 --- !u!1001 &2068070626
 PrefabInstance:
   m_ObjectHideFlags: 0
