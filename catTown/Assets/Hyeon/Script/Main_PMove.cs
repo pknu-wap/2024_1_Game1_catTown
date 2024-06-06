@@ -40,7 +40,7 @@ public class Main_PMove : MonoBehaviour
     // 위험도 변수 제어
     public int ct = 0; // ct = caution
     public float cautionHealthTime = 0.0f;
-    public int maxCt = 50;
+    public int maxCt = 100;
     public int ctd = 10;
     public int cth = 5;
     
@@ -80,8 +80,8 @@ public class Main_PMove : MonoBehaviour
 
     private void Update()
     {
-        HandleMovement();
         HandleJump();
+        HandleMovement();
         HandleSceneSwitching();
         HandleStamina();
         UpdateUI();
@@ -184,6 +184,14 @@ public class Main_PMove : MonoBehaviour
             st += sth;
             if (st < 0) st = 0;
             if (st > maxSt) st = maxSt;
+        }
+
+        if(SceneManager.GetActiveScene().name == "constructionSite" )
+        {
+
+            st = 2000;
+            maxSt =2000;
+
         }
     }
     
