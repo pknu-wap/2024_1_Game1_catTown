@@ -54,9 +54,9 @@ public class CautionStatus : MonoBehaviour
                 breakableObject.gameObject.SetActive(false);
                 breakableMeshCollider.enabled = false;
                 
-                // Need to add code : increase cautionAmount when broken
-                //player.GetComponent<Main_PMove>().ct += brokenCautionAmount;
                 Debug.Log(brokenCautionAmount);
+                InteractionUI.Instance.GiveCaution(BrokenCautionAmount);
+
                 cautionObject.gameObject.SetActive(true);
 
             }

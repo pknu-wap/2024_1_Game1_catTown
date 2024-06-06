@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Main_PMove : MonoBehaviour
 {
@@ -43,6 +44,8 @@ public class Main_PMove : MonoBehaviour
     public int maxCt = 100;
     public int ctd = 10;
     public int cth = 5;
+
+    public bool isJody = false;
     
     public Slider ctSlider;
 
@@ -86,6 +89,12 @@ public class Main_PMove : MonoBehaviour
         HandleStamina();
         UpdateUI();
         HandleHP();
+
+        if (isJody)
+        {
+            Debug.Log("Check Caution");
+            HandleCaution();
+        }
     }
 
     void HandleHP()
@@ -194,6 +203,8 @@ public class Main_PMove : MonoBehaviour
 
         }
     }
+
+    GameObject joby;
     
     void HandleCaution()
     {
@@ -211,6 +222,10 @@ public class Main_PMove : MonoBehaviour
             ct += cth;
             if (ct < 0) ct = 0;
             if (ct > maxCt) ct = maxCt;
+            if (ct == maxCt)
+            {
+                Debug.Log("Hello");   
+            }
         }
     }
 
