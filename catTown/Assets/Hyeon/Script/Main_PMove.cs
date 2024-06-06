@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Main_PMove : MonoBehaviour
 {
@@ -45,6 +46,8 @@ public class Main_PMove : MonoBehaviour
     public int maxCt = 100;
     public int ctd = 10;
     public int cth = 5;
+
+    public bool isJody = false;
     
     public Slider ctSlider;
 
@@ -70,6 +73,7 @@ public class Main_PMove : MonoBehaviour
     {
         // 캐릭터 컨트롤러 컴포넌트 받아오기
         cc = GetComponent<CharacterController>();
+        cc.detectCollisions = false;
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
@@ -89,6 +93,10 @@ public class Main_PMove : MonoBehaviour
         UpdateUI();
         HandleHP();
         Scale();
+        if (!isJody)
+        {
+            HandleCaution();
+        }
     }
 
     void HandleHP()
@@ -200,21 +208,21 @@ public class Main_PMove : MonoBehaviour
     
     void HandleCaution()
     {
-        if (!isCaution)
+        if (ct < 0) ct = 0;
+        if (ct > maxCt) ct = maxCt;
+        if (ct == maxCt)
         {
-            cautionHealthTime += Time.deltaTime;
-            if (cautionHealthTime > 5.0f)
-            {
-                isCaution = true;
-            }
+            Debug.Log("Hello");   
+            isJody = true;
+            WakeUpJody();
         }
+    }
 
-        if (isCaution)
-        {
-            ct += cth;
-            if (ct < 0) ct = 0;
-            if (ct > maxCt) ct = maxCt;
-        }
+    private void WakeUpJody()
+    {
+        var jody = GameObject.Find("Jody");
+        Debug.Log("You will Die");
+        jody.GetComponent<Jody>().wakeUP = true;
     }
 
     void UpdateUI()

@@ -5,19 +5,23 @@ using UnityEngine;
 public class ActivateGravity : MonoBehaviour
 {
     private Rigidbody rb;
+    private GameObject player;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        player = GameObject.FindGameObjectWithTag("Player");
         rb.useGravity = false; // 시작할 때 중력 비활성화
     }
 
-    void OnCollisionEnter(Collision collision)
+
+
+    void OnTriggerEnter(Collider other)
     {
-        // 충돌한 오브젝트의 태그가 "Player"인 경우
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.gameObject == player)
         {
-            rb.useGravity = true; // 중력 활성화
+            rb.useGravity = true;
+            rb.isKinematic = false;
         }
     }
 }
