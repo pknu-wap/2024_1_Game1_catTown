@@ -253,6 +253,7 @@ Transform:
   m_Children:
   - {fileID: 1209556777}
   - {fileID: 1786896563}
+  - {fileID: 1110968168}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &251370841
@@ -388,6 +389,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7582667777751117982, guid: 48fb0793213920f4bb4b292424fa780a, type: 3}
   m_PrefabInstance: {fileID: 989091168080726744}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &504643051
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 504643052}
+  m_Layer: 0
+  m_Name: CanDrop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &504643052
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 504643051}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1110968168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &691626725 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4877350380381291983, guid: 5b6603fde5ea54844a31f5a0d0672d04, type: 3}
@@ -508,6 +540,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3536464914645583688, guid: 3fb785ffc56dc8643be964b50ecb4e46, type: 3}
   m_PrefabInstance: {fileID: 1764185831074870043}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1110968167
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1110968168}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1110968168
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110968167}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -10.2637, y: 23.795078, z: 13.568036}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1699138331}
+  - {fileID: 504643052}
+  - {fileID: 1372759823}
+  m_Father: {fileID: 222793262}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1173650460 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 827949809309839692, guid: 5b6603fde5ea54844a31f5a0d0672d04, type: 3}
@@ -592,6 +658,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3169527528151153378, guid: d93f223ff55cd2a4287120dc688b3ebf, type: 3}
   m_PrefabInstance: {fileID: 8593222689114774663}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1372759822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1372759823}
+  m_Layer: 0
+  m_Name: WalkingOnBrokenGlass
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1372759823
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1372759822}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1110968168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1409267272 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4724657198500124350, guid: 5b6603fde5ea54844a31f5a0d0672d04, type: 3}
@@ -806,6 +903,37 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2520022911190855807, guid: b5b43e827d5cb3a4a904dc55a5c714e0, type: 3}
   m_PrefabInstance: {fileID: 1823195499939883654}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1699138330
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1699138331}
+  m_Layer: 0
+  m_Name: PenDrop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1699138331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1699138330}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1110968168}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1762033023 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1099625851227528148, guid: 5b6603fde5ea54844a31f5a0d0672d04, type: 3}

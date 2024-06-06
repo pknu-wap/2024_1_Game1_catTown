@@ -48,6 +48,8 @@ public class InteractionItem : MonoBehaviour
         {
             noiseAmount += 1;
 
+
+
             if (noiseAmount == 1)
             {
                 StartCoroutine(OnDecreasedNoise());
