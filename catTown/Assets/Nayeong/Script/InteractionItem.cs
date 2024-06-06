@@ -46,9 +46,8 @@ public class InteractionItem : MonoBehaviour
     {
         while (onWaterDamage)
         {
-            Debug.Log("just dying...");
             player.GetComponent<Main_PMove>().hp -= 1;
-            yield return new WaitForSeconds(2f);
+            yield return new WaitForSeconds(0.3f);
         }
     }
 
