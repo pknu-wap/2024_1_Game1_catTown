@@ -53,7 +53,7 @@ public class CamRotate : MonoBehaviour
     //     transform.position = (offset_x, offset_y, offset_z);
     //  }
 
-    if(player.CameraM == true)
+    // if(player.CameraM == true)
     // {
 
     //     TargetPosition = new Vector3(
