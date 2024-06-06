@@ -57,6 +57,9 @@ public class CautionStatus : MonoBehaviour
                 // Broken Time delay ( to enable MeshCollider )
                 StartCoroutine("OnBroken");
                 InteractionUI.Instance.GiveCaution(BrokenCautionAmount);
+
+                AudioSource BrokenObject = GetComponent<AudioSource>();
+                BrokenObject.Play();
                 Debug.Log("OnBroken");
             }
         }
