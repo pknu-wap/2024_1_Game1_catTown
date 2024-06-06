@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class WeightBoxMove : MonoBehaviour
 {
-    public float forceAmount = 5.0f;
+    public float forceAmount = 3.0f;
     private GameObject player;
     private Rigidbody rb;
     public bool isPlayerInTrigger = false;
