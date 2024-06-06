@@ -39,7 +39,7 @@ public class KeyScrip : MonoBehaviour
         {            
             Debug.Log("Picked up a key");
             is_havingKey = true;
-            Destroy(Key);
+            Key.SetActive(false);
 
         }
 
