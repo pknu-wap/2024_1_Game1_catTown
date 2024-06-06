@@ -48,6 +48,8 @@ public class InteractionItem : MonoBehaviour
         {
             noiseAmount += 1;
 
+
+
             if (noiseAmount == 1)
             {
                 StartCoroutine(OnDecreasedNoise());
@@ -84,7 +86,6 @@ public class InteractionItem : MonoBehaviour
     {    
         while (noiseAmount > 0)
         {
-            Debug.Log("In Coroutine" + noiseAmount);
 
             var beforePos = gameObject.transform.position;
             yield return new WaitForSeconds(0.5f);
