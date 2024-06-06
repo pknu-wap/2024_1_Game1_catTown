@@ -10,17 +10,17 @@ public class CamRotate : MonoBehaviour
         float mx = 0;
         float my = 0;
 
-        float hx = 0;
-        float hz = 0;   
+        // float hx = 0;
+        // float hz = 0;   
     
-        float Uh = 1.0f;
-        float Dh = 0.4f;
+        // float Uh = 1.0f;
+        // float Dh = 0.4f;
 
         public GameObject Target;
 
         public float CameraSpeed = 10.0f;
 
-        Vector3 TargetPosition;
+       // Vector3 TargetPosition;
 
 
     void Start()
@@ -47,24 +47,24 @@ public class CamRotate : MonoBehaviour
 
      transform.eulerAngles = new Vector3 (-my,mx,0);
 
-    if(Input.GetKey(KeyCode.E)){
-        TargetPosition = new Vector3(
-            Target.transform.position.x + hx,
-            Target.transform.position.y + Dh,
-            Target.transform.position.z + hz
-            );
+    // if(Input.GetKey(KeyCode.E)){
+    //     TargetPosition = new Vector3(
+    //         Target.transform.position.x + hx,
+    //         Target.transform.position.y + Dh,
+    //         Target.transform.position.z + hz
+    //         );
         
-     }
-     else{
-        TargetPosition = new Vector3(
-            Target.transform.position.x + hx,
-            Target.transform.position.y + Uh,
-            Target.transform.position.z + hz
-            );
+    //  }
+    //  else{
+    //     TargetPosition = new Vector3(
+    //         Target.transform.position.x + hx,
+    //         Target.transform.position.y + Uh,
+    //         Target.transform.position.z + hz
+    //         );
 
-     }
+    //  }
 
-     transform.position = Vector3.Lerp(transform.position, TargetPosition, Time.deltaTime * CameraSpeed);
+    // transform.position = Vector3.Lerp(transform.position, TargetPosition, Time.deltaTime * CameraSpeed);
 
     // if(Main_Menu.mm.gState != Main_Menu.GameState.Run)
     // {

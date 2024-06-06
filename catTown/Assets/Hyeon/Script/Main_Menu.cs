@@ -52,7 +52,12 @@ public class Main_Menu : MonoBehaviour
 
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Title");
+
+        //숙이기시 몸체가 아래로 가도록 변경
+
+        //점프 씹힘...
+
     }
 
     public void Open_Close()
