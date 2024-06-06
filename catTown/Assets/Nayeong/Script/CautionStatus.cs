@@ -6,11 +6,7 @@ using UnityEditor.Experimental.Rendering;
 using UnityEngine;
 
 public class CautionStatus : MonoBehaviour
-<<<<<<< HEAD
-{ 
-=======
 {
->>>>>>> c1217f9e6f157d365336246f978c196295f7f0e0
     private bool isCollidedWithPlayer = false;
 
     private int collidedCount = 0;
@@ -61,12 +57,10 @@ public class CautionStatus : MonoBehaviour
                 // Broken Time delay ( to enable MeshCollider )
                 StartCoroutine("OnBroken");
                 InteractionUI.Instance.GiveCaution(BrokenCautionAmount);
-<<<<<<< HEAD
-=======
 
                 AudioSource BrokenObject = GetComponent<AudioSource>();
                 BrokenObject.Play();
->>>>>>> c1217f9e6f157d365336246f978c196295f7f0e0
+
                 Debug.Log("OnBroken");
             }
         }
