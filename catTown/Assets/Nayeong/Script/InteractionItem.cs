@@ -7,6 +7,8 @@ public class InteractionItem : MonoBehaviour
 {
     GameObject player;
 
+    private bool onWaterDamage = false;
+
     private void Awake() // already find player
     {
         player = GameObject.Find("Player");
@@ -17,8 +19,6 @@ public class InteractionItem : MonoBehaviour
         // increased & decreased HP
         if (other.CompareTag("HpItem"))
         {
-            // player = GameObject.Find("Player");
-
             var healValue = other.GetComponent<ItemStatus>().HealAmount;
             if (healValue > 0)
             {
@@ -34,20 +34,39 @@ public class InteractionItem : MonoBehaviour
             other.gameObject.SetActive(false);
         }
 
-        // increased Caution Rate
-        /*if (other.CompareTag("CautionObject"))
+        if (other.CompareTag("Water"))
         {
-            var cautionValue = other.GetComponent<CautionStatus>().CautionAmount;
-        }*/
+            Debug.Log("I Hate Water!");
+            onWaterDamage = true;
+            StartCoroutine(CatHateWater());
+        }
+
+    }
+    IEnumerator CatHateWater()
+    {
+        while (onWaterDamage)
+        {
+            Debug.Log("just dying...");
+            player.GetComponent<Main_PMove>().hp -= 1;
+            yield return new WaitForSeconds(2f);
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Water"))
+        {
+            Debug.Log("Ugh, I feel uncomfortable...");
+            onWaterDamage = false;
+        }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
+        // collided with caution object
         if (collision.gameObject.CompareTag("CautionFraction"))
         {
             noiseAmount += 1;
-
-
 
             if (noiseAmount == 1)
             {
@@ -75,7 +94,6 @@ public class InteractionItem : MonoBehaviour
                 rb.AddForce(direction * 2f, ForceMode.Impulse);
             }
         }
-        
     }
 
     public int noiseAmount = 0;
