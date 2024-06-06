@@ -43,7 +43,6 @@ public class InteractionItem : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("Noise");
         if (collision.gameObject.CompareTag("CautionFraction"))
         {
             noiseAmount += 1;
