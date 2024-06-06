@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Main_PMove : MonoBehaviour
 {
@@ -40,9 +41,11 @@ public class Main_PMove : MonoBehaviour
     // 위험도 변수 제어
     public int ct = 0; // ct = caution
     public float cautionHealthTime = 0.0f;
-    public int maxCt = 50;
+    public int maxCt = 100;
     public int ctd = 10;
     public int cth = 5;
+
+    public bool isJody = false;
     
     public Slider ctSlider;
 
@@ -80,12 +83,16 @@ public class Main_PMove : MonoBehaviour
 
     private void Update()
     {
-        HandleMovement();
         HandleJump();
+        HandleMovement();
         HandleSceneSwitching();
         HandleStamina();
         UpdateUI();
         HandleHP();
+        if (!isJody)
+        {
+            HandleCaution();
+        }
     }
 
     void HandleHP()
@@ -185,25 +192,33 @@ public class Main_PMove : MonoBehaviour
             if (st < 0) st = 0;
             if (st > maxSt) st = maxSt;
         }
+
+        if(SceneManager.GetActiveScene().name == "constructionSite" )
+        {
+
+            st = 2000;
+            maxSt =2000;
+
+        }
     }
     
     void HandleCaution()
     {
-        if (!isCaution)
+        if (ct < 0) ct = 0;
+        if (ct > maxCt) ct = maxCt;
+        if (ct == maxCt)
         {
-            cautionHealthTime += Time.deltaTime;
-            if (cautionHealthTime > 5.0f)
-            {
-                isCaution = true;
-            }
+            Debug.Log("Hello");   
+            isJody = true;
+            WakeUpJody();
         }
+    }
 
-        if (isCaution)
-        {
-            ct += cth;
-            if (ct < 0) ct = 0;
-            if (ct > maxCt) ct = maxCt;
-        }
+    private void WakeUpJody()
+    {
+        var jody = GameObject.Find("Jody");
+        Debug.Log("You will Die");
+        jody.GetComponent<Jody>().wakeUP = true;
     }
 
     void UpdateUI()

@@ -3,10 +3,18 @@ using UnityEngine;
 public class WeightBoxMove : MonoBehaviour
 {
     public float forceAmount = 5.0f;
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
     private GameObject player;
     private Rigidbody rb;
     public bool isPlayerInTrigger = false;
     public bool isObjectHidden = false;
+<<<<<<< HEAD
+=======
+
+>>>>>>> develop
     public GameObject objectToHandle; // 플레이어가 주울 오브젝트
 
     void Start()
@@ -41,8 +49,14 @@ public class WeightBoxMove : MonoBehaviour
     {
         if (objectToHandle != null)
         {
+<<<<<<< HEAD
             // 플레이어 위치로 이동하는 대신 멀리 이동
             objectToHandle.transform.position = new Vector3(1000f, 1000f, 1000f);
+=======
+            // 플레이어 위치로 이동 후 비활성화
+            objectToHandle.transform.position = player.transform.position;
+            objectToHandle.SetActive(false);
+>>>>>>> develop
             isObjectHidden = true;
         }
     }
@@ -52,6 +66,10 @@ public class WeightBoxMove : MonoBehaviour
         if (player != null && objectToHandle != null)
         {
             objectToHandle.transform.position = player.transform.position;
+<<<<<<< HEAD
+=======
+            objectToHandle.SetActive(true); // 활성화될 때마다 위치 설정
+>>>>>>> develop
             isObjectHidden = false;
         }
     }
@@ -79,4 +97,8 @@ public class WeightBoxMove : MonoBehaviour
             isPlayerInTrigger = false;
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> develop
