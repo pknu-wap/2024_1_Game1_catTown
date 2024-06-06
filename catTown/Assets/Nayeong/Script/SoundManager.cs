@@ -5,5 +5,7 @@ using UnityEngine.UIElements;
 
 public class SoundManager : MonoBehaviour
 {
+    public static SoundManager instance;
 
+    s
 }
