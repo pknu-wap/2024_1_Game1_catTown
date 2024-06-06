@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 
 public class Main_PMove : MonoBehaviour
 {
@@ -19,7 +20,7 @@ public class Main_PMove : MonoBehaviour
     public float jumpPower = 5f;
     public float applySpeed;
 
-    public SphereCollider SphereCollider;
+    private MeshCollider meshCollider;
 
     // 캐릭터 컨트롤러 변수
     CharacterController cc;
@@ -40,9 +41,11 @@ public class Main_PMove : MonoBehaviour
     // 위험도 변수 제어
     public int ct = 0; // ct = caution
     public float cautionHealthTime = 0.0f;
-    public int maxCt = 50;
+    public int maxCt = 100;
     public int ctd = 10;
     public int cth = 5;
+
+    public bool isJody = false;
     
     public Slider ctSlider;
 
@@ -59,6 +62,11 @@ public class Main_PMove : MonoBehaviour
         return maxCt;
     }
 
+    private void Awake()
+    {
+        meshCollider = GetComponent<MeshCollider>();
+    }
+
     private void Start()
     {
         // 캐릭터 컨트롤러 컴포넌트 받아오기
@@ -66,7 +74,6 @@ public class Main_PMove : MonoBehaviour
         // 속도 초기화
         applySpeed = walkSpeed;
         LoadData();
-        SphereCollider = GetComponent<SphereCollider>();
     }
 
     void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드
@@ -76,12 +83,16 @@ public class Main_PMove : MonoBehaviour
 
     private void Update()
     {
-        HandleMovement();
         HandleJump();
+        HandleMovement();
         HandleSceneSwitching();
         HandleStamina();
         UpdateUI();
         HandleHP();
+        if (!isJody)
+        {
+            HandleCaution();
+        }
     }
 
     void HandleHP()
@@ -103,7 +114,7 @@ public class Main_PMove : MonoBehaviour
         dir.y = 0; // 수직 방향 제거
 
         // Shift 키 입력에 따른 달리기 제어 및 스태미나 감소
-        if (Input.GetMouseButton(0) && st > 0 && dir != Vector3.zero) //좌shift로 변경
+        if (Input.GetKey(KeyCode.LeftShift) && st > 0 && dir != Vector3.zero) //좌shift로 변경
         {
             isStaminaHeal = false;
             staminaHealthTime = 0.0f; // 스태미나 힐 리셋
@@ -181,25 +192,33 @@ public class Main_PMove : MonoBehaviour
             if (st < 0) st = 0;
             if (st > maxSt) st = maxSt;
         }
+
+        if(SceneManager.GetActiveScene().name == "constructionSite" )
+        {
+
+            st = 2000;
+            maxSt =2000;
+
+        }
     }
     
     void HandleCaution()
     {
-        if (!isCaution)
+        if (ct < 0) ct = 0;
+        if (ct > maxCt) ct = maxCt;
+        if (ct == maxCt)
         {
-            cautionHealthTime += Time.deltaTime;
-            if (cautionHealthTime > 5.0f)
-            {
-                isCaution = true;
-            }
+            Debug.Log("Hello");   
+            isJody = true;
+            WakeUpJody();
         }
+    }
 
-        if (isCaution)
-        {
-            ct += cth;
-            if (ct < 0) ct = 0;
-            if (ct > maxCt) ct = maxCt;
-        }
+    private void WakeUpJody()
+    {
+        var jody = GameObject.Find("Jody");
+        Debug.Log("You will Die");
+        jody.GetComponent<Jody>().wakeUP = true;
     }
 
     void UpdateUI()

@@ -39,7 +39,64 @@ public class InteractionItem : MonoBehaviour
         {
             var cautionValue = other.GetComponent<CautionStatus>().CautionAmount;
         }*/
+    }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Noise");
+        if (collision.gameObject.CompareTag("CautionFraction"))
+        {
+            noiseAmount += 1;
+
+            if (noiseAmount == 1)
+            {
+                StartCoroutine(OnDecreasedNoise());
+            }
+
+            if (noiseAmount > limitNoise)
+            {
+                player.GetComponent<Main_PMove>().ct += 2;
+            }
+        }
+        else if (collision.gameObject.CompareTag("CautionNotBroken"))
+        {
+            Rigidbody rb = collision.gameObject.GetComponent<Rigidbody>();
+
+            var cautionAmount = collision.transform.GetComponent<GetCautionValue>().CautionAmount;
+
+            player.GetComponent<Main_PMove>().ct += cautionAmount;
+
+            if (rb != null)
+            {
+                Vector3 direction = collision.contacts[0].point - transform.position;
+                direction = -direction.normalized;
+
+                rb.AddForce(direction * 2f, ForceMode.Impulse);
+            }
+        }
+        
+    }
+
+    public int noiseAmount = 0;
+    private int limitNoise = 10;
+
+    IEnumerator OnDecreasedNoise()
+    {    
+        while (noiseAmount > 0)
+        {
+
+            var beforePos = gameObject.transform.position;
+            yield return new WaitForSeconds(0.5f);
+
+            if (beforePos == gameObject.transform.position)
+            {
+                noiseAmount -= 10;
+            }
+
+            noiseAmount -= 1;
+
+        }
+        noiseAmount = 0;
     }
 
 }

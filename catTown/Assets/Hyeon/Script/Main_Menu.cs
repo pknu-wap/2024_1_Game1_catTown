@@ -5,7 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class Main_Menu : MonoBehaviour
-{  
+{
+    
     public static Main_Menu mm;
 
     public void Awake()
@@ -35,39 +36,77 @@ public class Main_Menu : MonoBehaviour
 
     public GameObject gameOption;
 
-    public bool state;
+    public void Resume()
+    {
+        gameOption.SetActive(false);
+        Time.timeScale = 1.0f;
+        gState = GameState.Run;
+        state = true;
+    }
 
-
-    void Restart()
+    public void Restart()
     {
         Time.timeScale = 1.0f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    void QuitGame()
+    public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("Title");
+
+        //숙이기시 몸체가 아래로 가도록 변경
+
+        //점프 씹힘...
+
     }
 
-    // void Opening(){
+    public void Open_Close()
+    {   
+        if(Input.GetKeyDown(KeyCode.Escape) | Input.GetKeyDown(KeyCode.M))
+        //if(Input.GetButtonDown("Cancel"))
+        {
+            if(state == true)
+            {
+                gameOption.SetActive(true);
+                Time.timeScale = 0f;
+                gState = GameState.Pause;
+                state = false;
+            }
+            else
+            {
+                gameOption.SetActive(false);
+                Time.timeScale = 1.0f;
+                gState = GameState.Run;
+                state = true;
+            }
+        }
         
-    //     if(Input.GetKeyDown(KeyCode.M))
-    //     //if(Input.GetButtonDown("Escape"))
-    //     {
-    //             Debug.Log("작동하는 듯");
-    //             gameOption.SetActive(true);
-    //             Time.timeScale = 0f;
-    //             gState = GameState.Pause;
-    //     }
-    //     else
-    //     {
-    //             Debug.Log("작동 안 하는 듯");
-    //             gameOption.SetActive(false);
-    //             Time.timeScale = 1.0f;
-    //             gState = GameState.Run;
-            
-    //     } 
-    // }    
+    }
+
+    public bool state;
+
+    void Opening()
+    {   
+        if(Input.GetKeyDown(KeyCode.M))
+        //if(Input.GetButtonDown("Escape"))
+        {
+            if(state == true)
+            {
+                gameOption.SetActive(true);
+                Time.timeScale = 0f;
+                gState = GameState.Pause;
+                state = false;
+            }
+            else
+            {
+                gameOption.SetActive(false);
+                Time.timeScale = 1.0f;
+                gState = GameState.Run;
+                state = true;
+            }
+        }
+        
+    }
     // Start is called before the first frame update
     void Start()
     {
@@ -78,15 +117,14 @@ public class Main_Menu : MonoBehaviour
         gameText = gameLabel.GetComponent<Text>();
 
         StartCoroutine(ReadytoStart());
-        
+
         state = true;
+
     }
 
     IEnumerator ReadytoStart(){
 
-        yield return new WaitForSeconds(2f);
-
-        gameLabel.SetActive(false);
+        yield return new WaitForSeconds(1f);
 
         gState = GameState.Run;
     }
@@ -95,33 +133,12 @@ public class Main_Menu : MonoBehaviour
     {
         if(Player.hp <= 0)
         {
+            gameLabel.SetActive(true);
             gState = GameState.GameOver;
         }
-        
-              
-        if(Input.GetKeyDown(KeyCode.M))
-        //if(Input.GetButtonDown("Escape"))
-        {
-            if(state == true)
-            {
-                Debug.Log("작동하는 듯");
-                gameOption.SetActive(true);
 
-                state = false;
+        Opening();
 
-                Time.timeScale = 0f;
-                gState = GameState.Pause;
-            }    
-            else
-            {
-                Debug.Log("작동 안 하는 듯");
-                gameOption.SetActive(false);
-
-                state = true;
-                Time.timeScale = 1.0f;
-                gState = GameState.Run;
-            
-            } 
-        }
     }
+    
 }
