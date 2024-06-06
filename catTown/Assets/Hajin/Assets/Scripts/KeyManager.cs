@@ -21,6 +21,7 @@ public class KeyManager : MonoBehaviour
 
         if (is_keyPossible)
         {
+            Debug.Log("Show Key");
             StartCoroutine(ActivateKeyAfterDelay());
         }
     }
