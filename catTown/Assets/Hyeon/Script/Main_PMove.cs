@@ -89,10 +89,8 @@ public class Main_PMove : MonoBehaviour
         HandleStamina();
         UpdateUI();
         HandleHP();
-
-        if (isJody)
+        if (!isJody)
         {
-            Debug.Log("Check Caution");
             HandleCaution();
         }
     }
@@ -203,30 +201,24 @@ public class Main_PMove : MonoBehaviour
 
         }
     }
-
-    GameObject joby;
     
     void HandleCaution()
     {
-        if (!isCaution)
+        if (ct < 0) ct = 0;
+        if (ct > maxCt) ct = maxCt;
+        if (ct == maxCt)
         {
-            cautionHealthTime += Time.deltaTime;
-            if (cautionHealthTime > 5.0f)
-            {
-                isCaution = true;
-            }
+            Debug.Log("Hello");   
+            isJody = true;
+            WakeUpJody();
         }
+    }
 
-        if (isCaution)
-        {
-            ct += cth;
-            if (ct < 0) ct = 0;
-            if (ct > maxCt) ct = maxCt;
-            if (ct == maxCt)
-            {
-                Debug.Log("Hello");   
-            }
-        }
+    private void WakeUpJody()
+    {
+        var jody = GameObject.Find("Jody");
+        Debug.Log("You will Die");
+        jody.GetComponent<Jody>().wakeUP = true;
     }
 
     void UpdateUI()

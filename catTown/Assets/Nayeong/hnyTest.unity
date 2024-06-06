@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: 7b4935ce3f167ac41a58d85ded167d07, type: 2}
 --- !u!4 &77091984 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2950474311517429873, guid: b786f9f924f4058499e2dc775e7ca690, type: 3}
@@ -272,7 +272,7 @@ GameObject:
   m_TagString: Plane
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!64 &251370842
 MeshCollider:
@@ -2157,6 +2157,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CautionObject_3
       objectReference: {fileID: 0}
+    - target: {fileID: 8666678035348464316, guid: c13641297378f4142a32741eda12b163, type: 3}
+      propertyPath: m_TagString
+      value: CautionFraction
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2235,6 +2239,10 @@ PrefabInstance:
     - target: {fileID: 4963150745447170156, guid: fc618d49ee825054085823c090d246c2, type: 3}
       propertyPath: m_Name
       value: CautionObject_1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4963150745447170156, guid: fc618d49ee825054085823c090d246c2, type: 3}
+      propertyPath: m_TagString
+      value: CautionFraction
       objectReference: {fileID: 0}
     - target: {fileID: 9041069995705564479, guid: fc618d49ee825054085823c090d246c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2623,6 +2631,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CautionObject_6
       objectReference: {fileID: 0}
+    - target: {fileID: 2773531841467113354, guid: 6b1bbdfbf9266bb40b717ff40c9fe92f, type: 3}
+      propertyPath: m_TagString
+      value: CautionFraction
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2741,6 +2753,10 @@ PrefabInstance:
     - target: {fileID: 5828085969974846512, guid: 02ba71c1880ec284fb5f0b384acb7694, type: 3}
       propertyPath: m_Name
       value: CautionObject_5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5828085969974846512, guid: 02ba71c1880ec284fb5f0b384acb7694, type: 3}
+      propertyPath: m_TagString
+      value: CautionFraction
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2861,6 +2877,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: CautionObject_2
       objectReference: {fileID: 0}
+    - target: {fileID: 1906979081448626143, guid: 21bbd57b11461ac4f81dcbf5813344fb, type: 3}
+      propertyPath: m_TagString
+      value: CautionFraction
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2882,6 +2902,10 @@ PrefabInstance:
     - target: {fileID: 180125664090254573, guid: 404ab37eef244c3458dff7af4e698ef2, type: 3}
       propertyPath: m_Name
       value: CautionObject_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 180125664090254573, guid: 404ab37eef244c3458dff7af4e698ef2, type: 3}
+      propertyPath: m_TagString
+      value: CautionFraction
       objectReference: {fileID: 0}
     - target: {fileID: 2431879464425065834, guid: 404ab37eef244c3458dff7af4e698ef2, type: 3}
       propertyPath: m_LocalPosition.x

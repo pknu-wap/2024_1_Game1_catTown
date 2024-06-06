@@ -1,19 +1,25 @@
+using System.Collections;
 using System.Runtime.CompilerServices;
 using System.Security.Cryptography;
+using Unity.VisualScripting;
 using UnityEditor.Experimental.Rendering;
 using UnityEngine;
 
 public class CautionStatus : MonoBehaviour
-{ 
-
+{
     private bool isCollidedWithPlayer = false;
 
     private int collidedCount = 0;
-    private bool isbroken = false;
+
+    private bool isBroken = false;
 
     [SerializeField]
     private int brokenCautionAmount = 20;
     public int BrokenCautionAmount => brokenCautionAmount;
+
+    [SerializeField]
+    private int fractionsCautionAmount = 2;
+    public int FractionsCautionAmount => fractionsCautionAmount;
 
     private Transform breakableObject = null;
     private Transform cautionObject = null;
@@ -43,33 +49,26 @@ public class CautionStatus : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         // need to fix Collision of Caution Object
-        if (!isbroken)
+        if (!isBroken)
         {
             collidedCount++;
-
-            if (collidedCount == 4)
+            if (collidedCount == 5)
             {
-                isbroken = true;
-
-                breakableObject.gameObject.SetActive(false);
-                breakableMeshCollider.enabled = false;
-                
-                Debug.Log(brokenCautionAmount);
+                // Broken Time delay ( to enable MeshCollider )
+                StartCoroutine("OnBroken");
                 InteractionUI.Instance.GiveCaution(BrokenCautionAmount);
-
-                cautionObject.gameObject.SetActive(true);
-
+                Debug.Log("OnBroken");
             }
         }
 
-        if (!isbroken)
+        /*if (!isbroken)
         {
             Debug.Log(breakableObject.name);
         }
         else
         {
             Debug.Log(cautionObject.name);
-        }
+        }*/
 
         if (collision.transform.tag == "Player")
         {
@@ -80,6 +79,21 @@ public class CautionStatus : MonoBehaviour
         {
             isCollidedWithPlayer = false;
         }
+    }
+
+    IEnumerator OnBroken()
+    {
+        isBroken = true;
+
+        breakableObject.gameObject.SetActive(false);
+
+        // Need to add code : increase cautionAmount when broken
+        //player.GetComponent<Main_PMove>().ct += brokenCautionAmount;
+        cautionObject.gameObject.SetActive(true);
+
+        yield return new WaitForSeconds(1);
+
+        breakableMeshCollider.enabled = false;
     }
 }
 
