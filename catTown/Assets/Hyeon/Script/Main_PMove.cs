@@ -21,6 +21,8 @@ public class Main_PMove : MonoBehaviour
 
     private MeshCollider meshCollider;
 
+    public bool CameraM = false;
+
     // 캐릭터 컨트롤러 변수
     CharacterController cc;
 
@@ -86,6 +88,7 @@ public class Main_PMove : MonoBehaviour
         HandleStamina();
         UpdateUI();
         HandleHP();
+        Scale();
     }
 
     void HandleHP()
@@ -219,6 +222,20 @@ public class Main_PMove : MonoBehaviour
         hpSlider.value = (float)hp / maxHp;
         stSlider.value = (float)st / maxSt;
         ctSlider.value = (float)ct / maxCt;
+    }
+
+    void Scale()
+    {
+        if(Input.GetKey(KeyCode.E))
+        {
+            transform.localScale = new Vector3(1f, 0.5f, 1f);
+            CameraM = true;
+        }
+        else
+        {
+            transform.localScale = new Vector3(1f, 1f, 1f);
+            CameraM = false;
+        }
     }
 
     // 리스폰
