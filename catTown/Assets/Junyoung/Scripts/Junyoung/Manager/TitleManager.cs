@@ -1,16 +1,25 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 public class TitleManager : MonoBehaviour
 {
+    public GameObject existingCanvas; // ê¸°ì¡´ ìº”ë²„ìŠ¤
+    public Image[] images; // 7ê°œì˜ ì´ë¯¸ì§€ ë°°ì—´
+    public float displayTime = 4f; // ê° ì´ë¯¸ì§€ë¥¼ í‘œì‹œí•  ì‹œê°„ (ì´ˆ)
+
     public GameObject scene2Button;
     public GameObject scene3Button;
+
+    private void Start()
+    {
+
+    }
+
     public void StartGame()
     {
-        SceneManager.LoadScene("test");
+        StartCoroutine(DisplayImages());
     }
 
     public void QuitGame()
@@ -20,14 +29,13 @@ public class TitleManager : MonoBehaviour
 
     public void LoadScene2()
     {
-        if(DataManager.instance.saveData.constructionSave == true)
+        if (DataManager.instance.saveData.constructionSave == true)
         {
             scene2Button.SetActive(true);
             StartScene2();
         }
-        Debug.Log("¾ÆÁ÷ Scene1À» Å¬¸®¾îÇÏÁö ¸øÇÏ¿´½À´Ï´Ù.");
-        Debug.Log(DataManager.instance.saveData.constructionSave);
     }
+
     public void LoadScene3()
     {
         if (DataManager.instance.saveData.apartSave == true)
@@ -35,8 +43,6 @@ public class TitleManager : MonoBehaviour
             scene3Button.SetActive(true);
             StartScene3();
         }
-        Debug.Log("¾ÆÁ÷ Scene2¸¦ Å¬¸®¾îÇÏÁö ¸øÇÏ¿´½À´Ï´Ù.");
-        Debug.Log(DataManager.instance.saveData.apartSave);
     }
 
     public void Reset()
@@ -48,8 +54,28 @@ public class TitleManager : MonoBehaviour
     {
         SceneManager.LoadScene("constructionSite");
     }
+
     private void StartScene3()
     {
         SceneManager.LoadScene("ApartmentScene");
+    }
+
+    private IEnumerator DisplayImages()
+    {
+
+        for (int i = 0; i < images.Length; i++)
+        {
+            // í˜„ì¬ ì´ë¯¸ì§€ë¥¼ í™œì„±í™”
+            images[i].gameObject.SetActive(true);
+
+            // displayTime ë™ì•ˆ ëŒ€ê¸°
+            yield return new WaitForSeconds(displayTime);
+
+            // í˜„ì¬ ì´ë¯¸ì§€ë¥¼ ë¹„í™œì„±í™”
+            //images[i].gameObject.SetActive(false);
+        }
+
+        // ë‹¤ìŒ ì”¬ìœ¼ë¡œ ì „í™˜
+        SceneManager.LoadScene("test");
     }
 }
