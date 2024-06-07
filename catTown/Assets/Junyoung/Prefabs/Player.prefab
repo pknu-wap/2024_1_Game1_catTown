@@ -1873,6 +1873,7 @@ GameObject:
   - component: {fileID: 6714748216273996137}
   - component: {fileID: 463612926374330189}
   - component: {fileID: 5280286276850471703}
+  - component: {fileID: 4059635245829923965}
   m_Layer: 3
   m_Name: Player
   m_TagString: Player
@@ -1963,7 +1964,6 @@ MonoBehaviour:
   isJumping: 0
   jumpPower: 5
   applySpeed: 0
-  CameraM: 0
   hp: 10
   maxHp: 10
   hpSlider: {fileID: 6552409264792117095}
@@ -2074,6 +2074,19 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0.75, z: 0}
+--- !u!114 &4059635245829923965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7899736438926915127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eebfccfbd8dd2d940bbfc455043a6724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  noiseAmount: 0
 --- !u!1 &7944499270910057966
 GameObject:
   m_ObjectHideFlags: 0

@@ -297,7 +297,7 @@ public class Main_PMove : MonoBehaviour
         {
             GameObject targetObject = GameObject.Find("Player"); // 변경할 오브젝트의 이름으로 검색
             GameObject playerRespawnManager = GameObject.Find("PlayerRespawn"); // 변경할 오브젝트의 이름으로 검색
-            if (targetObject != null)
+            if (targetObject != null && playerRespawnManager != null)
             {
                 // 캐릭터 컨트롤러 비활성화
                 cc.enabled = false;

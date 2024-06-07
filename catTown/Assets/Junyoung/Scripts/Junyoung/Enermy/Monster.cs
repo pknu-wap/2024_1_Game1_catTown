@@ -59,7 +59,7 @@ public class Monster : MonoBehaviour
         attactTimer += Time.deltaTime;
         // 발소리 재생 타이머
         footstepTimer -= Time.deltaTime;
-        if (footstepTimer <= 0)
+        if (footstepTimer <= 0 && hasTarget)
         {
             if (!initialDelayPassed)
             {
@@ -81,7 +81,7 @@ public class Monster : MonoBehaviour
         {
             if (!hasTarget)
             {
-                Collider[] colliders = Physics.OverlapSphere(transform.position, 10f, whatIsTarget);
+                Collider[] colliders = Physics.OverlapSphere(transform.position, 8f, whatIsTarget);
 
                 for (int i = 0; i < colliders.Length; i++)
                 {
