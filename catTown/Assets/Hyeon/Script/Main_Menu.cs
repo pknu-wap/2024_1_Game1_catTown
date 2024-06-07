@@ -56,7 +56,7 @@ public class Main_Menu : MonoBehaviour
         {
             SceneManager.LoadScene("constructionSite");
         }
-        
+
         if(SceneManager.GetActiveScene().name == "test")
         {
             SceneManager.LoadScene("test");
@@ -100,7 +100,7 @@ public class Main_Menu : MonoBehaviour
 
     void Opening()
     {   
-        if(Input.GetKeyDown(KeyCode.M))
+        if(Input.GetKeyDown(KeyCode.Escape) |Input.GetKeyDown(KeyCode.M))
         //if(Input.GetButtonDown("Escape"))
         {
             if(state == true)
@@ -151,6 +151,8 @@ public class Main_Menu : MonoBehaviour
         }
 
         Opening();
+
+        // Open_Close();
 
     }
     
