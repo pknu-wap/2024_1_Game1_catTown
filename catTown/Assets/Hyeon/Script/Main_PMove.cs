@@ -87,6 +87,14 @@ public class Main_PMove : MonoBehaviour
 
         // 속도 초기화
         applySpeed = walkSpeed;
+
+        StartCoroutine(ResetCaution());
+    }
+
+    private IEnumerator ResetCaution()
+    {
+        yield return new WaitForSeconds(1f);
+        ct = 0;
     }
 
     private void Update()
