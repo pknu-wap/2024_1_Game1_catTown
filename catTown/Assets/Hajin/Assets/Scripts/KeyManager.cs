@@ -27,7 +27,7 @@ public class KeyManager : MonoBehaviour
 
     private IEnumerator ActivateKeyAfterDelay()
     {
-        yield return new WaitForSeconds(4f); // 0.1초 딜레이
+        yield return new WaitForSeconds(3f); // 0.1초 딜레이
         Key.SetActive(true);
     }
 }
