@@ -17,7 +17,7 @@ public class KeyScrip : MonoBehaviour
     void Update()
     {
         pickupKey();
-        
+
     }
 
 
@@ -33,13 +33,20 @@ public class KeyScrip : MonoBehaviour
 
     }
 
+    void OnTriggerExit(Collider other)
+    {
+        is_PlayerEnter = false;
+
+    }
+
     void pickupKey()
     {
         if (is_PlayerEnter && Input.GetKeyUp(KeyCode.F))
         {            
             Debug.Log("Picked up a key");
             is_havingKey = true;
-            Key.SetActive(false);
+            //Key.SetActive(false);
+            Key.transform.position = Vector3.zero;
 
         }
 

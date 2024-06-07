@@ -45,7 +45,7 @@ public class LockedDoor : MonoBehaviour
         { 
             if (is_havingKey)
             {
-                Debug.Log("open");
+                Debug.Log("The Door open");
                 anim.SetTrigger("Open");
                 is_Open = true; 
             }           
