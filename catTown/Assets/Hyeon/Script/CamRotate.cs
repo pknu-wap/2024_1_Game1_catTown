@@ -6,22 +6,19 @@ public class CamRotate : MonoBehaviour
 {
         // 회전에 관한 변수
         public float rotSpeed = 200.0f;
+        public float CameraSpeed = 10.0f;
 
         float mx = 0;
         float my = 0;
 
-        // float hx = 0;
-        // float hz = 0;   
-    
-        // float Uh = 1.0f;
-        // float Dh = 0.4f;
+        // public float offset_x = -0.022f;
+        // public float offset_y = 1.249f;
+        // public float offset_z = 0.232f;
 
-        public GameObject Target;
+        // public GameObject Target;
+        // Vector3 TargetPosition;
 
-        public float CameraSpeed = 10.0f;
-
-       // Vector3 TargetPosition;
-
+        // public Main_PMove player;
 
     void Start()
     {
@@ -47,19 +44,30 @@ public class CamRotate : MonoBehaviour
 
      transform.eulerAngles = new Vector3 (-my,mx,0);
 
-    // if(Input.GetKey(KeyCode.E)){
+    //  if(player.CameraM == true )
+    //  {
+    //     transform.position = (offset_x, offset_y - 0.5f, offset_z);
+    //  }
+    //  else
+    //  {
+    //     transform.position = (offset_x, offset_y, offset_z);
+    //  }
+
+    // if(player.CameraM == true)
+    // {
+
     //     TargetPosition = new Vector3(
-    //         Target.transform.position.x + hx,
-    //         Target.transform.position.y + Dh,
-    //         Target.transform.position.z + hz
+    //         Target.transform.position.x + offset_x,
+    //         Target.transform.position.y + offset_y,
+    //         Target.transform.position.z + offset_z 
     //         );
         
     //  }
     //  else{
     //     TargetPosition = new Vector3(
-    //         Target.transform.position.x + hx,
-    //         Target.transform.position.y + Uh,
-    //         Target.transform.position.z + hz
+    //         Target.transform.position.x + offset_x,
+    //         Target.transform.position.y + offset_y,
+    //         Target.transform.position.z + offset_z 
     //         );
 
     //  }

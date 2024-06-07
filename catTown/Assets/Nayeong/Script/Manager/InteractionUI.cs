@@ -11,6 +11,7 @@ public class InteractionUI : MonoBehaviour
 
     [SerializeField] private Text basicText;
     [SerializeField] private Image[] paper = new Image[8];
+    [SerializeField] private Image[] ending = new Image[4];
 
     private void Awake()
     {
@@ -56,6 +57,18 @@ public class InteractionUI : MonoBehaviour
     public void GiveCaution(int ct)
     {
         player.GetComponent<Main_PMove>().ct += ct;   
+    }
+
+    // appear ending credit ( i : image index )
+    public void endingAppear(int i)
+    {
+        ending[i].gameObject.SetActive(true);
+    }
+
+    // disappear ending credit ( i : image index )
+    public void endingDisAppear(int i)
+    {
+        ending[i].gameObject.SetActive(false);
     }
 
 }

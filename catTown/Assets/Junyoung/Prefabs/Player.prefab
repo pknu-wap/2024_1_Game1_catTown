@@ -299,7 +299,7 @@ Transform:
   m_GameObject: {fileID: 1113287037945824290}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.022, y: 0.803, z: 0.91}
+  m_LocalPosition: {x: -0.022, y: 0.803, z: 0.585}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -377,7 +377,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotSpeed: 200
-  Target: {fileID: 7899736438926915127}
   CameraSpeed: 10
 --- !u!1 &1552686400549349190
 GameObject:
@@ -1958,18 +1957,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 15607dbd3bd4c8b42856ebda9b636956, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isRunnig: 0
+  isRunning: 0
   isStaminaHeal: 1
   isCaution: 1
   isJumping: 0
   jumpPower: 5
   applySpeed: 0
+  CameraM: 0
   hp: 10
   maxHp: 10
   hpSlider: {fileID: 6552409264792117095}
   stSlider: {fileID: 0}
+  ct: 0
+  cautionHealthTime: 0
+  maxCt: 100
+  ctd: 10
+  cth: 5
+  isJody: 0
   ctSlider: {fileID: 0}
-  playerRespawnPoint: {fileID: 0}
 --- !u!114 &143160880017976282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2008,7 +2013,7 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0.75, z: 0}
+  m_Center: {x: 0, y: 0.75, z: 0.5}
 --- !u!54 &6714748216273996137
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2065,10 +2070,10 @@ SphereCollider:
   m_LayerOverridePriority: 0
   m_IsTrigger: 0
   m_ProvidesContacts: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Radius: 0.5
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0.75, z: 0}
 --- !u!1 &7944499270910057966
 GameObject:
   m_ObjectHideFlags: 0
