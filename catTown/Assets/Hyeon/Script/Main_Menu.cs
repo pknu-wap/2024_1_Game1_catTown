@@ -47,7 +47,20 @@ public class Main_Menu : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1.0f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        if (SceneManager.GetActiveScene().name =="ApartmentScene")
+        {
+            SceneManager.LoadScene("ApartmentScene");
+        }
+
+        if (SceneManager.GetActiveScene().name == "constructionSite")
+        {
+            SceneManager.LoadScene("constructionSite");
+        }
+
+        if(SceneManager.GetActiveScene().name == "test")
+        {
+            SceneManager.LoadScene("test");
+        }
     }
 
     public void QuitGame()
@@ -87,7 +100,7 @@ public class Main_Menu : MonoBehaviour
 
     void Opening()
     {   
-        if(Input.GetKeyDown(KeyCode.M))
+        if(Input.GetKeyDown(KeyCode.Escape) |Input.GetKeyDown(KeyCode.M))
         //if(Input.GetButtonDown("Escape"))
         {
             if(state == true)
@@ -138,6 +151,8 @@ public class Main_Menu : MonoBehaviour
         }
 
         Opening();
+
+        // Open_Close();
 
     }
     
