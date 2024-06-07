@@ -28,10 +28,7 @@ public class RespawnManager : MonoBehaviour
 
     public void RespawnAll()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        main_PMove.Respawn();
-        gameOverPanel.SetActive(false);
-        Time.timeScale = 1.0f;
+        SceneManager.LoadScene("ApartmentScene");
     }
 
 }

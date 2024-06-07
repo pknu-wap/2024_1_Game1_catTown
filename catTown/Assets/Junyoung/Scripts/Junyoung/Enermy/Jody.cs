@@ -126,7 +126,7 @@ public class Jody : MonoBehaviour
                     {
                         JodyAnimator.SetTrigger("Attack");
                         Debug.Log("attck");
-                        yield return new WaitForSeconds(1.0f);
+                        yield return new WaitForSeconds(1.25f);
                         player.hp -= 10;
 
                         Debug.Log("Player HP: " + player.hp);
