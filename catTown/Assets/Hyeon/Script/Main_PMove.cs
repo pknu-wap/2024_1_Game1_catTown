@@ -22,7 +22,7 @@ public class Main_PMove : MonoBehaviour
 
     private MeshCollider meshCollider;
 
-    public bool CameraM = false;
+    //public bool CameraM = false;
 
     // 캐릭터 컨트롤러 변수
     CharacterController cc;
@@ -51,8 +51,18 @@ public class Main_PMove : MonoBehaviour
     
     public Slider ctSlider;
 
+
+
     //[SerializeField] Transform playerRespawnPoint;
     //private Transform playerRespawnPoint;
+
+    // [SerializeField] private float gravitationalAcceleration;
+    // [SerializeField] private float jumpForce;
+
+    // private GroundChecker m_groundChecker;
+    // private GroundChecker isGrounded;
+    // private Vector3 velocity;
+    // private bool jumpFlag;
 
     public int get_ct()
     {
@@ -76,16 +86,39 @@ public class Main_PMove : MonoBehaviour
         cc.detectCollisions = false;
         // 속도 초기화
         applySpeed = walkSpeed;
-        LoadData();
-    }
-
-    void LoadData() // 플레이어 데이터 씬 이동 시 이전 코드
-    {
-        // 여기에 데이터를 로드하는 로직 추가
     }
 
     private void Update()
     {
+        // float GetYVelocity()
+    
+        // {
+        // if (!m_groundChecker.IsGrounded())
+        // {
+        //     return velocity.y - gravitationalAcceleration * Time.fixedDeltaTime;
+        // }
+
+        // if (jumpFlag)
+        // {
+        //     jumpFlag = false;
+        //     return velocity.y + jumpForce;
+        // }
+        // else
+        // {
+        //     return Mathf.Max(0.0f, velocity.y);
+        // };
+        // }
+        // if (Input.GetButtonDown("Jump")) 
+        // {
+        //     jumpFlag = true;
+        //     isJumping = true;
+        // }
+        // else
+        // {
+        //     jumpFlag = false;
+        //     isJumping = false;
+        //}
+
         HandleJump();
         HandleMovement();
         HandleSceneSwitching();
@@ -98,6 +131,7 @@ public class Main_PMove : MonoBehaviour
             HandleCaution();
         }
     }
+
 
     void HandleHP()
     {
@@ -132,7 +166,7 @@ public class Main_PMove : MonoBehaviour
             applySpeed = walkSpeed;
         }
 
-        // 중력 적용
+        //중력 적용
         if (cc.isGrounded)
         {
             if (isJumping)
@@ -237,12 +271,12 @@ public class Main_PMove : MonoBehaviour
         if(Input.GetKey(KeyCode.E))
         {
             transform.localScale = new Vector3(1f, 0.5f, 1f);
-            CameraM = true;
+            //CameraM = true;
         }
         else
         {
             transform.localScale = new Vector3(1f, 1f, 1f);
-            CameraM = false;
+            //CameraM = false;
         }
     }
 
