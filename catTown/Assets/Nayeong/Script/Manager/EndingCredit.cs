@@ -5,24 +5,23 @@ using UnityEngine;
 
 public class EndingCredit : MonoBehaviour
 {
-    public static EndingCredit Instance;
+    [SerializeField] private int endNumber = 0;
+    public int EndNumber => endNumber;
 
-    GameObject CutScene1;
-    GameObject CutScene2;
-    GameObject CutScene3;
-    GameObject CutScene4;
-
-    private void Awake()
+    private void OnTriggerEnter(Collider other)
     {
-        if (Instance == null)
+        if (other.CompareTag("Player"))
         {
-            Instance = this;
+            Debug.Log("Show Image");
+            InteractionUI.Instance.endingAppear(endNumber);
         }
-        CutScene1= GameObject.Find("MapFirst");
-        CutScene2 = GameObject.Find("MapSecond");
-        CutScene3 = GameObject.Find("MapThrid");
-        CutScene4 = GameObject.Find("LastMessage");
     }
 
-
+    private void OnTriggerExit(Collider other)
+    {
+        if (other.CompareTag("Player"))
+        {
+            InteractionUI.Instance.endingDisAppear(endNumber);
+        }
+    }
 }
