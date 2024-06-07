@@ -279,6 +279,7 @@ public class Main_PMove : MonoBehaviour
             transform.localScale = new Vector3(1f, 1f, 1f);
             //CameraM = false;
         }
+        
     }
 
     // 리스폰
