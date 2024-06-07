@@ -12,6 +12,7 @@ public class EndingCredit : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            Debug.Log("Show Image");
             InteractionUI.Instance.endingAppear(endNumber);
         }
     }
