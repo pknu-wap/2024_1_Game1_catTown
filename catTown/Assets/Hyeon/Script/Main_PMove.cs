@@ -84,6 +84,7 @@ public class Main_PMove : MonoBehaviour
         // 캐릭터 컨트롤러 컴포넌트 받아오기
         cc = GetComponent<CharacterController>();
         cc.detectCollisions = false;
+
         // 속도 초기화
         applySpeed = walkSpeed;
     }
