@@ -269,9 +269,9 @@ public class Main_PMove : MonoBehaviour
 
     void Scale()
     {
-        if(Input.GetKey(KeyCode.E))
+        if( SceneManager.GetActiveScene().name == "ApartmentScene")
         {
-            transform.localScale = new Vector3(1f, 0.5f, 1f);
+            transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
             //CameraM = true;
         }
         else
