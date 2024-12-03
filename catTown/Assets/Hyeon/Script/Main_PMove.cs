@@ -36,7 +36,7 @@ public class Main_PMove : MonoBehaviour
     private int st = 1000;
     private float staminaHealthTime = 0.0f; // 스태미나 힐 딜레이를 위한 타임 기본 값
     private int maxSt = 1000;
-    private int std = 10; // stamina damage
+    private int std = 1; // stamina damage
     private int sth = 5; // stamina heal
     public Slider stSlider;
 
