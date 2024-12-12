@@ -103,19 +103,23 @@ public class Jody : MonoBehaviour
                 {
                     float navMeshSpeed = navMeshAgent.speed;
                     navMeshAgent.speed = 0;
+                    navMeshAgent.enabled = false; // NavMeshAgent 비활성화
                     JodyTransform.position = sleepPoint.position;
-                    yield return new WaitForSeconds(5.0f);
+                    yield return new WaitForSeconds(4.25f);
+                    JodyTransform.rotation = Quaternion.Euler(0, 90f, 0);
                     JodyAnimator.SetTrigger("LookAround");
                     Debug.Log("rotate");
-                    JodyTransform.rotation = Quaternion.Euler(0, 90f, 0);
-                    yield return new WaitForSeconds(6.5f);
+                    yield return new WaitForSeconds(6.0f);
                     JodyAnimator.SetTrigger("Surprised");
                     JodyTransform.rotation = Quaternion.Euler(0, 0, 0);
                     JodyTransform.position = wakeUpPoint.position;
+                    Debug.Log("move position");
                     yield return new WaitForSeconds(8.0f);
+                    navMeshAgent.enabled = true; // NavMeshAgent 다시 활성화
                     navMeshAgent.speed = navMeshSpeed;
                     surprised = false;
                 }
+
 
                 if (Vector3.Distance(transform.position, targetEntity.transform.position) <= 100f && !surprised)
                 {

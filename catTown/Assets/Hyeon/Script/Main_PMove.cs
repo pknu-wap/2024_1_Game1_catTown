@@ -93,7 +93,7 @@ public class Main_PMove : MonoBehaviour
 
     private IEnumerator ResetCaution()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.1f);
         ct = 0;
     }
 

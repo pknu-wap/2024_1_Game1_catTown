@@ -41,6 +41,8 @@ public class AudioManager : MonoBehaviour
         {
             audioSource.clip = backgroundMusic1;
 
+            audioSource.volume = 0.5f;
+
             // �ݺ� ��� ����
             audioSource.loop = true;
 
@@ -67,6 +69,7 @@ public class AudioManager : MonoBehaviour
         {
             Debug.Log("complete change BGM");
             audioSource.clip = newClip;
+            audioSource.volume = 0.5f;
             audioSource.Play();
         }
         else
@@ -84,7 +87,7 @@ public class AudioManager : MonoBehaviour
         }
         else
         {
-            audioSource.volume = 1;
+            audioSource.volume = 0.5f;
             isVolumnOff = false;
         }
     }

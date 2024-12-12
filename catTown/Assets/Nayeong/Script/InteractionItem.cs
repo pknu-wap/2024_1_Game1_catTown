@@ -46,7 +46,7 @@ public class InteractionItem : MonoBehaviour
     {
         while (onWaterDamage)
         {
-            player.GetComponent<Main_PMove>().hp -= 1;
+            player.GetComponent<Main_PMove>().hp -= 0;
             yield return new WaitForSeconds(0.3f);
         }
     }
