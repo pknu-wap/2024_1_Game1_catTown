@@ -93,8 +93,11 @@
 ---
 ## 📹 게임 영상
 
-[![YouTube Demo](https://https://www.youtube.com/watch?v=bjAj5CNaBr8)
-
+<div>
+  <a href="https://www.youtube.com/watch?v=bjAj5CNaBr8" target="_blank">
+    <img src="https://www.youtube.com/watch?v=bjAj5CNaBr8.jpg" alt="YouTube Video" style="width: 100%; max-width: 600px; height: auto;">
+  </a>
+</div>
 
 <div align=center>
   
