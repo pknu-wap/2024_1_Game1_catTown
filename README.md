@@ -44,4 +44,4 @@
 
 <br>
 
-<div align=center><h2>📑 Wiki</h2></div>
+![cattownbanner](https://github.com/user-attachments/assets/c34e8e22-2ed0-4cdd-ba90-b44f8e364ad6)
