@@ -43,6 +43,9 @@
 </div>
 
 <br>
+
 <div align=center>
-  ![cattownbanner](https://github.com/user-attachments/assets/c34e8e22-2ed0-4cdd-ba90-b44f8e364ad6)
+  
+  <img src="https://github.com/user-attachments/assets/c34e8e22-2ed0-4cdd-ba90-b44f8e364ad6">
+  
 </div>
