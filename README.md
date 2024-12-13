@@ -91,6 +91,9 @@
   - 퍼즐을 풀어 문을 열고 다음 단계로 이동
 
 ---
+## 📹 게임 영상
+
+[![YouTube Demo](https://https://www.youtube.com/watch?v=bjAj5CNaBr8)
 
 
 <div align=center>
