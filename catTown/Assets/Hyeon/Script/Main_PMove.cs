@@ -220,6 +220,10 @@ public class Main_PMove : MonoBehaviour
         {
             SceneManager.LoadScene("test");
         }
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+            SceneManager.LoadScene("end");
+        }
     }
 
     void HandleStamina()
