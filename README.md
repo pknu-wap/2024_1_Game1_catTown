@@ -91,13 +91,12 @@
   - 퍼즐을 풀어 문을 열고 다음 단계로 이동
 
 ---
-## 📹 게임 영상
+## 📹 게임 플레이 영상
 
-<div>
-  <a href="https://www.youtube.com/watch?v=bjAj5CNaBr8" target="_blank">
-    <img src="https://www.youtube.com/watch?v=bjAj5CNaBr8.jpg" alt="YouTube Video" style="width: 100%; max-width: 600px; height: auto;">
-  </a>
-</div>
+[![Cat Town Gameplay](https://img.youtube.com/vi/bjAj5CNaBr8/0.jpg)](https://www.youtube.com/watch?v=bjAj5CNaBr8)
+
+> 이미지를 클릭하면 YouTube에서 Cat Town 게임 플레이 영상을 볼 수 있습니다.
+
 
 <div align=center>
   
