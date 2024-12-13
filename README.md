@@ -97,6 +97,7 @@
 
 > 이미지를 클릭하면 YouTube에서 Cat Town 게임 플레이 영상을 볼 수 있습니다.
 
+---
 
 <div align=center>
   
