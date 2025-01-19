@@ -13,7 +13,7 @@ public class MonsterSpeedUP : MonoBehaviour
         {
             if (monster != null)
             {
-                monster.speedUp = true;
+                //monster.speedUp = true;
                 Debug.Log("SpeedUP triggered");
             }
             else
